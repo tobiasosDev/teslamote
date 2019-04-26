@@ -1,0 +1,30 @@
+PODS:
+  - ObjectMapper (3.4.2)
+  - Realm (3.14.2):
+    - Realm/Headers (= 3.14.2)
+  - Realm/Headers (3.14.2)
+  - RealmSwift (3.14.2):
+    - Realm (= 3.14.2)
+  - TeslaKit (2.5):
+    - ObjectMapper (~> 3.3)
+
+DEPENDENCIES:
+  - RealmSwift
+  - TeslaKit
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - ObjectMapper
+    - Realm
+    - RealmSwift
+    - TeslaKit
+
+SPEC CHECKSUMS:
+  ObjectMapper: 0d4402610f4e468903ae64629eec4784531e5c51
+  Realm: 179c6706e3a49dbfe112e572fd3c03d3169bea35
+  RealmSwift: 1797f272fb51c555b764fada32e82159a2c65247
+  TeslaKit: 2d0d6562c11d6159bdeef073701691e34db1ad63
+
+PODFILE CHECKSUM: 9c70fe311ed04bb100ba22a3d0f178b98d0de77e
+
+COCOAPODS: 1.6.1

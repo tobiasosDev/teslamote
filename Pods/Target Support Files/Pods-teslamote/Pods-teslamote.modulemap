@@ -1,0 +1,6 @@
+framework module Pods_teslamote {
+  umbrella header "Pods-teslamote-umbrella.h"
+
+  export *
+  module * { export * }
+}

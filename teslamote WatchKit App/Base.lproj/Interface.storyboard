@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="14490.70" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="AgC-eL-Hgc">
-    <device id="watch38" orientation="portrait">
+<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="14460.31" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="AgC-eL-Hgc">
+    <device id="watch44" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="watchOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="14490.21"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="14460.16"/>
     </dependencies>
     <scenes>
         <!--Interface Controller-->
@@ -24,7 +24,7 @@
                             <items>
                                 <group width="1" alignment="left" id="Bhk-mN-9Kg">
                                     <items>
-                                        <imageView height="0.69999999999999996" alignment="left" verticalAlignment="center" image="temperature" contentMode="scaleAspectFit" id="mlh-JT-OBH">
+                                        <imageView width="50" height="0.69999999999999996" alignment="left" verticalAlignment="center" image="temperature" contentMode="scaleAspectFit" id="mlh-JT-OBH">
                                             <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </imageView>
                                         <group alignment="left" layout="vertical" id="8qV-ef-RTw">
@@ -45,7 +45,7 @@
                         </group>
                         <group width="1" alignment="left" id="zjZ-l5-NnI">
                             <items>
-                                <imageView height="0.69999999999999996" alignment="left" verticalAlignment="center" image="teslaModel3" contentMode="scaleAspectFit" id="LRo-zC-ZlK">
+                                <imageView width="50" height="0.69999999999999996" alignment="left" verticalAlignment="center" image="teslaModel3" contentMode="scaleAspectFit" id="LRo-zC-ZlK">
                                     <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </imageView>
                                 <group alignment="left" layout="vertical" id="XKl-qV-JLb">
@@ -63,7 +63,7 @@
                         </group>
                         <group width="1" alignment="left" id="MVH-w0-tbK">
                             <items>
-                                <imageView height="0.69999999999999996" alignment="left" verticalAlignment="center" image="charging" contentMode="scaleAspectFit" id="qaY-x2-2wa">
+                                <imageView width="50" height="0.69999999999999996" alignment="left" verticalAlignment="center" image="charging" contentMode="scaleAspectFit" id="qaY-x2-2wa">
                                     <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </imageView>
                                 <group alignment="left" layout="vertical" id="cDd-Qf-cTn">

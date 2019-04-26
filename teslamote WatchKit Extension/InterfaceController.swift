@@ -51,8 +51,8 @@ class InterfaceController: WKInterfaceController {
     
 
     func getCarInformation() {
-        session.sendMessage(["status" : 1], replyHandler: { (response: [String : Any]) in
-            controlsLabel.setText(response.)
+        session.sendMessage(["request" : "status"], replyHandler: { (response: [String : Any]) in
+            self.controlsLabel.setText(response.first(where: {$0.key == "status"})?.value as? String)
         }) { (Error) in
             print(Error)
         }
