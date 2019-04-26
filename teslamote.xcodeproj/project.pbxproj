@@ -1,0 +1,872 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		3BEB51012272FFEC002AFDA1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BEB51002272FFEC002AFDA1 /* AppDelegate.swift */; };
+		3BEB51032272FFEC002AFDA1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BEB51022272FFEC002AFDA1 /* ViewController.swift */; };
+		3BEB51062272FFEC002AFDA1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3BEB51042272FFEC002AFDA1 /* Main.storyboard */; };
+		3BEB51082272FFEE002AFDA1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3BEB51072272FFEE002AFDA1 /* Assets.xcassets */; };
+		3BEB510B2272FFEE002AFDA1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3BEB51092272FFEE002AFDA1 /* LaunchScreen.storyboard */; };
+		3BEB51162272FFEE002AFDA1 /* teslamoteTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BEB51152272FFEE002AFDA1 /* teslamoteTests.swift */; };
+		3BEB51212272FFEE002AFDA1 /* teslamoteUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BEB51202272FFEE002AFDA1 /* teslamoteUITests.swift */; };
+		3BEB51262272FFEE002AFDA1 /* teslamote WatchKit App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 3BEB51252272FFEE002AFDA1 /* teslamote WatchKit App.app */; };
+		3BEB512C2272FFEE002AFDA1 /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3BEB512A2272FFEE002AFDA1 /* Interface.storyboard */; };
+		3BEB512E2272FFEF002AFDA1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3BEB512D2272FFEF002AFDA1 /* Assets.xcassets */; };
+		3BEB51352272FFEF002AFDA1 /* teslamote WatchKit Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 3BEB51342272FFEF002AFDA1 /* teslamote WatchKit Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		3BEB513A2272FFEF002AFDA1 /* InterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BEB51392272FFEF002AFDA1 /* InterfaceController.swift */; };
+		3BEB513C2272FFEF002AFDA1 /* ExtensionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BEB513B2272FFEF002AFDA1 /* ExtensionDelegate.swift */; };
+		3BEB513E2272FFEF002AFDA1 /* NotificationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BEB513D2272FFEF002AFDA1 /* NotificationController.swift */; };
+		3BEB51402272FFF0002AFDA1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3BEB513F2272FFF0002AFDA1 /* Assets.xcassets */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		3BEB51122272FFEE002AFDA1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3BEB50F52272FFEC002AFDA1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3BEB50FC2272FFEC002AFDA1;
+			remoteInfo = teslamote;
+		};
+		3BEB511D2272FFEE002AFDA1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3BEB50F52272FFEC002AFDA1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3BEB50FC2272FFEC002AFDA1;
+			remoteInfo = teslamote;
+		};
+		3BEB51272272FFEE002AFDA1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3BEB50F52272FFEC002AFDA1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3BEB51242272FFEE002AFDA1;
+			remoteInfo = "teslamote WatchKit App";
+		};
+		3BEB51362272FFEF002AFDA1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3BEB50F52272FFEC002AFDA1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3BEB51332272FFEF002AFDA1;
+			remoteInfo = "teslamote WatchKit Extension";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		3BEB51482272FFF0002AFDA1 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				3BEB51352272FFEF002AFDA1 /* teslamote WatchKit Extension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3BEB514C2272FFF0002AFDA1 /* Embed Watch Content */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "$(CONTENTS_FOLDER_PATH)/Watch";
+			dstSubfolderSpec = 16;
+			files = (
+				3BEB51262272FFEE002AFDA1 /* teslamote WatchKit App.app in Embed Watch Content */,
+			);
+			name = "Embed Watch Content";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		3BEB50FD2272FFEC002AFDA1 /* teslamote.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = teslamote.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		3BEB51002272FFEC002AFDA1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		3BEB51022272FFEC002AFDA1 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		3BEB51052272FFEC002AFDA1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		3BEB51072272FFEE002AFDA1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		3BEB510A2272FFEE002AFDA1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		3BEB510C2272FFEE002AFDA1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3BEB51112272FFEE002AFDA1 /* teslamoteTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = teslamoteTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		3BEB51152272FFEE002AFDA1 /* teslamoteTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = teslamoteTests.swift; sourceTree = "<group>"; };
+		3BEB51172272FFEE002AFDA1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3BEB511C2272FFEE002AFDA1 /* teslamoteUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = teslamoteUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		3BEB51202272FFEE002AFDA1 /* teslamoteUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = teslamoteUITests.swift; sourceTree = "<group>"; };
+		3BEB51222272FFEE002AFDA1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3BEB51252272FFEE002AFDA1 /* teslamote WatchKit App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "teslamote WatchKit App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		3BEB512B2272FFEE002AFDA1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Interface.storyboard; sourceTree = "<group>"; };
+		3BEB512D2272FFEF002AFDA1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		3BEB512F2272FFEF002AFDA1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3BEB51342272FFEF002AFDA1 /* teslamote WatchKit Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "teslamote WatchKit Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		3BEB51392272FFEF002AFDA1 /* InterfaceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterfaceController.swift; sourceTree = "<group>"; };
+		3BEB513B2272FFEF002AFDA1 /* ExtensionDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionDelegate.swift; sourceTree = "<group>"; };
+		3BEB513D2272FFEF002AFDA1 /* NotificationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationController.swift; sourceTree = "<group>"; };
+		3BEB513F2272FFF0002AFDA1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		3BEB51412272FFF0002AFDA1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3BEB51422272FFF0002AFDA1 /* PushNotificationPayload.apns */ = {isa = PBXFileReference; lastKnownFileType = text; path = PushNotificationPayload.apns; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		3BEB50FA2272FFEC002AFDA1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3BEB510E2272FFEE002AFDA1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3BEB51192272FFEE002AFDA1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3BEB51312272FFEF002AFDA1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		3BEB50F42272FFEC002AFDA1 = {
+			isa = PBXGroup;
+			children = (
+				3BEB50FF2272FFEC002AFDA1 /* teslamote */,
+				3BEB51142272FFEE002AFDA1 /* teslamoteTests */,
+				3BEB511F2272FFEE002AFDA1 /* teslamoteUITests */,
+				3BEB51292272FFEE002AFDA1 /* teslamote WatchKit App */,
+				3BEB51382272FFEF002AFDA1 /* teslamote WatchKit Extension */,
+				3BEB50FE2272FFEC002AFDA1 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		3BEB50FE2272FFEC002AFDA1 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				3BEB50FD2272FFEC002AFDA1 /* teslamote.app */,
+				3BEB51112272FFEE002AFDA1 /* teslamoteTests.xctest */,
+				3BEB511C2272FFEE002AFDA1 /* teslamoteUITests.xctest */,
+				3BEB51252272FFEE002AFDA1 /* teslamote WatchKit App.app */,
+				3BEB51342272FFEF002AFDA1 /* teslamote WatchKit Extension.appex */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		3BEB50FF2272FFEC002AFDA1 /* teslamote */ = {
+			isa = PBXGroup;
+			children = (
+				3BEB51002272FFEC002AFDA1 /* AppDelegate.swift */,
+				3BEB51022272FFEC002AFDA1 /* ViewController.swift */,
+				3BEB51042272FFEC002AFDA1 /* Main.storyboard */,
+				3BEB51072272FFEE002AFDA1 /* Assets.xcassets */,
+				3BEB51092272FFEE002AFDA1 /* LaunchScreen.storyboard */,
+				3BEB510C2272FFEE002AFDA1 /* Info.plist */,
+			);
+			path = teslamote;
+			sourceTree = "<group>";
+		};
+		3BEB51142272FFEE002AFDA1 /* teslamoteTests */ = {
+			isa = PBXGroup;
+			children = (
+				3BEB51152272FFEE002AFDA1 /* teslamoteTests.swift */,
+				3BEB51172272FFEE002AFDA1 /* Info.plist */,
+			);
+			path = teslamoteTests;
+			sourceTree = "<group>";
+		};
+		3BEB511F2272FFEE002AFDA1 /* teslamoteUITests */ = {
+			isa = PBXGroup;
+			children = (
+				3BEB51202272FFEE002AFDA1 /* teslamoteUITests.swift */,
+				3BEB51222272FFEE002AFDA1 /* Info.plist */,
+			);
+			path = teslamoteUITests;
+			sourceTree = "<group>";
+		};
+		3BEB51292272FFEE002AFDA1 /* teslamote WatchKit App */ = {
+			isa = PBXGroup;
+			children = (
+				3BEB512A2272FFEE002AFDA1 /* Interface.storyboard */,
+				3BEB512D2272FFEF002AFDA1 /* Assets.xcassets */,
+				3BEB512F2272FFEF002AFDA1 /* Info.plist */,
+			);
+			path = "teslamote WatchKit App";
+			sourceTree = "<group>";
+		};
+		3BEB51382272FFEF002AFDA1 /* teslamote WatchKit Extension */ = {
+			isa = PBXGroup;
+			children = (
+				3BEB51392272FFEF002AFDA1 /* InterfaceController.swift */,
+				3BEB513B2272FFEF002AFDA1 /* ExtensionDelegate.swift */,
+				3BEB513D2272FFEF002AFDA1 /* NotificationController.swift */,
+				3BEB513F2272FFF0002AFDA1 /* Assets.xcassets */,
+				3BEB51412272FFF0002AFDA1 /* Info.plist */,
+				3BEB51422272FFF0002AFDA1 /* PushNotificationPayload.apns */,
+			);
+			path = "teslamote WatchKit Extension";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		3BEB50FC2272FFEC002AFDA1 /* teslamote */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3BEB514D2272FFF0002AFDA1 /* Build configuration list for PBXNativeTarget "teslamote" */;
+			buildPhases = (
+				3BEB50F92272FFEC002AFDA1 /* Sources */,
+				3BEB50FA2272FFEC002AFDA1 /* Frameworks */,
+				3BEB50FB2272FFEC002AFDA1 /* Resources */,
+				3BEB514C2272FFF0002AFDA1 /* Embed Watch Content */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				3BEB51282272FFEE002AFDA1 /* PBXTargetDependency */,
+			);
+			name = teslamote;
+			productName = teslamote;
+			productReference = 3BEB50FD2272FFEC002AFDA1 /* teslamote.app */;
+			productType = "com.apple.product-type.application";
+		};
+		3BEB51102272FFEE002AFDA1 /* teslamoteTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3BEB51502272FFF0002AFDA1 /* Build configuration list for PBXNativeTarget "teslamoteTests" */;
+			buildPhases = (
+				3BEB510D2272FFEE002AFDA1 /* Sources */,
+				3BEB510E2272FFEE002AFDA1 /* Frameworks */,
+				3BEB510F2272FFEE002AFDA1 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				3BEB51132272FFEE002AFDA1 /* PBXTargetDependency */,
+			);
+			name = teslamoteTests;
+			productName = teslamoteTests;
+			productReference = 3BEB51112272FFEE002AFDA1 /* teslamoteTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		3BEB511B2272FFEE002AFDA1 /* teslamoteUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3BEB51532272FFF0002AFDA1 /* Build configuration list for PBXNativeTarget "teslamoteUITests" */;
+			buildPhases = (
+				3BEB51182272FFEE002AFDA1 /* Sources */,
+				3BEB51192272FFEE002AFDA1 /* Frameworks */,
+				3BEB511A2272FFEE002AFDA1 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				3BEB511E2272FFEE002AFDA1 /* PBXTargetDependency */,
+			);
+			name = teslamoteUITests;
+			productName = teslamoteUITests;
+			productReference = 3BEB511C2272FFEE002AFDA1 /* teslamoteUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+		3BEB51242272FFEE002AFDA1 /* teslamote WatchKit App */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3BEB51492272FFF0002AFDA1 /* Build configuration list for PBXNativeTarget "teslamote WatchKit App" */;
+			buildPhases = (
+				3BEB51232272FFEE002AFDA1 /* Resources */,
+				3BEB51482272FFF0002AFDA1 /* Embed App Extensions */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				3BEB51372272FFEF002AFDA1 /* PBXTargetDependency */,
+			);
+			name = "teslamote WatchKit App";
+			productName = "teslamote WatchKit App";
+			productReference = 3BEB51252272FFEE002AFDA1 /* teslamote WatchKit App.app */;
+			productType = "com.apple.product-type.application.watchapp2";
+		};
+		3BEB51332272FFEF002AFDA1 /* teslamote WatchKit Extension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3BEB51452272FFF0002AFDA1 /* Build configuration list for PBXNativeTarget "teslamote WatchKit Extension" */;
+			buildPhases = (
+				3BEB51302272FFEF002AFDA1 /* Sources */,
+				3BEB51312272FFEF002AFDA1 /* Frameworks */,
+				3BEB51322272FFEF002AFDA1 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "teslamote WatchKit Extension";
+			productName = "teslamote WatchKit Extension";
+			productReference = 3BEB51342272FFEF002AFDA1 /* teslamote WatchKit Extension.appex */;
+			productType = "com.apple.product-type.watchkit2-extension";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		3BEB50F52272FFEC002AFDA1 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1020;
+				LastUpgradeCheck = 1020;
+				ORGANIZATIONNAME = "Tobias Lüscher";
+				TargetAttributes = {
+					3BEB50FC2272FFEC002AFDA1 = {
+						CreatedOnToolsVersion = 10.2.1;
+					};
+					3BEB51102272FFEE002AFDA1 = {
+						CreatedOnToolsVersion = 10.2.1;
+						TestTargetID = 3BEB50FC2272FFEC002AFDA1;
+					};
+					3BEB511B2272FFEE002AFDA1 = {
+						CreatedOnToolsVersion = 10.2.1;
+						TestTargetID = 3BEB50FC2272FFEC002AFDA1;
+					};
+					3BEB51242272FFEE002AFDA1 = {
+						CreatedOnToolsVersion = 10.2.1;
+					};
+					3BEB51332272FFEF002AFDA1 = {
+						CreatedOnToolsVersion = 10.2.1;
+					};
+				};
+			};
+			buildConfigurationList = 3BEB50F82272FFEC002AFDA1 /* Build configuration list for PBXProject "teslamote" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 3BEB50F42272FFEC002AFDA1;
+			productRefGroup = 3BEB50FE2272FFEC002AFDA1 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				3BEB50FC2272FFEC002AFDA1 /* teslamote */,
+				3BEB51102272FFEE002AFDA1 /* teslamoteTests */,
+				3BEB511B2272FFEE002AFDA1 /* teslamoteUITests */,
+				3BEB51242272FFEE002AFDA1 /* teslamote WatchKit App */,
+				3BEB51332272FFEF002AFDA1 /* teslamote WatchKit Extension */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		3BEB50FB2272FFEC002AFDA1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3BEB510B2272FFEE002AFDA1 /* LaunchScreen.storyboard in Resources */,
+				3BEB51082272FFEE002AFDA1 /* Assets.xcassets in Resources */,
+				3BEB51062272FFEC002AFDA1 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3BEB510F2272FFEE002AFDA1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3BEB511A2272FFEE002AFDA1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3BEB51232272FFEE002AFDA1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3BEB512E2272FFEF002AFDA1 /* Assets.xcassets in Resources */,
+				3BEB512C2272FFEE002AFDA1 /* Interface.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3BEB51322272FFEF002AFDA1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3BEB51402272FFF0002AFDA1 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		3BEB50F92272FFEC002AFDA1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3BEB51032272FFEC002AFDA1 /* ViewController.swift in Sources */,
+				3BEB51012272FFEC002AFDA1 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3BEB510D2272FFEE002AFDA1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3BEB51162272FFEE002AFDA1 /* teslamoteTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3BEB51182272FFEE002AFDA1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3BEB51212272FFEE002AFDA1 /* teslamoteUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3BEB51302272FFEF002AFDA1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3BEB513E2272FFEF002AFDA1 /* NotificationController.swift in Sources */,
+				3BEB513C2272FFEF002AFDA1 /* ExtensionDelegate.swift in Sources */,
+				3BEB513A2272FFEF002AFDA1 /* InterfaceController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		3BEB51132272FFEE002AFDA1 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 3BEB50FC2272FFEC002AFDA1 /* teslamote */;
+			targetProxy = 3BEB51122272FFEE002AFDA1 /* PBXContainerItemProxy */;
+		};
+		3BEB511E2272FFEE002AFDA1 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 3BEB50FC2272FFEC002AFDA1 /* teslamote */;
+			targetProxy = 3BEB511D2272FFEE002AFDA1 /* PBXContainerItemProxy */;
+		};
+		3BEB51282272FFEE002AFDA1 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 3BEB51242272FFEE002AFDA1 /* teslamote WatchKit App */;
+			targetProxy = 3BEB51272272FFEE002AFDA1 /* PBXContainerItemProxy */;
+		};
+		3BEB51372272FFEF002AFDA1 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 3BEB51332272FFEF002AFDA1 /* teslamote WatchKit Extension */;
+			targetProxy = 3BEB51362272FFEF002AFDA1 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		3BEB51042272FFEC002AFDA1 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3BEB51052272FFEC002AFDA1 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		3BEB51092272FFEE002AFDA1 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3BEB510A2272FFEE002AFDA1 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		3BEB512A2272FFEE002AFDA1 /* Interface.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3BEB512B2272FFEE002AFDA1 /* Base */,
+			);
+			name = Interface.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		3BEB51432272FFF0002AFDA1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		3BEB51442272FFF0002AFDA1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		3BEB51462272FFF0002AFDA1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 48XAPJ6DGL;
+				INFOPLIST_FILE = "teslamote WatchKit Extension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = ch.lscher.teslamote.watchkitapp.watchkitextension;
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 5.2;
+			};
+			name = Debug;
+		};
+		3BEB51472272FFF0002AFDA1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 48XAPJ6DGL;
+				INFOPLIST_FILE = "teslamote WatchKit Extension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = ch.lscher.teslamote.watchkitapp.watchkitextension;
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 5.2;
+			};
+			name = Release;
+		};
+		3BEB514A2272FFF0002AFDA1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 48XAPJ6DGL;
+				IBSC_MODULE = teslamote_WatchKit_Extension;
+				INFOPLIST_FILE = "teslamote WatchKit App/Info.plist";
+				PRODUCT_BUNDLE_IDENTIFIER = ch.lscher.teslamote.watchkitapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 5.2;
+			};
+			name = Debug;
+		};
+		3BEB514B2272FFF0002AFDA1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 48XAPJ6DGL;
+				IBSC_MODULE = teslamote_WatchKit_Extension;
+				INFOPLIST_FILE = "teslamote WatchKit App/Info.plist";
+				PRODUCT_BUNDLE_IDENTIFIER = ch.lscher.teslamote.watchkitapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 5.2;
+			};
+			name = Release;
+		};
+		3BEB514E2272FFF0002AFDA1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 48XAPJ6DGL;
+				INFOPLIST_FILE = teslamote/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = ch.lscher.teslamote;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		3BEB514F2272FFF0002AFDA1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 48XAPJ6DGL;
+				INFOPLIST_FILE = teslamote/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = ch.lscher.teslamote;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		3BEB51512272FFF0002AFDA1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 48XAPJ6DGL;
+				INFOPLIST_FILE = teslamoteTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = ch.lscher.teslamoteTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/teslamote.app/teslamote";
+			};
+			name = Debug;
+		};
+		3BEB51522272FFF0002AFDA1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 48XAPJ6DGL;
+				INFOPLIST_FILE = teslamoteTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = ch.lscher.teslamoteTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/teslamote.app/teslamote";
+			};
+			name = Release;
+		};
+		3BEB51542272FFF0002AFDA1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 48XAPJ6DGL;
+				INFOPLIST_FILE = teslamoteUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = ch.lscher.teslamoteUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = teslamote;
+			};
+			name = Debug;
+		};
+		3BEB51552272FFF0002AFDA1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 48XAPJ6DGL;
+				INFOPLIST_FILE = teslamoteUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = ch.lscher.teslamoteUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = teslamote;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		3BEB50F82272FFEC002AFDA1 /* Build configuration list for PBXProject "teslamote" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3BEB51432272FFF0002AFDA1 /* Debug */,
+				3BEB51442272FFF0002AFDA1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3BEB51452272FFF0002AFDA1 /* Build configuration list for PBXNativeTarget "teslamote WatchKit Extension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3BEB51462272FFF0002AFDA1 /* Debug */,
+				3BEB51472272FFF0002AFDA1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3BEB51492272FFF0002AFDA1 /* Build configuration list for PBXNativeTarget "teslamote WatchKit App" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3BEB514A2272FFF0002AFDA1 /* Debug */,
+				3BEB514B2272FFF0002AFDA1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3BEB514D2272FFF0002AFDA1 /* Build configuration list for PBXNativeTarget "teslamote" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3BEB514E2272FFF0002AFDA1 /* Debug */,
+				3BEB514F2272FFF0002AFDA1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3BEB51502272FFF0002AFDA1 /* Build configuration list for PBXNativeTarget "teslamoteTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3BEB51512272FFF0002AFDA1 /* Debug */,
+				3BEB51522272FFF0002AFDA1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3BEB51532272FFF0002AFDA1 /* Build configuration list for PBXNativeTarget "teslamoteUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3BEB51542272FFF0002AFDA1 /* Debug */,
+				3BEB51552272FFF0002AFDA1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 3BEB50F52272FFEC002AFDA1 /* Project object */;
+}
