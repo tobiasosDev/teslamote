@@ -14,13 +14,75 @@
             <objects>
                 <controller id="AgC-eL-Hgc" customClass="InterfaceController" customModule="teslamote_WatchKit_App" customModuleProvider="target">
                     <items>
-                        <group width="1" alignment="left" spacing="5" id="FfX-l3-cK2">
+                        <group width="1" height="63" alignment="left" spacing="5" id="FfX-l3-cK2">
                             <items>
-                                <button width="65" height="65" alignment="left" title="Button" id="sEe-fK-iGF"/>
-                                <button width="65" height="65" alignment="left" title="Button" id="Rce-ws-Ijh"/>
+                                <button width="0.5" height="1" alignment="left" title="Koffer" id="sEe-fK-iGF"/>
+                                <button width="0.5" height="1" alignment="left" title="Öffnen" id="Rce-ws-Ijh"/>
                             </items>
                         </group>
+                        <group width="1" alignment="left" id="I9Q-2H-w62">
+                            <items>
+                                <group width="1" alignment="left" id="Bhk-mN-9Kg">
+                                    <items>
+                                        <imageView height="0.69999999999999996" alignment="left" verticalAlignment="center" image="temperature" contentMode="scaleAspectFit" id="mlh-JT-OBH">
+                                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </imageView>
+                                        <group alignment="left" layout="vertical" id="8qV-ef-RTw">
+                                            <items>
+                                                <label alignment="left" text="Temperatur" id="cQo-Ls-9nA">
+                                                    <fontDescription key="font" type="system" pointSize="14"/>
+                                                </label>
+                                                <label alignment="left" text="Innen 17°C" textAlignment="left" id="9hb-hz-LIl">
+                                                    <fontDescription key="font" type="system" weight="thin" pointSize="12"/>
+                                                </label>
+                                            </items>
+                                        </group>
+                                    </items>
+                                    <color key="backgroundColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
+                                </group>
+                                <label alignment="left" text="180 Km" id="AR2-Q7-A3m"/>
+                            </items>
+                        </group>
+                        <group width="1" alignment="left" id="zjZ-l5-NnI">
+                            <items>
+                                <imageView height="0.69999999999999996" alignment="left" verticalAlignment="center" image="teslaModel3" contentMode="scaleAspectFit" id="LRo-zC-ZlK">
+                                    <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </imageView>
+                                <group alignment="left" layout="vertical" id="XKl-qV-JLb">
+                                    <items>
+                                        <label alignment="left" text="Controls" id="Jt6-Im-iJn">
+                                            <fontDescription key="font" type="system" pointSize="14"/>
+                                        </label>
+                                        <label alignment="left" text="Trunk open" textAlignment="left" id="Kir-CG-W6Y">
+                                            <fontDescription key="font" type="system" weight="thin" pointSize="12"/>
+                                        </label>
+                                    </items>
+                                </group>
+                            </items>
+                            <color key="backgroundColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
+                        </group>
+                        <group width="1" alignment="left" id="MVH-w0-tbK">
+                            <items>
+                                <imageView height="0.69999999999999996" alignment="left" verticalAlignment="center" image="charging" contentMode="scaleAspectFit" id="qaY-x2-2wa">
+                                    <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </imageView>
+                                <group alignment="left" layout="vertical" id="cDd-Qf-cTn">
+                                    <items>
+                                        <label alignment="left" text="Chargin" id="w4V-EW-R6e">
+                                            <fontDescription key="font" type="system" pointSize="14"/>
+                                        </label>
+                                        <label alignment="left" text="Limit: 80%" textAlignment="left" id="1CV-u7-tsD">
+                                            <fontDescription key="font" type="system" weight="thin" pointSize="12"/>
+                                        </label>
+                                    </items>
+                                </group>
+                            </items>
+                            <color key="backgroundColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
+                        </group>
                     </items>
+                    <connections>
+                        <outlet property="controlsLabel" destination="Kir-CG-W6Y" id="ZEL-5Z-Y2m"/>
+                    </connections>
                 </controller>
             </objects>
             <point key="canvasLocation" x="229" y="244"/>

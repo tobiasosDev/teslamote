@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		17A11C68E9DB08EF8AB6296E /* Pods_teslamoteUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 81A3C5467C60D58B389CD808 /* Pods_teslamoteUITests.framework */; };
+		3B7EB68F22733B2700526F48 /* TeslaKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B7EB68E22733B2700526F48 /* TeslaKit.framework */; };
+		3B7EB69122733B2700526F48 /* TeslaKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B7EB69022733B2700526F48 /* TeslaKit.framework */; };
 		3BEB51012272FFEC002AFDA1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BEB51002272FFEC002AFDA1 /* AppDelegate.swift */; };
 		3BEB51032272FFEC002AFDA1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BEB51022272FFEC002AFDA1 /* ViewController.swift */; };
 		3BEB51062272FFEC002AFDA1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3BEB51042272FFEC002AFDA1 /* Main.storyboard */; };
@@ -22,6 +25,10 @@
 		3BEB513C2272FFEF002AFDA1 /* ExtensionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BEB513B2272FFEF002AFDA1 /* ExtensionDelegate.swift */; };
 		3BEB513E2272FFEF002AFDA1 /* NotificationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BEB513D2272FFEF002AFDA1 /* NotificationController.swift */; };
 		3BEB51402272FFF0002AFDA1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3BEB513F2272FFF0002AFDA1 /* Assets.xcassets */; };
+		4CC712A1D62C21F264611D85 /* Pods_teslamote_WatchKit_Extension.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 319858A2880AB3E323E2E475 /* Pods_teslamote_WatchKit_Extension.framework */; };
+		6DD1780201EDD28BAE024A1C /* Pods_teslamote.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C775A9766D07500AD447822 /* Pods_teslamote.framework */; };
+		A5306B4312BC0F84116C4E4B /* Pods_teslamoteTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C3E9394FE5CD92615A052ED8 /* Pods_teslamoteTests.framework */; };
+		E18052C7410A8256DB1E30AD /* Pods_teslamote_WatchKit_App.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 325A7235DFE48D1A0A7E99D1 /* Pods_teslamote_WatchKit_App.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -81,6 +88,12 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		0C775A9766D07500AD447822 /* Pods_teslamote.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_teslamote.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		319858A2880AB3E323E2E475 /* Pods_teslamote_WatchKit_Extension.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_teslamote_WatchKit_Extension.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		325A7235DFE48D1A0A7E99D1 /* Pods_teslamote_WatchKit_App.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_teslamote_WatchKit_App.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3B317AC166AC49DD7ECB0156 /* Pods-teslamote WatchKit Extension.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-teslamote WatchKit Extension.release.xcconfig"; path = "Pods/Target Support Files/Pods-teslamote WatchKit Extension/Pods-teslamote WatchKit Extension.release.xcconfig"; sourceTree = "<group>"; };
+		3B7EB68E22733B2700526F48 /* TeslaKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = TeslaKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3B7EB69022733B2700526F48 /* TeslaKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = TeslaKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3BEB50FD2272FFEC002AFDA1 /* teslamote.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = teslamote.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3BEB51002272FFEC002AFDA1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3BEB51022272FFEC002AFDA1 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -105,6 +118,17 @@
 		3BEB513F2272FFF0002AFDA1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3BEB51412272FFF0002AFDA1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3BEB51422272FFF0002AFDA1 /* PushNotificationPayload.apns */ = {isa = PBXFileReference; lastKnownFileType = text; path = PushNotificationPayload.apns; sourceTree = "<group>"; };
+		3D4F35ED91C1BE32F1F0158F /* Pods-teslamoteUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-teslamoteUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-teslamoteUITests/Pods-teslamoteUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		4AE19EA8BBD67053757B6A97 /* Pods-teslamoteUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-teslamoteUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-teslamoteUITests/Pods-teslamoteUITests.release.xcconfig"; sourceTree = "<group>"; };
+		66F13300EA99F075115D07AC /* Pods-teslamote WatchKit App.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-teslamote WatchKit App.debug.xcconfig"; path = "Pods/Target Support Files/Pods-teslamote WatchKit App/Pods-teslamote WatchKit App.debug.xcconfig"; sourceTree = "<group>"; };
+		81A3C5467C60D58B389CD808 /* Pods_teslamoteUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_teslamoteUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9A6B9295A302FA0A6026367D /* Pods-teslamote.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-teslamote.release.xcconfig"; path = "Pods/Target Support Files/Pods-teslamote/Pods-teslamote.release.xcconfig"; sourceTree = "<group>"; };
+		B63445DFF6869541AE2C8BEA /* Pods-teslamoteTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-teslamoteTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-teslamoteTests/Pods-teslamoteTests.debug.xcconfig"; sourceTree = "<group>"; };
+		C1E1B12250DE19E78F9A49E3 /* Pods-teslamote WatchKit App.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-teslamote WatchKit App.release.xcconfig"; path = "Pods/Target Support Files/Pods-teslamote WatchKit App/Pods-teslamote WatchKit App.release.xcconfig"; sourceTree = "<group>"; };
+		C3E9394FE5CD92615A052ED8 /* Pods_teslamoteTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_teslamoteTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C5B23ECA4C1EEA10CC8AAA61 /* Pods-teslamoteTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-teslamoteTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-teslamoteTests/Pods-teslamoteTests.release.xcconfig"; sourceTree = "<group>"; };
+		EF119DCC4445B1B358B5B284 /* Pods-teslamote WatchKit Extension.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-teslamote WatchKit Extension.debug.xcconfig"; path = "Pods/Target Support Files/Pods-teslamote WatchKit Extension/Pods-teslamote WatchKit Extension.debug.xcconfig"; sourceTree = "<group>"; };
+		FA3522F6FEF393CF1F7DBCA6 /* Pods-teslamote.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-teslamote.debug.xcconfig"; path = "Pods/Target Support Files/Pods-teslamote/Pods-teslamote.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,6 +136,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3B7EB68F22733B2700526F48 /* TeslaKit.framework in Frameworks */,
+				3B7EB69122733B2700526F48 /* TeslaKit.framework in Frameworks */,
+				6DD1780201EDD28BAE024A1C /* Pods_teslamote.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -119,6 +146,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A5306B4312BC0F84116C4E4B /* Pods_teslamoteTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -126,6 +154,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				17A11C68E9DB08EF8AB6296E /* Pods_teslamoteUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -133,12 +162,35 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4CC712A1D62C21F264611D85 /* Pods_teslamote_WatchKit_Extension.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8E05BE5B7AE916BC013417D6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E18052C7410A8256DB1E30AD /* Pods_teslamote_WatchKit_App.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2BD43489F6BD28E6594C2B27 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3B7EB68E22733B2700526F48 /* TeslaKit.framework */,
+				3B7EB69022733B2700526F48 /* TeslaKit.framework */,
+				0C775A9766D07500AD447822 /* Pods_teslamote.framework */,
+				325A7235DFE48D1A0A7E99D1 /* Pods_teslamote_WatchKit_App.framework */,
+				319858A2880AB3E323E2E475 /* Pods_teslamote_WatchKit_Extension.framework */,
+				C3E9394FE5CD92615A052ED8 /* Pods_teslamoteTests.framework */,
+				81A3C5467C60D58B389CD808 /* Pods_teslamoteUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		3BEB50F42272FFEC002AFDA1 = {
 			isa = PBXGroup;
 			children = (
@@ -148,6 +200,8 @@
 				3BEB51292272FFEE002AFDA1 /* teslamote WatchKit App */,
 				3BEB51382272FFEF002AFDA1 /* teslamote WatchKit Extension */,
 				3BEB50FE2272FFEC002AFDA1 /* Products */,
+				87CDADD061F2E0F6F31D93D3 /* Pods */,
+				2BD43489F6BD28E6594C2B27 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -217,6 +271,23 @@
 			path = "teslamote WatchKit Extension";
 			sourceTree = "<group>";
 		};
+		87CDADD061F2E0F6F31D93D3 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				FA3522F6FEF393CF1F7DBCA6 /* Pods-teslamote.debug.xcconfig */,
+				9A6B9295A302FA0A6026367D /* Pods-teslamote.release.xcconfig */,
+				66F13300EA99F075115D07AC /* Pods-teslamote WatchKit App.debug.xcconfig */,
+				C1E1B12250DE19E78F9A49E3 /* Pods-teslamote WatchKit App.release.xcconfig */,
+				EF119DCC4445B1B358B5B284 /* Pods-teslamote WatchKit Extension.debug.xcconfig */,
+				3B317AC166AC49DD7ECB0156 /* Pods-teslamote WatchKit Extension.release.xcconfig */,
+				B63445DFF6869541AE2C8BEA /* Pods-teslamoteTests.debug.xcconfig */,
+				C5B23ECA4C1EEA10CC8AAA61 /* Pods-teslamoteTests.release.xcconfig */,
+				3D4F35ED91C1BE32F1F0158F /* Pods-teslamoteUITests.debug.xcconfig */,
+				4AE19EA8BBD67053757B6A97 /* Pods-teslamoteUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -224,10 +295,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 3BEB514D2272FFF0002AFDA1 /* Build configuration list for PBXNativeTarget "teslamote" */;
 			buildPhases = (
+				FE2FC6C40B07D8DE3E02E457 /* [CP] Check Pods Manifest.lock */,
 				3BEB50F92272FFEC002AFDA1 /* Sources */,
 				3BEB50FA2272FFEC002AFDA1 /* Frameworks */,
 				3BEB50FB2272FFEC002AFDA1 /* Resources */,
 				3BEB514C2272FFF0002AFDA1 /* Embed Watch Content */,
+				386E16BED2B60CC8504FDA1C /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -243,6 +316,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 3BEB51502272FFF0002AFDA1 /* Build configuration list for PBXNativeTarget "teslamoteTests" */;
 			buildPhases = (
+				662571BA017FCE3DCBE5253B /* [CP] Check Pods Manifest.lock */,
 				3BEB510D2272FFEE002AFDA1 /* Sources */,
 				3BEB510E2272FFEE002AFDA1 /* Frameworks */,
 				3BEB510F2272FFEE002AFDA1 /* Resources */,
@@ -261,6 +335,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 3BEB51532272FFF0002AFDA1 /* Build configuration list for PBXNativeTarget "teslamoteUITests" */;
 			buildPhases = (
+				7C1A0DE68EEE6E797F6016A4 /* [CP] Check Pods Manifest.lock */,
 				3BEB51182272FFEE002AFDA1 /* Sources */,
 				3BEB51192272FFEE002AFDA1 /* Frameworks */,
 				3BEB511A2272FFEE002AFDA1 /* Resources */,
@@ -279,8 +354,10 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 3BEB51492272FFF0002AFDA1 /* Build configuration list for PBXNativeTarget "teslamote WatchKit App" */;
 			buildPhases = (
+				0D873F2B388A73DEB224004A /* [CP] Check Pods Manifest.lock */,
 				3BEB51232272FFEE002AFDA1 /* Resources */,
 				3BEB51482272FFF0002AFDA1 /* Embed App Extensions */,
+				8E05BE5B7AE916BC013417D6 /* Frameworks */,
 			);
 			buildRules = (
 			);
@@ -296,6 +373,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 3BEB51452272FFF0002AFDA1 /* Build configuration list for PBXNativeTarget "teslamote WatchKit Extension" */;
 			buildPhases = (
+				EB7997F4F4BB89918C9080F6 /* [CP] Check Pods Manifest.lock */,
 				3BEB51302272FFEF002AFDA1 /* Sources */,
 				3BEB51312272FFEF002AFDA1 /* Frameworks */,
 				3BEB51322272FFEF002AFDA1 /* Resources */,
@@ -403,6 +481,143 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		0D873F2B388A73DEB224004A /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-teslamote WatchKit App-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		386E16BED2B60CC8504FDA1C /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-teslamote/Pods-teslamote-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/ObjectMapper-iOS/ObjectMapper.framework",
+				"${BUILT_PRODUCTS_DIR}/TeslaKit-iOS/TeslaKit.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ObjectMapper.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/TeslaKit.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-teslamote/Pods-teslamote-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		662571BA017FCE3DCBE5253B /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-teslamoteTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7C1A0DE68EEE6E797F6016A4 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-teslamoteUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		EB7997F4F4BB89918C9080F6 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-teslamote WatchKit Extension-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FE2FC6C40B07D8DE3E02E457 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-teslamote-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		3BEB50F92272FFEC002AFDA1 /* Sources */ = {
@@ -611,6 +826,7 @@
 		};
 		3BEB51462272FFF0002AFDA1 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = EF119DCC4445B1B358B5B284 /* Pods-teslamote WatchKit Extension.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
 				CODE_SIGN_STYLE = Automatic;
@@ -633,6 +849,7 @@
 		};
 		3BEB51472272FFF0002AFDA1 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3B317AC166AC49DD7ECB0156 /* Pods-teslamote WatchKit Extension.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
 				CODE_SIGN_STYLE = Automatic;
@@ -655,6 +872,7 @@
 		};
 		3BEB514A2272FFF0002AFDA1 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 66F13300EA99F075115D07AC /* Pods-teslamote WatchKit App.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -674,6 +892,7 @@
 		};
 		3BEB514B2272FFF0002AFDA1 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C1E1B12250DE19E78F9A49E3 /* Pods-teslamote WatchKit App.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -693,6 +912,7 @@
 		};
 		3BEB514E2272FFF0002AFDA1 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = FA3522F6FEF393CF1F7DBCA6 /* Pods-teslamote.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -711,6 +931,7 @@
 		};
 		3BEB514F2272FFF0002AFDA1 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9A6B9295A302FA0A6026367D /* Pods-teslamote.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -729,6 +950,7 @@
 		};
 		3BEB51512272FFF0002AFDA1 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B63445DFF6869541AE2C8BEA /* Pods-teslamoteTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -750,6 +972,7 @@
 		};
 		3BEB51522272FFF0002AFDA1 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C5B23ECA4C1EEA10CC8AAA61 /* Pods-teslamoteTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -771,6 +994,7 @@
 		};
 		3BEB51542272FFF0002AFDA1 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3D4F35ED91C1BE32F1F0158F /* Pods-teslamoteUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -791,6 +1015,7 @@
 		};
 		3BEB51552272FFF0002AFDA1 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4AE19EA8BBD67053757B6A97 /* Pods-teslamoteUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
