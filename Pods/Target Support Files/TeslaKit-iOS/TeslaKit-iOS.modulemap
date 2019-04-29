@@ -1,0 +1,6 @@
+framework module TeslaKit {
+  umbrella header "TeslaKit-iOS-umbrella.h"
+
+  export *
+  module * { export * }
+}

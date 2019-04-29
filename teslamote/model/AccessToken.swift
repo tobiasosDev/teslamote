@@ -7,9 +7,9 @@
 //
 
 import Foundation
-import RealmSwift
 
 
-class AccessToken: Object {
-    @objc dynamic var token = ""
+class AccessToken {
+    var token: String = ""
+    var carId: String = ""
 }

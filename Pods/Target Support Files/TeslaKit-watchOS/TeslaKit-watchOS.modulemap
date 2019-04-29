@@ -1,5 +1,5 @@
 framework module TeslaKit {
-  umbrella header "TeslaKit-umbrella.h"
+  umbrella header "TeslaKit-watchOS-umbrella.h"
 
   export *
   module * { export * }

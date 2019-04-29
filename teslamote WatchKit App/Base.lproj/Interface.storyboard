@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="14460.31" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="AgC-eL-Hgc">
+<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="14490.70" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="AgC-eL-Hgc">
     <device id="watch44" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="watchOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="14460.16"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="14490.21"/>
     </dependencies>
     <scenes>
         <!--Interface Controller-->
@@ -16,8 +16,40 @@
                     <items>
                         <group width="1" height="63" alignment="left" spacing="5" id="FfX-l3-cK2">
                             <items>
-                                <button width="0.5" height="1" alignment="left" title="Koffer" id="sEe-fK-iGF"/>
-                                <button width="0.5" height="1" alignment="left" title="Öffnen" id="Rce-ws-Ijh"/>
+                                <group width="0.5" height="1" alignment="left" layout="vertical" radius="10" id="xOL-9I-5t3" userLabel="FrunkButton">
+                                    <items>
+                                        <imageView width="0.90000000000000002" height="0.5" alignment="center" verticalAlignment="center" image="trunk" contentMode="scaleAspectFit" id="No7-eu-8wy"/>
+                                        <label alignment="center" verticalAlignment="center" text="Trunk" id="nZT-tv-phb"/>
+                                    </items>
+                                    <gestureRecognizers>
+                                        <tapGestureRecognizer id="ARN-u4-Yre" userLabel="FrunkEvent">
+                                            <connections>
+                                                <action selector="openTrunk:" destination="AgC-eL-Hgc" id="pyS-9C-V8y"/>
+                                            </connections>
+                                        </tapGestureRecognizer>
+                                    </gestureRecognizers>
+                                    <color key="backgroundColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
+                                </group>
+                                <group width="0.5" height="1" alignment="left" layout="vertical" radius="10" id="tdL-n3-BSI" userLabel="LockUnlockButton">
+                                    <items>
+                                        <imageView width="0.90000000000000002" height="0.5" alignment="center" verticalAlignment="center" image="lock" contentMode="scaleAspectFit" id="gdH-bb-nfd"/>
+                                        <label alignment="center" verticalAlignment="center" text="Lock" id="ST2-J9-YDh"/>
+                                    </items>
+                                    <gestureRecognizers>
+                                        <tapGestureRecognizer id="TYq-ka-zKP" userLabel="OpenCarEvent">
+                                            <connections>
+                                                <action selector="openCar:" destination="AgC-eL-Hgc" id="OKb-0w-heb"/>
+                                            </connections>
+                                        </tapGestureRecognizer>
+                                    </gestureRecognizers>
+                                    <color key="backgroundColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
+                                </group>
+                            </items>
+                        </group>
+                        <group width="1" alignment="left" id="dS6-YH-4G7">
+                            <items>
+                                <label alignment="left" text="192" id="Kao-Xt-d5O"/>
+                                <label alignment="left" text="Km" id="O7t-Wo-rRr"/>
                             </items>
                         </group>
                         <group width="1" alignment="left" id="I9Q-2H-w62">
@@ -79,9 +111,32 @@
                             </items>
                             <color key="backgroundColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
                         </group>
+                        <group width="1" alignment="left" id="iOo-A3-587">
+                            <items>
+                                <imageView width="50" height="0.69999999999999996" alignment="left" verticalAlignment="center" image="location" contentMode="scaleAspectFit" id="vSd-oI-mK3">
+                                    <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </imageView>
+                                <group alignment="left" layout="vertical" id="gC1-eX-Q8A">
+                                    <items>
+                                        <label alignment="left" text="Location" id="b3z-3a-A5Z">
+                                            <fontDescription key="font" type="system" pointSize="14"/>
+                                        </label>
+                                        <label alignment="left" text="Bahnhofstrasse 2" textAlignment="left" id="s0D-L7-wDi">
+                                            <fontDescription key="font" type="system" weight="thin" pointSize="12"/>
+                                        </label>
+                                    </items>
+                                </group>
+                            </items>
+                            <color key="backgroundColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
+                        </group>
                     </items>
                     <connections>
-                        <outlet property="controlsLabel" destination="Kir-CG-W6Y" id="ZEL-5Z-Y2m"/>
+                        <outlet property="chargingLabel" destination="1CV-u7-tsD" id="ahj-FA-wqH"/>
+                        <outlet property="controllsLabel" destination="Kir-CG-W6Y" id="fdw-6O-Dk1"/>
+                        <outlet property="distanceLabel" destination="Kao-Xt-d5O" id="f7S-he-gno"/>
+                        <outlet property="locationLabel" destination="s0D-L7-wDi" id="7fJ-dK-wKK"/>
+                        <outlet property="lockOpenLabel" destination="ST2-J9-YDh" id="K1W-pE-Hdl"/>
+                        <outlet property="temperaturLabel" destination="9hb-hz-LIl" id="aCP-HT-se5"/>
                     </connections>
                 </controller>
             </objects>
@@ -110,6 +165,148 @@
                 <controller id="4sK-HA-Art" customClass="NotificationController" customModule="teslamote_WatchKit_App" customModuleProvider="target"/>
             </objects>
             <point key="canvasLocation" x="615" y="794"/>
+        </scene>
+        <!--Controls Controller-->
+        <scene sceneID="NWQ-91-mHh">
+            <objects>
+                <controller id="Yuj-Rd-8PV" userLabel="Controls Controller">
+                    <items>
+                        <group width="1" alignment="left" id="g1q-bo-YFs">
+                            <items>
+                                <group width="1" height="63" alignment="left" spacing="5" id="FYY-aU-N3l">
+                                    <items>
+                                        <group width="0.5" height="1" alignment="left" layout="vertical" radius="10" id="LDp-9Y-8ZE" userLabel="FrunkButton">
+                                            <items>
+                                                <imageView width="0.90000000000000002" height="0.5" alignment="center" verticalAlignment="center" image="trunk" contentMode="scaleAspectFit" id="Lhy-bV-tmw"/>
+                                                <label alignment="center" verticalAlignment="center" text="Trunk" id="ua7-V2-ujD"/>
+                                            </items>
+                                            <gestureRecognizers>
+                                                <tapGestureRecognizer id="gBb-7E-Lf9" userLabel="FrunkEvent">
+                                                    <connections>
+                                                        <action selector="openTrunk:" destination="AgC-eL-Hgc" id="fQP-IH-Q3p"/>
+                                                    </connections>
+                                                </tapGestureRecognizer>
+                                            </gestureRecognizers>
+                                            <color key="backgroundColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
+                                        </group>
+                                        <group width="0.5" height="1" alignment="left" layout="vertical" radius="10" id="ySm-qy-w8p" userLabel="LockUnlockButton">
+                                            <items>
+                                                <imageView width="0.90000000000000002" height="0.5" alignment="center" verticalAlignment="center" image="lock" contentMode="scaleAspectFit" id="FD8-pj-BvO"/>
+                                                <label alignment="center" verticalAlignment="center" text="Lock" id="A8R-wY-NHV"/>
+                                            </items>
+                                            <gestureRecognizers>
+                                                <tapGestureRecognizer id="KAk-Qd-iyZ" userLabel="OpenCarEvent">
+                                                    <connections>
+                                                        <action selector="openCar:" destination="AgC-eL-Hgc" id="qqC-mN-nGa"/>
+                                                    </connections>
+                                                </tapGestureRecognizer>
+                                            </gestureRecognizers>
+                                            <color key="backgroundColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
+                                        </group>
+                                    </items>
+                                </group>
+                            </items>
+                        </group>
+                        <group width="1" height="63" alignment="left" spacing="5" id="ETj-7D-kvq">
+                            <items>
+                                <group width="0.5" height="1" alignment="left" layout="vertical" radius="10" id="dN1-Pu-Ry1" userLabel="FrunkButton">
+                                    <items>
+                                        <imageView width="0.90000000000000002" height="0.5" alignment="center" verticalAlignment="center" image="trunk" contentMode="scaleAspectFit" id="PRa-O8-KVT"/>
+                                        <label alignment="center" verticalAlignment="center" text="Trunk" id="MZ0-4v-beR"/>
+                                    </items>
+                                    <gestureRecognizers>
+                                        <tapGestureRecognizer id="7Iz-0X-nJW" userLabel="FrunkEvent">
+                                            <connections>
+                                                <action selector="openTrunk:" destination="AgC-eL-Hgc" id="s5X-kc-Y0F"/>
+                                            </connections>
+                                        </tapGestureRecognizer>
+                                    </gestureRecognizers>
+                                    <color key="backgroundColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
+                                </group>
+                                <group width="0.5" height="1" alignment="left" layout="vertical" radius="10" id="tPR-SO-ZXy" userLabel="LockUnlockButton">
+                                    <items>
+                                        <imageView width="0.90000000000000002" height="0.5" alignment="center" verticalAlignment="center" image="lock" contentMode="scaleAspectFit" id="rNs-OQ-mq6"/>
+                                        <label alignment="center" verticalAlignment="center" text="Lock" id="vVp-Nr-iAU"/>
+                                    </items>
+                                    <gestureRecognizers>
+                                        <tapGestureRecognizer id="jh1-1z-wLT" userLabel="OpenCarEvent">
+                                            <connections>
+                                                <action selector="openCar:" destination="AgC-eL-Hgc" id="ej8-nH-taM"/>
+                                            </connections>
+                                        </tapGestureRecognizer>
+                                    </gestureRecognizers>
+                                    <color key="backgroundColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
+                                </group>
+                            </items>
+                        </group>
+                        <group width="1" height="63" alignment="left" spacing="5" id="1Th-RY-Qzb">
+                            <items>
+                                <group width="0.5" height="1" alignment="left" layout="vertical" radius="10" id="lau-mA-dRs" userLabel="FrunkButton">
+                                    <items>
+                                        <imageView width="0.90000000000000002" height="0.5" alignment="center" verticalAlignment="center" image="trunk" contentMode="scaleAspectFit" id="knR-mz-HZc"/>
+                                        <label alignment="center" verticalAlignment="center" text="Trunk" id="hbh-b5-xfk"/>
+                                    </items>
+                                    <gestureRecognizers>
+                                        <tapGestureRecognizer id="VKj-p5-dds" userLabel="FrunkEvent">
+                                            <connections>
+                                                <action selector="openTrunk:" destination="AgC-eL-Hgc" id="WME-IJ-cl8"/>
+                                            </connections>
+                                        </tapGestureRecognizer>
+                                    </gestureRecognizers>
+                                    <color key="backgroundColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
+                                </group>
+                                <group width="0.5" height="1" alignment="left" layout="vertical" radius="10" id="yda-HV-APK" userLabel="LockUnlockButton">
+                                    <items>
+                                        <imageView width="0.90000000000000002" height="0.5" alignment="center" verticalAlignment="center" image="lock" contentMode="scaleAspectFit" id="YUN-Cd-eCG"/>
+                                        <label alignment="center" verticalAlignment="center" text="Lock" id="W4d-jM-am5"/>
+                                    </items>
+                                    <gestureRecognizers>
+                                        <tapGestureRecognizer id="6Wu-bn-q0O" userLabel="OpenCarEvent">
+                                            <connections>
+                                                <action selector="openCar:" destination="AgC-eL-Hgc" id="857-1o-ubb"/>
+                                            </connections>
+                                        </tapGestureRecognizer>
+                                    </gestureRecognizers>
+                                    <color key="backgroundColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
+                                </group>
+                            </items>
+                        </group>
+                        <group width="1" height="63" alignment="left" spacing="5" id="Coy-uT-Gp9">
+                            <items>
+                                <group width="0.5" height="1" alignment="left" layout="vertical" radius="10" id="ATV-uN-vEm" userLabel="FrunkButton">
+                                    <items>
+                                        <imageView width="0.90000000000000002" height="0.5" alignment="center" verticalAlignment="center" image="trunk" contentMode="scaleAspectFit" id="O0S-Td-kAT"/>
+                                        <label alignment="center" verticalAlignment="center" text="Trunk" id="bC4-WJ-vVd"/>
+                                    </items>
+                                    <gestureRecognizers>
+                                        <tapGestureRecognizer id="UPT-ok-i7I" userLabel="FrunkEvent">
+                                            <connections>
+                                                <action selector="openTrunk:" destination="AgC-eL-Hgc" id="vvh-Ng-DHk"/>
+                                            </connections>
+                                        </tapGestureRecognizer>
+                                    </gestureRecognizers>
+                                    <color key="backgroundColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
+                                </group>
+                                <group width="0.5" height="1" alignment="left" layout="vertical" radius="10" id="OZy-nC-w7h" userLabel="LockUnlockButton">
+                                    <items>
+                                        <imageView width="0.90000000000000002" height="0.5" alignment="center" verticalAlignment="center" image="lock" contentMode="scaleAspectFit" id="dcD-Dh-FaC"/>
+                                        <label alignment="center" verticalAlignment="center" text="Lock" id="3BY-q3-RRc"/>
+                                    </items>
+                                    <gestureRecognizers>
+                                        <tapGestureRecognizer id="HqR-K0-bpO" userLabel="OpenCarEvent">
+                                            <connections>
+                                                <action selector="openCar:" destination="AgC-eL-Hgc" id="QVj-zM-S5I"/>
+                                            </connections>
+                                        </tapGestureRecognizer>
+                                    </gestureRecognizers>
+                                    <color key="backgroundColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
+                                </group>
+                            </items>
+                        </group>
+                    </items>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="555" y="186"/>
         </scene>
         <!--Notification Controller-->
         <scene sceneID="Niz-AI-uX2">

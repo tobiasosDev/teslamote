@@ -16,6 +16,7 @@ class SessionHandler : NSObject, WCSessionDelegate {
     // 1: Singleton
     static let shared = SessionHandler()
     public let teslaAPI = TeslaAPI()
+    public var accessToken = AccessToken()
     
     // 2: Property to manage session
     private var session = WCSession.default
@@ -27,6 +28,7 @@ class SessionHandler : NSObject, WCSessionDelegate {
         if isSuported() {
             session.delegate = self
             session.activate()
+            self.loadAccessToken()
         }
         
         print("isPaired?: \(session.isPaired), isWatchAppInstalled?: \(session.isWatchAppInstalled)")
@@ -63,6 +65,16 @@ class SessionHandler : NSObject, WCSessionDelegate {
         self.session.activate()
     }
     
+    func loadAccessToken() {
+        if NSUbiquitousKeyValueStore.default.string(forKey: "token") != nil {
+            let accessToken: AccessToken = AccessToken()
+            accessToken.carId = NSUbiquitousKeyValueStore.default.string(forKey: "carId")!
+            accessToken.token = NSUbiquitousKeyValueStore.default.string(forKey: "token")!
+            self.accessToken = accessToken;
+            self.teslaAPI.setAccessToken(accessToken.token)
+        }
+    }
+    
     /// Observer to receive messages from watch and we be able to response it
     ///
     /// - Parameters:
@@ -70,8 +82,30 @@ class SessionHandler : NSObject, WCSessionDelegate {
     ///   - message: message received
     ///   - replyHandler: response handler
     func session(_ session: WCSession, didReceiveMessage message: [String : Any], replyHandler: @escaping ([String : Any]) -> Void) {
+        if self.accessToken.token == "" {
+            self.loadAccessToken()
+        }
         if message["request"] as? String == "status" {
             replyHandler(["status" : "\(Bundle.main.object(forInfoDictionaryKey: "CFBundleShortVersionString") ?? "No version")"])
+        }
+        
+        if message["request"] as? String == "token" {
+            replyHandler(["token" : self.accessToken.token])
+        }
+        
+        
+        if message["request"] as? String == "infos" {
+            print("CarId: \(self.accessToken.carId)")
+            self.teslaAPI.getData(self.accessToken.carId) { (httpResponse, dataOrNil, errorOrNil) in
+                
+                guard let infos = dataOrNil else { return }
+                
+                print("Battery is at \(infos.chargeState.batteryLevel)%")
+                replyHandler(["infos" : infos])
+                
+                print("Battery is at \(infos.chargeState.batteryLevel)%")
+                print("Temperatur is \(String(describing: infos.climateState.insideTemperature))")
+            }
         }
     }
     

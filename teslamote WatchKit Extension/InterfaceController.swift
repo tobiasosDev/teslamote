@@ -8,13 +8,19 @@
 
 import WatchKit
 import Foundation
-import WatchConnectivity
+import TeslaKit
 
 class InterfaceController: WKInterfaceController {
+    static var token = ""
+    private let teslaAPI = TeslaAPI()
+    private var vehicle: Vehicle = Vehicle()
+    @IBOutlet weak var controllsLabel: WKInterfaceLabel!
+    @IBOutlet weak var temperaturLabel: WKInterfaceLabel!
+    @IBOutlet weak var chargingLabel: WKInterfaceLabel!
+    @IBOutlet weak var distanceLabel: WKInterfaceLabel!
+    @IBOutlet weak var locationLabel: WKInterfaceLabel!
+    @IBOutlet weak var lockOpenLabel: WKInterfaceLabel!
     
-    // 1: Session property
-    private var session = WCSession.default
-    @IBOutlet weak var controlsLabel: WKInterfaceLabel!
     
     override func awake(withContext context: Any?) {
         super.awake(withContext: context)
@@ -26,12 +32,11 @@ class InterfaceController: WKInterfaceController {
         // This method is called when watch view controller is about to be visible to user
         super.willActivate()
         
-        // 2: Initialization of session and set as delegate this InterfaceController if it's supported
-        if isSuported() {
-            session.delegate = self
-            session.activate()
-        }
         
+    }
+    
+    override func didAppear() {
+        self.getAccessToken()
     }
     
     override func didDeactivate() {
@@ -39,25 +44,64 @@ class InterfaceController: WKInterfaceController {
         super.didDeactivate()
     }
     
-    private func isSuported() -> Bool {
-        return WCSession.isSupported()
+    @IBAction func openTrunk(_ sender: Any) {
+        teslaAPI.send(.openTrunk, to: vehicle) { (repsonse) in
+            if repsonse.result {
+                self.getCarInformation()
+            }
+        }
     }
     
-    private func isReachable() -> Bool {
-        return session.isReachable
+    
+    @IBAction func openCar(_ sender: Any) {
+        let command = self.vehicle.vehicleState.locked ? Command.unlockDoors : Command.lockDoors
+        
+        teslaAPI.send(command, to: vehicle) { (repsonse) in
+            if repsonse.result {
+                self.getCarInformation()
+            }
+        }
     }
     
-    
-    
-
-    func getCarInformation() {
-        session.sendMessage(["request" : "status"], replyHandler: { (response: [String : Any]) in
-            self.controlsLabel.setText(response.first(where: {$0.key == "status"})?.value as? String)
+    func getAccessToken() {
+        session.sendMessage(["request" : "token"], replyHandler: { (response: [String : Any]) in
+            self.token = (response.first(where: {$0.key == "token"})?.value as! String)
+            self.teslaAPI.setAccessToken(self.token)
+            
+            self.teslaAPI.getVehicles { (httpResponse, dataOrNil, errorOrNil) in
+                
+                self.vehicle = (dataOrNil?.vehicles.first)!
+                
+                print("Hello, \(self.vehicle.displayName)")
+                print("id: \(self.vehicle.id)")
+                print("vhicleid: \(self.vehicle.vehicleId)")
+                self.teslaAPI.wake(self.vehicle, completion: { (res, _, err) in
+                    
+                    guard res else { return }
+                    self.getCarInformation()
+                })
+            }
         }) { (Error) in
             print(Error)
         }
     }
-
+    
+    func getCarInformation() {
+       
+            
+            self.teslaAPI.getData(for: self.vehicle, completion: { (res, data, err) in
+                self.vehicle = data!
+                self.controllsLabel.setText("Trunk \(self.vehicle.vehicleState.isRearTrunkOpen ? "open" : "closed" )")
+                self.temperaturLabel.setText("Innen \(String(describing: self.vehicle.climateState.insideTemperature!)) °C")
+                self.chargingLabel.setText("Charged: \(self.vehicle.chargeState.batteryLevel )%")
+                self.distanceLabel.setText(String(self.vehicle.chargeState.estBatteryRange))
+                self.lockOpenLabel.setText(self.vehicle.vehicleState.locked ? "Öffnen" : "Schliessen")
+                // self.locationLabel.setText(vehicleInfo.driveState.)
+            })
+        
+    }
+    
+    
 }
 
 extension InterfaceController: WCSessionDelegate {

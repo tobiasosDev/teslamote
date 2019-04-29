@@ -35,5 +35,6 @@ target 'teslamote WatchKit Extension' do
   use_frameworks!
 
   # Pods for teslamote WatchKit Extension
+  pod 'TeslaKit'
 
 end
