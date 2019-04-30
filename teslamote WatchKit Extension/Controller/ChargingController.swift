@@ -16,6 +16,8 @@ class ChargingController: WKInterfaceController {
     @IBOutlet weak var batteryDistanceLabel: WKInterfaceLabel!
     @IBOutlet weak var batteryChargingLimitLabel: WKInterfaceLabel!
     @IBOutlet weak var chargePortOpenCloseLabel: WKInterfaceLabel!
+    @IBOutlet weak var progressBarDistance: WKInterfaceImage!
+    @IBOutlet weak var batterChargeLimitSlider: WKInterfaceSlider!
     
     override func awake(withContext context: Any?) {
         super.awake(withContext: context)
@@ -44,11 +46,12 @@ class ChargingController: WKInterfaceController {
         }
     }
     @IBAction func setChargeLimit(_ value: Float) {
+        self.batteryChargingLimitLabel.setText(String(value))
         let parameters = SetChargeLimit(limitValue: Double(value))
         self.teslaAPI.send(.setChargeLimit, to: SessionManger.vehicle, parameters: parameters) { (repsonse) in
             if repsonse.result {
                 // self.getCarInformation()
-                self.batteryChargingLimitLabel.setText(String(value))
+                self.getCarInformation()
             }
         }
     }
@@ -62,8 +65,10 @@ class ChargingController: WKInterfaceController {
     }
     
     func setCarInformation() {
-        batteryDistanceLabel.setText(String((SessionManger.vehicle.chargeState.estBatteryRange * 1.609344).rounded()))
-        batteryChargingLimitLabel.setText(String(SessionManger.vehicle.chargeState.chargeLimitSoc))
-        chargePortOpenCloseLabel.setText(SessionManger.vehicle.chargeState.chargePortDoorOpen ? "Close charge Port" : "Open charge Port")
+        self.batteryDistanceLabel.setText(String((SessionManger.vehicle.chargeState.estBatteryRange * 1.609344).rounded()))
+        self.batteryChargingLimitLabel.setText(String(SessionManger.vehicle.chargeState.chargeLimitSoc))
+        self.chargePortOpenCloseLabel.setText(SessionManger.vehicle.chargeState.chargePortDoorOpen ? "Close charge Port" : "Open charge Port")
+        self.batterChargeLimitSlider.setValue(Float(SessionManger.vehicle.chargeState.chargeLimitSoc))
+        self.progressBarDistance.setRelativeWidth((CGFloat(SessionManger.vehicle.chargeState.batteryLevel / 100)), withAdjustment: 0)
     }
 }

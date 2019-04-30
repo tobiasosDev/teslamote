@@ -2,7 +2,7 @@
   "images" : [
     {
       "idiom" : "universal",
-      "filename" : "chargingLimitEmpty.png",
+      "filename" : "progressEmpty.png",
       "scale" : "1x"
     },
     {

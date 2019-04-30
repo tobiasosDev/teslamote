@@ -4,7 +4,6 @@
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <deployment identifier="watchOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="14490.21"/>
     </dependencies>
@@ -319,11 +318,16 @@
                         <group width="1" alignment="left" id="vra-Xz-REE">
                             <items>
                                 <label alignment="center" verticalAlignment="bottom" text="192" id="5E7-tQ-98g">
-                                    <fontDescription key="font" type="boldSystem" pointSize="16"/>
+                                    <fontDescription key="font" type="boldSystem" pointSize="19"/>
                                 </label>
                                 <label alignment="center" verticalAlignment="bottom" text="Km" id="Qw1-JQ-puw">
-                                    <fontDescription key="font" type="system" pointSize="12"/>
+                                    <fontDescription key="font" type="system" pointSize="14"/>
                                 </label>
+                            </items>
+                        </group>
+                        <group width="1" alignment="left" backgroundImage="progressEmpty" id="PwF-vT-XIb">
+                            <items>
+                                <imageView width="1" height="18" alignment="left" image="progressFull" id="hyj-4c-66a"/>
                             </items>
                         </group>
                         <group width="1" height="35" alignment="left" id="CQJ-fV-fMM">
@@ -360,7 +364,7 @@
                         </group>
                         <group width="1" alignment="left" radius="20" id="8Is-T1-nq8">
                             <items>
-                                <slider width="1" alignment="left" continuous="YES" value="80" maximum="100" steps="5" minimumImage="chargingLimitEmpty" maximumImage="chargingLimitFull" id="CT6-6V-HT4">
+                                <slider alignment="left" continuous="YES" value="80" maximum="100" steps="20" id="CT6-6V-HT4">
                                     <connections>
                                         <action selector="setChargeLimit:" destination="oVt-OK-JLZ" id="GvF-4M-zRF"/>
                                     </connections>
@@ -369,13 +373,15 @@
                         </group>
                     </items>
                     <connections>
+                        <outlet property="batterChargeLimitSlider" destination="CT6-6V-HT4" id="gGo-Br-Neq"/>
                         <outlet property="batteryChargingLimitLabel" destination="KD7-6p-FDr" id="FgL-oD-hdV"/>
                         <outlet property="batteryDistanceLabel" destination="5E7-tQ-98g" id="FkI-wW-4e8"/>
                         <outlet property="chargePortOpenCloseLabel" destination="OlP-ym-Fdh" id="Mwe-Ig-Tfh"/>
+                        <outlet property="progressBarDistance" destination="hyj-4c-66a" id="oV9-T7-rhz"/>
                     </connections>
                 </controller>
             </objects>
-            <point key="canvasLocation" x="628" y="-102"/>
+            <point key="canvasLocation" x="627.52173913043475" y="-102.45535714285714"/>
         </scene>
         <!--Location-->
         <scene sceneID="Ck9-kC-sIF">
