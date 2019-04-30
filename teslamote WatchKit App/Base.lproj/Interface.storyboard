@@ -12,7 +12,7 @@
         <!--Interface Controller-->
         <scene sceneID="aou-V4-d1y">
             <objects>
-                <controller id="AgC-eL-Hgc" customClass="InterfaceController" customModule="teslamote_WatchKit_App" customModuleProvider="target">
+                <controller id="AgC-eL-Hgc" customClass="InterfaceController" customModule="teslamote_WatchKit_Extension">
                     <items>
                         <group width="1" height="63" alignment="left" spacing="5" id="FfX-l3-cK2">
                             <items>
@@ -48,32 +48,29 @@
                         </group>
                         <group width="1" alignment="left" id="dS6-YH-4G7">
                             <items>
-                                <label alignment="left" text="192" id="Kao-Xt-d5O"/>
-                                <label alignment="left" text="Km" id="O7t-Wo-rRr"/>
+                                <label alignment="left" verticalAlignment="bottom" text="192" id="Kao-Xt-d5O"/>
+                                <label alignment="left" verticalAlignment="bottom" text="Km" id="O7t-Wo-rRr">
+                                    <fontDescription key="font" type="system" pointSize="12"/>
+                                </label>
                             </items>
                         </group>
-                        <group width="1" alignment="left" id="I9Q-2H-w62">
+                        <group width="1" alignment="left" id="Bhk-mN-9Kg">
                             <items>
-                                <group width="1" alignment="left" id="Bhk-mN-9Kg">
+                                <imageView width="50" height="0.69999999999999996" alignment="left" verticalAlignment="center" image="temperature" contentMode="scaleAspectFit" id="mlh-JT-OBH">
+                                    <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </imageView>
+                                <group alignment="left" layout="vertical" id="8qV-ef-RTw">
                                     <items>
-                                        <imageView width="50" height="0.69999999999999996" alignment="left" verticalAlignment="center" image="temperature" contentMode="scaleAspectFit" id="mlh-JT-OBH">
-                                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        </imageView>
-                                        <group alignment="left" layout="vertical" id="8qV-ef-RTw">
-                                            <items>
-                                                <label alignment="left" text="Temperatur" id="cQo-Ls-9nA">
-                                                    <fontDescription key="font" type="system" pointSize="14"/>
-                                                </label>
-                                                <label alignment="left" text="Innen 17°C" textAlignment="left" id="9hb-hz-LIl">
-                                                    <fontDescription key="font" type="system" weight="thin" pointSize="12"/>
-                                                </label>
-                                            </items>
-                                        </group>
+                                        <label alignment="left" text="Temperatur" id="cQo-Ls-9nA">
+                                            <fontDescription key="font" type="system" pointSize="14"/>
+                                        </label>
+                                        <label alignment="left" text="Innen 17°C" textAlignment="left" id="9hb-hz-LIl">
+                                            <fontDescription key="font" type="system" weight="thin" pointSize="12"/>
+                                        </label>
                                     </items>
-                                    <color key="backgroundColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
                                 </group>
-                                <label alignment="left" text="180 Km" id="AR2-Q7-A3m"/>
                             </items>
+                            <color key="backgroundColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
                         </group>
                         <group width="1" alignment="left" id="zjZ-l5-NnI">
                             <items>
@@ -91,6 +88,13 @@
                                     </items>
                                 </group>
                             </items>
+                            <gestureRecognizers>
+                                <tapGestureRecognizer id="fTB-Y7-G4n" userLabel="GoToControls">
+                                    <connections>
+                                        <action selector="goToControlsPage:" destination="AgC-eL-Hgc" id="GWE-Oc-gKU"/>
+                                    </connections>
+                                </tapGestureRecognizer>
+                            </gestureRecognizers>
                             <color key="backgroundColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
                         </group>
                         <group width="1" alignment="left" id="MVH-w0-tbK">
@@ -109,6 +113,13 @@
                                     </items>
                                 </group>
                             </items>
+                            <gestureRecognizers>
+                                <tapGestureRecognizer id="Rrn-4K-Yy2" userLabel="GoToCharging">
+                                    <connections>
+                                        <action selector="goToChargingPage:" destination="AgC-eL-Hgc" id="xjh-zP-wFb"/>
+                                    </connections>
+                                </tapGestureRecognizer>
+                            </gestureRecognizers>
                             <color key="backgroundColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
                         </group>
                         <group width="1" alignment="left" id="iOo-A3-587">
@@ -127,6 +138,13 @@
                                     </items>
                                 </group>
                             </items>
+                            <gestureRecognizers>
+                                <tapGestureRecognizer id="c3F-5R-oU0" userLabel="LocationButton">
+                                    <connections>
+                                        <action selector="goToLocationPage:" destination="AgC-eL-Hgc" id="alh-5U-lV6"/>
+                                    </connections>
+                                </tapGestureRecognizer>
+                            </gestureRecognizers>
                             <color key="backgroundColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
                         </group>
                     </items>
@@ -140,7 +158,7 @@
                     </connections>
                 </controller>
             </objects>
-            <point key="canvasLocation" x="229" y="244"/>
+            <point key="canvasLocation" x="186" y="-71"/>
         </scene>
         <!--Static Notification Interface Controller-->
         <scene sceneID="AEw-b0-oYE">
@@ -169,21 +187,21 @@
         <!--Controls Controller-->
         <scene sceneID="NWQ-91-mHh">
             <objects>
-                <controller id="Yuj-Rd-8PV" userLabel="Controls Controller">
+                <controller identifier="controlsController" title="Controls" id="Yuj-Rd-8PV" userLabel="Controls Controller" customClass="ControlsController" customModule="teslamote_WatchKit_Extension">
                     <items>
                         <group width="1" alignment="left" id="g1q-bo-YFs">
                             <items>
                                 <group width="1" height="63" alignment="left" spacing="5" id="FYY-aU-N3l">
                                     <items>
-                                        <group width="0.5" height="1" alignment="left" layout="vertical" radius="10" id="LDp-9Y-8ZE" userLabel="FrunkButton">
+                                        <group width="0.5" height="1" alignment="left" layout="vertical" radius="10" id="LDp-9Y-8ZE" userLabel="TrunkButton">
                                             <items>
                                                 <imageView width="0.90000000000000002" height="0.5" alignment="center" verticalAlignment="center" image="trunk" contentMode="scaleAspectFit" id="Lhy-bV-tmw"/>
                                                 <label alignment="center" verticalAlignment="center" text="Trunk" id="ua7-V2-ujD"/>
                                             </items>
                                             <gestureRecognizers>
-                                                <tapGestureRecognizer id="gBb-7E-Lf9" userLabel="FrunkEvent">
+                                                <tapGestureRecognizer id="gBb-7E-Lf9" userLabel="TrunkEvent">
                                                     <connections>
-                                                        <action selector="openTrunk:" destination="AgC-eL-Hgc" id="fQP-IH-Q3p"/>
+                                                        <action selector="openTrunk:" destination="Yuj-Rd-8PV" id="cur-p8-73y"/>
                                                     </connections>
                                                 </tapGestureRecognizer>
                                             </gestureRecognizers>
@@ -197,7 +215,7 @@
                                             <gestureRecognizers>
                                                 <tapGestureRecognizer id="KAk-Qd-iyZ" userLabel="OpenCarEvent">
                                                     <connections>
-                                                        <action selector="openCar:" destination="AgC-eL-Hgc" id="qqC-mN-nGa"/>
+                                                        <action selector="lockUnlockCar:" destination="Yuj-Rd-8PV" id="0K2-sC-gtj"/>
                                                     </connections>
                                                 </tapGestureRecognizer>
                                             </gestureRecognizers>
@@ -209,29 +227,29 @@
                         </group>
                         <group width="1" height="63" alignment="left" spacing="5" id="ETj-7D-kvq">
                             <items>
-                                <group width="0.5" height="1" alignment="left" layout="vertical" radius="10" id="dN1-Pu-Ry1" userLabel="FrunkButton">
+                                <group width="0.5" height="1" alignment="left" layout="vertical" radius="10" id="dN1-Pu-Ry1" userLabel="FlashButton">
                                     <items>
-                                        <imageView width="0.90000000000000002" height="0.5" alignment="center" verticalAlignment="center" image="trunk" contentMode="scaleAspectFit" id="PRa-O8-KVT"/>
-                                        <label alignment="center" verticalAlignment="center" text="Trunk" id="MZ0-4v-beR"/>
+                                        <imageView width="0.90000000000000002" height="0.5" alignment="center" verticalAlignment="center" image="light" contentMode="scaleAspectFit" id="PRa-O8-KVT"/>
+                                        <label alignment="center" verticalAlignment="center" text="Flash" id="MZ0-4v-beR"/>
                                     </items>
                                     <gestureRecognizers>
-                                        <tapGestureRecognizer id="7Iz-0X-nJW" userLabel="FrunkEvent">
+                                        <tapGestureRecognizer id="7Iz-0X-nJW" userLabel="FlashEvent">
                                             <connections>
-                                                <action selector="openTrunk:" destination="AgC-eL-Hgc" id="s5X-kc-Y0F"/>
+                                                <action selector="flashCar:" destination="Yuj-Rd-8PV" id="h12-Uj-G6c"/>
                                             </connections>
                                         </tapGestureRecognizer>
                                     </gestureRecognizers>
                                     <color key="backgroundColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
                                 </group>
-                                <group width="0.5" height="1" alignment="left" layout="vertical" radius="10" id="tPR-SO-ZXy" userLabel="LockUnlockButton">
+                                <group width="0.5" height="1" alignment="left" layout="vertical" radius="10" id="tPR-SO-ZXy" userLabel="HonkButton">
                                     <items>
-                                        <imageView width="0.90000000000000002" height="0.5" alignment="center" verticalAlignment="center" image="lock" contentMode="scaleAspectFit" id="rNs-OQ-mq6"/>
-                                        <label alignment="center" verticalAlignment="center" text="Lock" id="vVp-Nr-iAU"/>
+                                        <imageView width="0.90000000000000002" height="0.5" alignment="center" verticalAlignment="center" image="horn" contentMode="scaleAspectFit" id="rNs-OQ-mq6"/>
+                                        <label alignment="center" verticalAlignment="center" text="Honk" id="vVp-Nr-iAU"/>
                                     </items>
                                     <gestureRecognizers>
-                                        <tapGestureRecognizer id="jh1-1z-wLT" userLabel="OpenCarEvent">
+                                        <tapGestureRecognizer id="jh1-1z-wLT" userLabel="HonkEvent">
                                             <connections>
-                                                <action selector="openCar:" destination="AgC-eL-Hgc" id="ej8-nH-taM"/>
+                                                <action selector="honkCar:" destination="Yuj-Rd-8PV" id="CmW-By-2eb"/>
                                             </connections>
                                         </tapGestureRecognizer>
                                     </gestureRecognizers>
@@ -241,29 +259,15 @@
                         </group>
                         <group width="1" height="63" alignment="left" spacing="5" id="1Th-RY-Qzb">
                             <items>
-                                <group width="0.5" height="1" alignment="left" layout="vertical" radius="10" id="lau-mA-dRs" userLabel="FrunkButton">
+                                <group width="0.5" height="1" alignment="left" layout="vertical" radius="10" id="lau-mA-dRs" userLabel="StartButton">
                                     <items>
-                                        <imageView width="0.90000000000000002" height="0.5" alignment="center" verticalAlignment="center" image="trunk" contentMode="scaleAspectFit" id="knR-mz-HZc"/>
-                                        <label alignment="center" verticalAlignment="center" text="Trunk" id="hbh-b5-xfk"/>
+                                        <imageView width="0.90000000000000002" height="0.5" alignment="center" verticalAlignment="center" image="keys" contentMode="scaleAspectFit" id="knR-mz-HZc"/>
+                                        <label alignment="center" verticalAlignment="center" text="Start" id="hbh-b5-xfk"/>
                                     </items>
                                     <gestureRecognizers>
-                                        <tapGestureRecognizer id="VKj-p5-dds" userLabel="FrunkEvent">
+                                        <tapGestureRecognizer id="VKj-p5-dds" userLabel="StartEvent">
                                             <connections>
-                                                <action selector="openTrunk:" destination="AgC-eL-Hgc" id="WME-IJ-cl8"/>
-                                            </connections>
-                                        </tapGestureRecognizer>
-                                    </gestureRecognizers>
-                                    <color key="backgroundColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
-                                </group>
-                                <group width="0.5" height="1" alignment="left" layout="vertical" radius="10" id="yda-HV-APK" userLabel="LockUnlockButton">
-                                    <items>
-                                        <imageView width="0.90000000000000002" height="0.5" alignment="center" verticalAlignment="center" image="lock" contentMode="scaleAspectFit" id="YUN-Cd-eCG"/>
-                                        <label alignment="center" verticalAlignment="center" text="Lock" id="W4d-jM-am5"/>
-                                    </items>
-                                    <gestureRecognizers>
-                                        <tapGestureRecognizer id="6Wu-bn-q0O" userLabel="OpenCarEvent">
-                                            <connections>
-                                                <action selector="openCar:" destination="AgC-eL-Hgc" id="857-1o-ubb"/>
+                                                <action selector="startCar:" destination="Yuj-Rd-8PV" id="tJK-0m-QKQ"/>
                                             </connections>
                                         </tapGestureRecognizer>
                                     </gestureRecognizers>
@@ -271,42 +275,121 @@
                                 </group>
                             </items>
                         </group>
-                        <group width="1" height="63" alignment="left" spacing="5" id="Coy-uT-Gp9">
+                        <switch width="1" alignment="left" title="Valet Mode" id="Cgk-gA-htf">
+                            <connections>
+                                <action selector="valetModeOnOff:" destination="Yuj-Rd-8PV" id="NLh-Wy-qUe"/>
+                            </connections>
+                        </switch>
+                        <switch width="1" alignment="left" title="Speed Limit" id="tj2-aL-2dM">
+                            <connections>
+                                <action selector="speedLimitOnOff:" destination="Yuj-Rd-8PV" id="dFY-a0-5Ie"/>
+                            </connections>
+                        </switch>
+                        <group width="1" height="50" alignment="left" id="gdy-yS-ZsM">
                             <items>
-                                <group width="0.5" height="1" alignment="left" layout="vertical" radius="10" id="ATV-uN-vEm" userLabel="FrunkButton">
-                                    <items>
-                                        <imageView width="0.90000000000000002" height="0.5" alignment="center" verticalAlignment="center" image="trunk" contentMode="scaleAspectFit" id="O0S-Td-kAT"/>
-                                        <label alignment="center" verticalAlignment="center" text="Trunk" id="bC4-WJ-vVd"/>
-                                    </items>
-                                    <gestureRecognizers>
-                                        <tapGestureRecognizer id="UPT-ok-i7I" userLabel="FrunkEvent">
-                                            <connections>
-                                                <action selector="openTrunk:" destination="AgC-eL-Hgc" id="vvh-Ng-DHk"/>
-                                            </connections>
-                                        </tapGestureRecognizer>
-                                    </gestureRecognizers>
-                                    <color key="backgroundColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
-                                </group>
-                                <group width="0.5" height="1" alignment="left" layout="vertical" radius="10" id="OZy-nC-w7h" userLabel="LockUnlockButton">
-                                    <items>
-                                        <imageView width="0.90000000000000002" height="0.5" alignment="center" verticalAlignment="center" image="lock" contentMode="scaleAspectFit" id="dcD-Dh-FaC"/>
-                                        <label alignment="center" verticalAlignment="center" text="Lock" id="3BY-q3-RRc"/>
-                                    </items>
-                                    <gestureRecognizers>
-                                        <tapGestureRecognizer id="HqR-K0-bpO" userLabel="OpenCarEvent">
-                                            <connections>
-                                                <action selector="openCar:" destination="AgC-eL-Hgc" id="QVj-zM-S5I"/>
-                                            </connections>
-                                        </tapGestureRecognizer>
-                                    </gestureRecognizers>
-                                    <color key="backgroundColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
-                                </group>
+                                <label alignment="center" verticalAlignment="bottom" text="100 Km/h" id="3Qt-Qx-iQx"/>
+                            </items>
+                        </group>
+                        <group width="1" alignment="left" radius="19" id="uhC-jT-C6c">
+                            <items>
+                                <slider width="1" alignment="left" continuous="YES" value="80" maximum="120" steps="5" id="JrW-Jd-K6v">
+                                    <connections>
+                                        <action selector="setSpeedLimit:" destination="Yuj-Rd-8PV" id="7WK-8q-oQj"/>
+                                    </connections>
+                                </slider>
                             </items>
                         </group>
                     </items>
+                    <connections>
+                        <outlet property="lockUnlockLabel" destination="A8R-wY-NHV" id="GIV-X7-TtX"/>
+                        <outlet property="speedLimitController" destination="JrW-Jd-K6v" id="phj-w2-rfl"/>
+                        <outlet property="speedLimitLabel" destination="3Qt-Qx-iQx" id="t9A-dU-XtJ"/>
+                        <outlet property="speedLimitSwitch" destination="tj2-aL-2dM" id="DFW-BN-ZsC"/>
+                        <outlet property="valetModeSwitch" destination="Cgk-gA-htf" id="Q8C-sP-uxd"/>
+                    </connections>
                 </controller>
             </objects>
-            <point key="canvasLocation" x="555" y="186"/>
+            <point key="canvasLocation" x="459" y="-578"/>
+        </scene>
+        <!--Charging Controller-->
+        <scene sceneID="Qbg-if-Ykg">
+            <objects>
+                <controller identifier="chargingController" title="Charging" id="oVt-OK-JLZ" userLabel="Charging Controller" customClass="ChargingController" customModule="teslamote_WatchKit_Extension">
+                    <items>
+                        <group width="1" alignment="left" id="vra-Xz-REE">
+                            <items>
+                                <label alignment="center" verticalAlignment="bottom" text="192" id="5E7-tQ-98g">
+                                    <fontDescription key="font" type="boldSystem" pointSize="16"/>
+                                </label>
+                                <label alignment="center" verticalAlignment="bottom" text="Km" id="Qw1-JQ-puw">
+                                    <fontDescription key="font" type="system" pointSize="12"/>
+                                </label>
+                            </items>
+                        </group>
+                        <group width="1" height="35" alignment="left" id="CQJ-fV-fMM">
+                            <items>
+                                <imageView width="50" height="0.69999999999999996" alignment="left" verticalAlignment="center" image="chargingPort" contentMode="scaleAspectFit" id="1xs-QJ-m1l">
+                                    <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </imageView>
+                                <group alignment="left" verticalAlignment="center" layout="vertical" id="DjE-nm-M3c">
+                                    <items>
+                                        <label alignment="left" text="Open Charge Port" id="OlP-ym-Fdh">
+                                            <fontDescription key="font" type="system" pointSize="14"/>
+                                        </label>
+                                    </items>
+                                </group>
+                            </items>
+                            <gestureRecognizers>
+                                <tapGestureRecognizer id="tyi-gd-JHJ" userLabel="ChargingPortButton">
+                                    <connections>
+                                        <action selector="openChargingPort:" destination="oVt-OK-JLZ" id="ogY-YB-hVS"/>
+                                    </connections>
+                                </tapGestureRecognizer>
+                            </gestureRecognizers>
+                            <color key="backgroundColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
+                        </group>
+                        <group width="1" height="50" alignment="left" id="fdB-VM-MVB">
+                            <items>
+                                <label alignment="center" verticalAlignment="bottom" text="Limit: " id="jGv-5b-Dnx">
+                                    <fontDescription key="font" type="system" pointSize="18"/>
+                                </label>
+                                <label alignment="center" verticalAlignment="bottom" text="80%" id="KD7-6p-FDr">
+                                    <fontDescription key="font" type="system" pointSize="18"/>
+                                </label>
+                            </items>
+                        </group>
+                        <group width="1" alignment="left" radius="20" id="8Is-T1-nq8">
+                            <items>
+                                <slider width="1" alignment="left" continuous="YES" value="80" maximum="100" steps="5" minimumImage="chargingLimitEmpty" maximumImage="chargingLimitFull" id="CT6-6V-HT4">
+                                    <connections>
+                                        <action selector="setChargeLimit:" destination="oVt-OK-JLZ" id="GvF-4M-zRF"/>
+                                    </connections>
+                                </slider>
+                            </items>
+                        </group>
+                    </items>
+                    <connections>
+                        <outlet property="batteryChargingLimitLabel" destination="KD7-6p-FDr" id="FgL-oD-hdV"/>
+                        <outlet property="batteryDistanceLabel" destination="5E7-tQ-98g" id="FkI-wW-4e8"/>
+                        <outlet property="chargePortOpenCloseLabel" destination="OlP-ym-Fdh" id="Mwe-Ig-Tfh"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="628" y="-102"/>
+        </scene>
+        <!--Location-->
+        <scene sceneID="Ck9-kC-sIF">
+            <objects>
+                <controller identifier="locationController" title="Location" id="eNE-xV-L6b" customClass="LocationController" customModule="teslamote_WatchKit_Extension">
+                    <items>
+                        <map width="1" height="1" alignment="left" id="Bme-f8-Je0"/>
+                    </items>
+                    <connections>
+                        <outlet property="mapObject" destination="Bme-f8-Je0" id="LLf-VB-gAG"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="627.52173913043475" y="189.73214285714286"/>
         </scene>
         <!--Notification Controller-->
         <scene sceneID="Niz-AI-uX2">

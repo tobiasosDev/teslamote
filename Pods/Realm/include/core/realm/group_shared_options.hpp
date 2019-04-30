@@ -31,8 +31,7 @@ struct SharedGroupOptions {
     enum class Durability : uint16_t {
         Full,
         MemOnly,
-        Async, ///< Not yet supported on windows.
-        Unsafe  // If you use this, you loose ACID property
+        Async ///< Not yet supported on windows.
     };
 
     explicit SharedGroupOptions(Durability level = Durability::Full, const char* key = nullptr,

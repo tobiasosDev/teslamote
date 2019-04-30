@@ -7,23 +7,9 @@
 //
 import WatchKit
 import WatchConnectivity
+import TeslaKit
 
-class SessionManger: NSObject, WCSessionDelegate {
-    // 1: Session property
-    private var session = WCSession.default
-    
-    static func initial() {
-        if isSuported() {
-            session.delegate = self
-            session.activate()
-        }
-    }
-    
-    private func isSuported() -> Bool {
-        return WCSession.isSupported()
-    }
-    
-    private func isReachable() -> Bool {
-        return session.isReachable
-    }
+class SessionManger: NSObject {
+    static var token: String = ""
+    static var vehicle: Vehicle = Vehicle()
 }

@@ -310,7 +310,7 @@ didCompleteWithError:(NSError *)error
         return;
     }
 
-    if (NSError *error = [self validateResponse:task.response data:_data]) {
+    if (![self validateResponse:task.response data:_data error:&error]) {
         _completionBlock(error, nil);
         return;
     }
@@ -330,10 +330,11 @@ didCompleteWithError:(NSError *)error
     _completionBlock(nil, (NSDictionary *)json);
 }
 
-- (NSError *)validateResponse:(NSURLResponse *)response data:(NSData *)data {
+- (BOOL)validateResponse:(NSURLResponse *)response data:(NSData *)data error:(NSError * __autoreleasing *)error {
     if (![response isKindOfClass:[NSHTTPURLResponse class]]) {
         // FIXME: Provide error message
-        return make_auth_error_bad_response();
+        *error = make_auth_error_bad_response();
+        return NO;
     }
 
     NSHTTPURLResponse *httpResponse = (NSHTTPURLResponse *)response;
@@ -352,22 +353,28 @@ didCompleteWithError:(NSError *)error
                 case RLMSyncAuthErrorExpiredPermissionOffer:
                 case RLMSyncAuthErrorAmbiguousPermissionOffer:
                 case RLMSyncAuthErrorFileCannotBeShared:
-                    return make_auth_error(responseModel);
+                    *error = make_auth_error(responseModel);
+                    break;
                 default:
                     // Right now we assume that any codes not described
                     // above are generic HTTP error codes.
-                    return make_auth_error_http_status(responseModel.status);
+                    *error = make_auth_error_http_status(responseModel.status);
+                    break;
             }
+        } else {
+            *error = make_auth_error_http_status(httpResponse.statusCode);
         }
-        return make_auth_error_http_status(httpResponse.statusCode);
+
+        return NO;
     }
 
     if (!data) {
         // FIXME: provide error message
-        return make_auth_error_bad_response();
+        *error = make_auth_error_bad_response();
+        return NO;
     }
 
-    return nil;
+    return YES;
 }
 
 - (RLMSyncErrorResponseModel *)responseModelFromData:(NSData *)data {
@@ -418,8 +425,6 @@ didCompleteWithError:(NSError *)error
 
     // Add the request to a task and start it
     [[session dataTaskWithRequest:request] resume];
-    // Tell the session to destroy itself once it's done with the request
-    [session finishTasksAndInvalidate];
 }
 @end
 

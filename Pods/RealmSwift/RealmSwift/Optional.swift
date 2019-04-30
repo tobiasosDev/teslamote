@@ -24,7 +24,7 @@ public protocol RealmOptionalType {
 
 public extension RealmOptionalType {
     /// :nodoc:
-    static func className() -> String {
+    public static func className() -> String {
         return ""
     }
 }

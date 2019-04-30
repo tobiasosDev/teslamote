@@ -163,9 +163,4 @@ public final class ObjectiveCSupport {
     public static func convert(object: RLMSyncConfiguration) -> SyncConfiguration {
         return SyncConfiguration(config: object)
     }
-
-    /// Convert a `RLMSyncSubscription` to a `SyncSubscription`.
-    public static func convert(object: RLMSyncSubscription) -> SyncSubscription<Object> {
-        return SyncSubscription(object)
-    }
 }

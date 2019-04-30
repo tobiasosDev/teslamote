@@ -1,10 +1,10 @@
 ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES
-FRAMEWORK_SEARCH_PATHS = $(inherited) "${PODS_CONFIGURATION_BUILD_DIR}/ObjectMapper-watchOS" "${PODS_CONFIGURATION_BUILD_DIR}/TeslaKit-watchOS"
+FRAMEWORK_SEARCH_PATHS = $(inherited) "${PODS_CONFIGURATION_BUILD_DIR}/EMTLoadingIndicator" "${PODS_CONFIGURATION_BUILD_DIR}/ObjectMapper-watchOS" "${PODS_CONFIGURATION_BUILD_DIR}/TeslaKit-watchOS"
 GCC_PREPROCESSOR_DEFINITIONS = $(inherited) COCOAPODS=1
-HEADER_SEARCH_PATHS = $(inherited) "${PODS_CONFIGURATION_BUILD_DIR}/ObjectMapper-watchOS/ObjectMapper.framework/Headers" "${PODS_CONFIGURATION_BUILD_DIR}/TeslaKit-watchOS/TeslaKit.framework/Headers"
 LD_RUNPATH_SEARCH_PATHS = $(inherited) '@executable_path/Frameworks' '@loader_path/Frameworks'
-OTHER_LDFLAGS = $(inherited) -framework "ObjectMapper" -framework "TeslaKit"
-OTHER_SWIFT_FLAGS = $(inherited) -D COCOAPODS
+OTHER_CFLAGS = $(inherited) -iquote "${PODS_CONFIGURATION_BUILD_DIR}/EMTLoadingIndicator/EMTLoadingIndicator.framework/Headers" -iquote "${PODS_CONFIGURATION_BUILD_DIR}/ObjectMapper-watchOS/ObjectMapper.framework/Headers" -iquote "${PODS_CONFIGURATION_BUILD_DIR}/TeslaKit-watchOS/TeslaKit.framework/Headers"
+OTHER_LDFLAGS = $(inherited) -framework "EMTLoadingIndicator" -framework "ObjectMapper" -framework "TeslaKit"
+OTHER_SWIFT_FLAGS = $(inherited) "-D" "COCOAPODS"
 PODS_BUILD_DIR = ${BUILD_DIR}
 PODS_CONFIGURATION_BUILD_DIR = ${PODS_BUILD_DIR}/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)
 PODS_PODFILE_DIR_PATH = ${SRCROOT}/.

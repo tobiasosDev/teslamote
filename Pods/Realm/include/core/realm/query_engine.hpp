@@ -744,11 +744,11 @@ public:
     {
     }
 
-    void aggregate_local_prepare(Action action, DataType col_id, bool is_nullable) override
+    void aggregate_local_prepare(Action action, DataType col_id, bool nullable) override
     {
         this->m_fastmode_disabled = (col_id == type_Float || col_id == type_Double);
         this->m_action = action;
-        this->m_find_callback_specialized = get_specialized_callback(action, col_id, is_nullable);
+        this->m_find_callback_specialized = get_specialized_callback(action, col_id, nullable);
     }
 
     size_t aggregate_local(QueryStateBase* st, size_t start, size_t end, size_t local_limit,
@@ -813,21 +813,21 @@ public:
 protected:
     using TFind_callback_specialized = typename BaseType::TFind_callback_specialized;
 
-    static TFind_callback_specialized get_specialized_callback(Action action, DataType col_id, bool is_nullable)
+    static TFind_callback_specialized get_specialized_callback(Action action, DataType col_id, bool nullable)
     {
         switch (action) {
             case act_Count:
-                return get_specialized_callback_2_int<act_Count>(col_id, is_nullable);
+                return get_specialized_callback_2_int<act_Count>(col_id, nullable);
             case act_Sum:
-                return get_specialized_callback_2<act_Sum>(col_id, is_nullable);
+                return get_specialized_callback_2<act_Sum>(col_id, nullable);
             case act_Max:
-                return get_specialized_callback_2<act_Max>(col_id, is_nullable);
+                return get_specialized_callback_2<act_Max>(col_id, nullable);
             case act_Min:
-                return get_specialized_callback_2<act_Min>(col_id, is_nullable);
+                return get_specialized_callback_2<act_Min>(col_id, nullable);
             case act_FindAll:
-                return get_specialized_callback_2_int<act_FindAll>(col_id, is_nullable);
+                return get_specialized_callback_2_int<act_FindAll>(col_id, nullable);
             case act_CallbackIdx:
-                return get_specialized_callback_2_int<act_CallbackIdx>(col_id, is_nullable);
+                return get_specialized_callback_2_int<act_CallbackIdx>(col_id, nullable);
             default:
                 break;
         }
@@ -836,15 +836,15 @@ protected:
     }
 
     template <Action TAction>
-    static TFind_callback_specialized get_specialized_callback_2(DataType col_id, bool is_nullable)
+    static TFind_callback_specialized get_specialized_callback_2(DataType col_id, bool nullable)
     {
         switch (col_id) {
             case type_Int:
-                return get_specialized_callback_3<TAction, type_Int>(is_nullable);
+                return get_specialized_callback_3<TAction, type_Int>(nullable);
             case type_Float:
-                return get_specialized_callback_3<TAction, type_Float>(is_nullable);
+                return get_specialized_callback_3<TAction, type_Float>(nullable);
             case type_Double:
-                return get_specialized_callback_3<TAction, type_Double>(is_nullable);
+                return get_specialized_callback_3<TAction, type_Double>(nullable);
             default:
                 break;
         }
@@ -853,19 +853,19 @@ protected:
     }
 
     template <Action TAction>
-    static TFind_callback_specialized get_specialized_callback_2_int(DataType col_id, bool is_nullable)
+    static TFind_callback_specialized get_specialized_callback_2_int(DataType col_id, bool nullable)
     {
         if (col_id == type_Int) {
-            return get_specialized_callback_3<TAction, type_Int>(is_nullable);
+            return get_specialized_callback_3<TAction, type_Int>(nullable);
         }
         REALM_ASSERT(false); // Invalid aggregate source column
         return nullptr;
     }
 
     template <Action TAction, DataType TDataType>
-    static TFind_callback_specialized get_specialized_callback_3(bool is_nullable)
+    static TFind_callback_specialized get_specialized_callback_3(bool nullable)
     {
-        if (is_nullable) {
+        if (nullable) {
             return &BaseType::template find_callback_specialization<TConditionFunction, TAction, TDataType, true>;
         }
         else {

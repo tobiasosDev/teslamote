@@ -18,7 +18,7 @@
 
 #import <Realm/RLMRealm.h>
 
-@class RLMFastEnumerator, RLMSyncSubscription;
+@class RLMFastEnumerator;
 
 NS_ASSUME_NONNULL_BEGIN
 
@@ -26,8 +26,6 @@ NS_ASSUME_NONNULL_BEGIN
 FOUNDATION_EXTERN void RLMDisableSyncToDisk(void);
 
 FOUNDATION_EXTERN NSData * _Nullable RLMRealmValidatedEncryptionKey(NSData *key);
-
-FOUNDATION_EXTERN RLMSyncSubscription *RLMCastToSyncSubscription(id obj);
 
 // Translate an in-flight exception resulting from an operation on a SharedGroup to
 // an NSError or NSException (if error is nil)

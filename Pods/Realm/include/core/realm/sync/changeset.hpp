@@ -218,7 +218,6 @@ private:
         void insert(size_t position, Instruction instr);
         void erase(size_t position);
         size_t size() const noexcept;
-        bool is_empty() const noexcept;
 
         Instruction& at(size_t pos) noexcept;
         const Instruction& at(size_t pos) const noexcept;
@@ -591,7 +590,7 @@ inline Changeset::iterator Changeset::erase_stable(const_iterator cpos)
     if (pos.m_pos >= pos.m_inner->size()) {
         do {
             ++pos.m_inner;
-        } while (pos.m_inner != end && pos.m_inner->is_empty());
+        } while (pos.m_inner != end && pos.m_inner->size() == 0);
         pos.m_pos = 0;
     }
     return pos;
@@ -629,14 +628,6 @@ inline size_t Changeset::InstructionContainer::size() const noexcept
     if (is_multi())
         return get_multi().instructions.size();
     return 1;
-}
-
-inline bool Changeset::InstructionContainer::is_empty() const noexcept
-{
-    if (is_multi()) {
-        return get_multi().instructions.empty();
-    }
-    return false;
 }
 
 inline Instruction& Changeset::InstructionContainer::at(size_t pos) noexcept

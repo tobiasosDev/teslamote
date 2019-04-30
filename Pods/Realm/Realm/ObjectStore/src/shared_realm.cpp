@@ -21,9 +21,7 @@
 #include "impl/collection_notifier.hpp"
 #include "impl/realm_coordinator.hpp"
 #include "impl/transact_log_handler.hpp"
-#include "util/fifo.hpp"
 
-#include "audit.hpp"
 #include "binding_context.hpp"
 #include "list.hpp"
 #include "object.hpp"
@@ -146,7 +144,7 @@ REALM_NOINLINE static void translate_file_exception(StringData path, bool immuta
 static bool is_nonupgradable_history(IncompatibleHistories const& ex)
 {
     // FIXME: Replace this with a proper specific exception type once Core adds support for it.
-    return std::string(ex.what()).find(std::string("Incompatible histories. Nonupgradable history schema")) != npos;
+    return ex.what() == std::string("Incompatible histories. Nonupgradable history schema");
 }
 #endif
 
@@ -182,9 +180,6 @@ void Realm::open_with_config(const Config& config,
             SharedGroupOptions options;
             options.durability = config.in_memory ? SharedGroupOptions::Durability::MemOnly :
                                                     SharedGroupOptions::Durability::Full;
-            if (!config.fifo_files_fallback_path.empty()) {
-                options.temp_dir = util::normalize_dir(config.fifo_files_fallback_path);
-            }
             options.encryption_key = config.encryption_key.data();
             options.allow_file_format_upgrade = !config.disable_format_upgrade &&
                                                 config.schema_mode != SchemaMode::ResetFile;
@@ -210,7 +205,7 @@ void Realm::open_with_config(const Config& config,
             translate_file_exception(config.path, config.immutable()); // Throws
 
         // Move the Realm file into the recovery directory.
-        std::string recovery_directory = SyncManager::shared().recovery_directory_path(config.sync_config ? config.sync_config->recovery_directory : none);
+        std::string recovery_directory = SyncManager::shared().recovery_directory_path();
         std::string new_realm_path = util::reserve_unique_file_name(recovery_directory, "synced-realm-XXXXXXX");
         util::File::move(config.path, new_realm_path);
 
@@ -590,14 +585,14 @@ void Realm::notify_schema_changed()
     }
 }
 
-static void check_read_write(const Realm* realm)
+static void check_read_write(Realm *realm)
 {
     if (realm->config().immutable()) {
         throw InvalidTransactionException("Can't perform transactions on read-only Realms.");
     }
 }
 
-static void check_write(const Realm* realm)
+static void check_write(Realm* realm)
 {
     if (realm->config().immutable() || realm->config().read_only_alternative()) {
         throw InvalidTransactionException("Can't perform transactions on read-only Realms.");
@@ -626,14 +621,6 @@ void Realm::verify_open() const
     if (is_closed()) {
         throw ClosedRealmException();
     }
-}
-
-VersionID Realm::read_transaction_version() const
-{
-    verify_thread();
-    verify_open();
-    check_read_write(this);
-    return m_shared_group->get_version_of_current_transaction();
 }
 
 bool Realm::is_in_transaction() const noexcept
@@ -691,15 +678,7 @@ void Realm::commit_transaction()
         throw InvalidTransactionException("Can't commit a non-existing write transaction");
     }
 
-    if (auto audit = audit_context()) {
-        auto prev_version = m_shared_group->pin_version();
-        m_coordinator->commit_write(*this);
-        audit->record_write(prev_version, m_shared_group->get_version_of_current_transaction());
-        m_shared_group->unpin_version(prev_version);
-    }
-    else {
-        m_coordinator->commit_write(*this);
-    }
+    m_coordinator->commit_write(*this);
     cache_new_schema();
     invalidate_permission_cache();
 }
@@ -885,7 +864,7 @@ bool Realm::refresh()
 
 bool Realm::can_deliver_notifications() const noexcept
 {
-    if (m_config.immutable() || !m_config.automatic_change_notifications) {
+    if (m_config.immutable()) {
         return false;
     }
 
@@ -1008,11 +987,6 @@ template Object Realm::resolve_thread_safe_reference(ThreadSafeReference<Object>
 template List Realm::resolve_thread_safe_reference(ThreadSafeReference<List> reference);
 template Results Realm::resolve_thread_safe_reference(ThreadSafeReference<Results> reference);
 
-AuditInterface* Realm::audit_context() const noexcept
-{
-    return m_coordinator ? m_coordinator->audit_context() : nullptr;
-}
-
 #if REALM_ENABLE_SYNC
 static_assert(static_cast<int>(ComputedPrivileges::Read) == static_cast<int>(sync::Privilege::Read), "");
 static_assert(static_cast<int>(ComputedPrivileges::Update) == static_cast<int>(sync::Privilege::Update), "");
@@ -1132,4 +1106,9 @@ Group& RealmFriend::read_group_to(Realm& realm, VersionID version)
         realm.m_shared_group->end_read();
     realm.begin_read(version);
     return *realm.m_group;
+}
+
+std::size_t Realm::compute_size() {
+    Group& group = read_group();
+    return group.compute_aggregated_byte_size();
 }

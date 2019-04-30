@@ -389,7 +389,7 @@ REALM_NOINLINE static void translateSharedGroupOpenException(RLMRealmConfigurati
     configuration = [configuration copy];
     Realm::Config& config = configuration.config;
 
-    RLMRealm *realm = [[self alloc] initPrivate];
+    RLMRealm *realm = [[RLMRealm alloc] initPrivate];
     realm->_dynamic = dynamic;
 
     // protects the realm cache and accessors cache

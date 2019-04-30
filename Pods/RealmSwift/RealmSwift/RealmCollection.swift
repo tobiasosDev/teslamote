@@ -43,7 +43,7 @@ public struct RLMIterator<Element: RealmCollectionValue>: IteratorProtocol {
             }
             return unsafeBitCast(next, to: Optional<Element>.self)
         }
-        return dynamicBridgeCast(fromObjectiveC: next as Any)
+        return next as! Element?
     }
 }
 
@@ -517,13 +517,13 @@ public extension RealmCollection where Element: MinMaxType {
     /**
      Returns the minimum (lowest) value of the collection, or `nil` if the collection is empty.
      */
-    func min() -> Element? {
+    public func min() -> Element? {
         return min(ofProperty: "self")
     }
     /**
      Returns the maximum (highest) value of the collection, or `nil` if the collection is empty.
      */
-    func max() -> Element? {
+    public func max() -> Element? {
         return max(ofProperty: "self")
     }
 }
@@ -532,13 +532,13 @@ public extension RealmCollection where Element: OptionalProtocol, Element.Wrappe
     /**
      Returns the minimum (lowest) value of the collection, or `nil` if the collection is empty.
      */
-    func min() -> Element.Wrapped? {
+    public func min() -> Element.Wrapped? {
         return min(ofProperty: "self")
     }
     /**
      Returns the maximum (highest) value of the collection, or `nil` if the collection is empty.
      */
-    func max() -> Element.Wrapped? {
+    public func max() -> Element.Wrapped? {
         return max(ofProperty: "self")
     }
 }
@@ -547,13 +547,13 @@ public extension RealmCollection where Element: AddableType {
     /**
      Returns the sum of the values in the collection, or `nil` if the collection is empty.
      */
-    func sum() -> Element {
+    public func sum() -> Element {
         return sum(ofProperty: "self")
     }
     /**
      Returns the average of all of the values in the collection.
      */
-    func average() -> Double? {
+    public func average() -> Double? {
         return average(ofProperty: "self")
     }
 }
@@ -562,13 +562,13 @@ public extension RealmCollection where Element: OptionalProtocol, Element.Wrappe
     /**
      Returns the sum of the values in the collection, or `nil` if the collection is empty.
      */
-    func sum() -> Element.Wrapped {
+    public func sum() -> Element.Wrapped {
         return sum(ofProperty: "self")
     }
     /**
      Returns the average of all of the values in the collection.
      */
-    func average() -> Double? {
+    public func average() -> Double? {
         return average(ofProperty: "self")
     }
 }
@@ -582,7 +582,7 @@ public extension RealmCollection where Element: Comparable {
 
      - parameter ascending: The direction to sort in.
      */
-    func sorted(ascending: Bool = true) -> Results<Element> {
+    public func sorted(ascending: Bool = true) -> Results<Element> {
         return sorted(byKeyPath: "self", ascending: ascending)
     }
 }
@@ -596,7 +596,7 @@ public extension RealmCollection where Element: OptionalProtocol, Element.Wrappe
 
      - parameter ascending: The direction to sort in.
      */
-    func sorted(ascending: Bool = true) -> Results<Element> {
+    public func sorted(ascending: Bool = true) -> Results<Element> {
         return sorted(byKeyPath: "self", ascending: ascending)
     }
 }
