@@ -51,6 +51,11 @@
                                 <label alignment="left" verticalAlignment="bottom" text="Km" id="O7t-Wo-rRr">
                                     <fontDescription key="font" type="system" pointSize="12"/>
                                 </label>
+                                <group width="0.69999999999999996" alignment="right" backgroundImage="progressEmpty" id="2vU-Pe-mcU">
+                                    <items>
+                                        <imageView width="1" height="18" alignment="left" image="progressFull" id="KV8-8n-pYu"/>
+                                    </items>
+                                </group>
                             </items>
                         </group>
                         <group width="1" alignment="left" id="Bhk-mN-9Kg">
@@ -69,6 +74,13 @@
                                     </items>
                                 </group>
                             </items>
+                            <gestureRecognizers>
+                                <tapGestureRecognizer id="BlO-pz-1Kq" userLabel="GoToClimate">
+                                    <connections>
+                                        <action selector="goToClimatePage:" destination="AgC-eL-Hgc" id="J7H-bj-yh1"/>
+                                    </connections>
+                                </tapGestureRecognizer>
+                            </gestureRecognizers>
                             <color key="backgroundColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
                         </group>
                         <group width="1" alignment="left" id="zjZ-l5-NnI">
@@ -148,6 +160,8 @@
                         </group>
                     </items>
                     <connections>
+                        <outlet property="batteryChargeBar" destination="KV8-8n-pYu" id="kMe-sm-vxd"/>
+                        <outlet property="chargingIndicatorTitle" destination="w4V-EW-R6e" id="AFZ-0U-i75"/>
                         <outlet property="chargingLabel" destination="1CV-u7-tsD" id="ahj-FA-wqH"/>
                         <outlet property="controllsLabel" destination="Kir-CG-W6Y" id="fdw-6O-Dk1"/>
                         <outlet property="distanceLabel" destination="Kao-Xt-d5O" id="f7S-he-gno"/>
@@ -158,6 +172,70 @@
                 </controller>
             </objects>
             <point key="canvasLocation" x="186" y="-71"/>
+        </scene>
+        <!--Climate Controller-->
+        <scene sceneID="D6S-oj-pDO">
+            <objects>
+                <controller identifier="climateController" title="Temperatur" id="gVg-OX-J6q" userLabel="Climate Controller" customClass="ClimateController" customModule="teslamote_WatchKit_Extension">
+                    <items>
+                        <group width="1" alignment="left" layout="vertical" id="k7J-Fx-CCp">
+                            <items>
+                                <group width="1" alignment="left" id="3oA-il-xYe">
+                                    <items>
+                                        <label alignment="center" verticalAlignment="center" text="Innen " id="k4B-4c-2VT">
+                                            <fontDescription key="font" type="system" pointSize="21"/>
+                                        </label>
+                                        <label height="19" alignment="center" verticalAlignment="center" text="20°C" id="mao-uX-lm2" userLabel="temp">
+                                            <fontDescription key="font" type="system" pointSize="21"/>
+                                        </label>
+                                    </items>
+                                </group>
+                            </items>
+                        </group>
+                        <group width="1" alignment="left" verticalAlignment="bottom" id="LfT-i9-pk3">
+                            <items>
+                                <button alignment="left" id="jOG-Ll-OHJ">
+                                    <group key="contentGroup" width="40" height="40" alignment="left" radius="20" spacing="14" id="xNd-Z6-5ae">
+                                        <items>
+                                            <imageView alignment="center" verticalAlignment="center" image="onOff" id="rp2-VT-bPi"/>
+                                        </items>
+                                        <color key="backgroundColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
+                                    </group>
+                                    <connections>
+                                        <action selector="turnClimateOnOff" destination="gVg-OX-J6q" id="U68-fH-gEc"/>
+                                    </connections>
+                                </button>
+                                <label alignment="center" verticalAlignment="center" text="25°C" id="MY7-RS-yMF">
+                                    <fontDescription key="font" type="system" pointSize="20"/>
+                                </label>
+                                <button alignment="right" id="bda-St-ohz">
+                                    <group key="contentGroup" width="40" height="40" alignment="left" radius="20" spacing="14" id="0qS-IV-GbN">
+                                        <items>
+                                            <imageView alignment="center" verticalAlignment="center" image="more" id="ydI-yy-Pcp" userLabel="more"/>
+                                        </items>
+                                        <color key="backgroundColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
+                                    </group>
+                                </button>
+                            </items>
+                        </group>
+                        <group width="1" alignment="left" verticalAlignment="bottom" radius="20" id="Xbs-hm-ooY">
+                            <items>
+                                <slider width="1" alignment="left" verticalAlignment="bottom" value="1" maximum="3" steps="3" id="4yb-aQ-VcJ">
+                                    <connections>
+                                        <action selector="setTemperatur:" destination="gVg-OX-J6q" id="0hL-jl-Unq"/>
+                                    </connections>
+                                </slider>
+                            </items>
+                        </group>
+                    </items>
+                    <connections>
+                        <outlet property="climateControlSlider" destination="4yb-aQ-VcJ" id="ZJe-yx-zaa"/>
+                        <outlet property="climateTemperaturLabel" destination="MY7-RS-yMF" id="5iH-W8-92p"/>
+                        <outlet property="interiorTemperaturLabel" destination="mao-uX-lm2" id="bzK-IC-XdF"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="195.13043478260869" y="243.61607142857144"/>
         </scene>
         <!--Static Notification Interface Controller-->
         <scene sceneID="AEw-b0-oYE">

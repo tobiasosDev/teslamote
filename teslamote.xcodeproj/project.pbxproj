@@ -14,6 +14,7 @@
 		3B4CC0DF22739F0F001C4FDA /* Login.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B4CC0DE22739F0F001C4FDA /* Login.swift */; };
 		3B4CC0E122739F61001C4FDA /* AccessToken.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B4CC0E022739F61001C4FDA /* AccessToken.swift */; };
 		3B754CCB22789084007F2CCB /* LocationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B754CCA22789084007F2CCB /* LocationController.swift */; };
+		3B8818762279CF9F00D87D43 /* ClimateController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B8818752279CF9F00D87D43 /* ClimateController.swift */; };
 		3B8B753222782CC000438B5D /* ControlsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B8B753122782CC000438B5D /* ControlsController.swift */; };
 		3BA697F3227850F4005E097B /* ChargingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BA697F2227850F4005E097B /* ChargingController.swift */; };
 		3BEB51012272FFEC002AFDA1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BEB51002272FFEC002AFDA1 /* AppDelegate.swift */; };
@@ -108,6 +109,7 @@
 		3B754CCA22789084007F2CCB /* LocationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationController.swift; sourceTree = "<group>"; };
 		3B7EB68E22733B2700526F48 /* TeslaKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = TeslaKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3B7EB69022733B2700526F48 /* TeslaKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = TeslaKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3B8818752279CF9F00D87D43 /* ClimateController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClimateController.swift; sourceTree = "<group>"; };
 		3B8B753122782CC000438B5D /* ControlsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ControlsController.swift; sourceTree = "<group>"; };
 		3BA697F2227850F4005E097B /* ChargingController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChargingController.swift; sourceTree = "<group>"; };
 		3BEB50FD2272FFEC002AFDA1 /* teslamote.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = teslamote.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -224,6 +226,7 @@
 				3BEB51392272FFEF002AFDA1 /* InterfaceController.swift */,
 				3BA697F2227850F4005E097B /* ChargingController.swift */,
 				3B754CCA22789084007F2CCB /* LocationController.swift */,
+				3B8818752279CF9F00D87D43 /* ClimateController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -734,6 +737,7 @@
 				3BEB513C2272FFEF002AFDA1 /* ExtensionDelegate.swift in Sources */,
 				3B8B753222782CC000438B5D /* ControlsController.swift in Sources */,
 				3B1270AD22779A68008F2F1D /* SessionManager.swift in Sources */,
+				3B8818762279CF9F00D87D43 /* ClimateController.swift in Sources */,
 				3BEB513A2272FFEF002AFDA1 /* InterfaceController.swift in Sources */,
 				3B754CCB22789084007F2CCB /* LocationController.swift in Sources */,
 			);

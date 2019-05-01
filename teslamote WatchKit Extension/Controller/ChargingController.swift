@@ -46,12 +46,12 @@ class ChargingController: WKInterfaceController {
         }
     }
     @IBAction func setChargeLimit(_ value: Float) {
-        self.batteryChargingLimitLabel.setText(String(value))
         let parameters = SetChargeLimit(limitValue: Double(value))
         self.teslaAPI.send(.setChargeLimit, to: SessionManger.vehicle, parameters: parameters) { (repsonse) in
             if repsonse.result {
+                SessionManger.vehicle.chargeState.chargeLimitSoc = Int(value)
+                self.setCarInformation()
                 // self.getCarInformation()
-                self.getCarInformation()
             }
         }
     }
@@ -66,7 +66,7 @@ class ChargingController: WKInterfaceController {
     
     func setCarInformation() {
         self.batteryDistanceLabel.setText(String((SessionManger.vehicle.chargeState.estBatteryRange * 1.609344).rounded()))
-        self.batteryChargingLimitLabel.setText(String(SessionManger.vehicle.chargeState.chargeLimitSoc))
+        self.batteryChargingLimitLabel.setText("\(String(SessionManger.vehicle.chargeState.chargeLimitSoc))%")
         self.chargePortOpenCloseLabel.setText(SessionManger.vehicle.chargeState.chargePortDoorOpen ? "Close charge Port" : "Open charge Port")
         self.batterChargeLimitSlider.setValue(Float(SessionManger.vehicle.chargeState.chargeLimitSoc))
         self.progressBarDistance.setRelativeWidth((CGFloat(SessionManger.vehicle.chargeState.batteryLevel / 100)), withAdjustment: 0)

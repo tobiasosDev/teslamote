@@ -15,6 +15,8 @@ class ViewController: UIViewController {
     @IBOutlet weak var usernameInput: UITextField!
     @IBOutlet weak var passwordInput: UITextField!
     let teslaAPI = TeslaAPI()
+    var vehicle = Vehicle()
+    @IBOutlet weak var teslaNameLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -53,6 +55,15 @@ class ViewController: UIViewController {
         
     }
     
+    @IBAction func loadCarData(_ sender: Any) {
+        self.teslaAPI.getData(for: self.vehicle, completion: { (res, data, err) in
+            let vehicle = data!
+            
+            print("Hello, \(vehicle.displayName)")
+            self.teslaNameLabel.text = vehicle.displayName
+        })
+    }
+    
     func setAccessToken(accessToken: String) {
         // SessionHandler.shared.teslaAPI.setAccessToken(accessToken)
         self.teslaAPI.setAccessToken(accessToken)
@@ -60,11 +71,12 @@ class ViewController: UIViewController {
         self.teslaAPI.getVehicles { (httpResponse, dataOrNil, errorOrNil) in
             
             guard let vehicle = dataOrNil?.vehicles.first else { return }
+            self.vehicle = vehicle
             
             print("Hello, \(vehicle.displayName)")
             let accessTokenModel = AccessToken()
             accessTokenModel.token = accessToken;
-            accessTokenModel.carId = "\(vehicle.vehicleId)"
+            accessTokenModel.carId = "\(vehicle.id)"
             
             print("id: \(vehicle.id)")
             print("vhicleid: \(vehicle.vehicleId)")

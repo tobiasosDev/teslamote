@@ -23,13 +23,15 @@ class InterfaceController: WKInterfaceController {
     @IBOutlet weak var distanceLabel: WKInterfaceLabel!
     @IBOutlet weak var locationLabel: WKInterfaceLabel!
     @IBOutlet weak var lockOpenLabel: WKInterfaceLabel!
+    @IBOutlet weak var batteryChargeBar: WKInterfaceImage!
+    @IBOutlet weak var chargingIndicatorTitle: WKInterfaceLabel!
     
     
     override func awake(withContext context: Any?) {
         super.awake(withContext: context)
         
         // Configure interface objects here.
-        
+        // self.crownSequencer.isHapticFeedbackEnabled = false
         if isSuported() {
             session.delegate = self
             session.activate()
@@ -43,7 +45,7 @@ class InterfaceController: WKInterfaceController {
     }
     
     override func didAppear() {
-        
+        // getCarInformation()
     }
     
     override func didDeactivate() {
@@ -90,6 +92,10 @@ class InterfaceController: WKInterfaceController {
         pushController(withName: "locationController", context: nil)
     }
     
+    @IBAction func goToClimatePage(_ sender: Any) {
+        pushController(withName: "climateController", context: nil)
+    }
+    
     func getAccessToken() {
         print("start")
         session.sendMessage(["request" : "token"], replyHandler: { (response: [String : Any]) in
@@ -122,22 +128,19 @@ class InterfaceController: WKInterfaceController {
     }
     
     func getCarInformation() {
-       
-            
             self.teslaAPI.getData(for: SessionManger.vehicle, completion: { (res, data, err) in
                 SessionManger.vehicle = data!
                 self.controllsLabel.setText("Trunk \(SessionManger.vehicle.vehicleState.isRearTrunkOpen ? "open" : "closed" )")
                 self.temperaturLabel.setText("Innen \(String(describing: SessionManger.vehicle.climateState.insideTemperature!)) °C")
-                self.chargingLabel.setText("Charged: \(SessionManger.vehicle.chargeState.batteryLevel )%")
+                self.chargingLabel.setText("Limit: \(SessionManger.vehicle.chargeState.chargeLimitSoc )%")
                 self.distanceLabel.setText(String((SessionManger.vehicle.chargeState.estBatteryRange * 1.609344).rounded()))
                 self.lockOpenLabel.setText(SessionManger.vehicle.vehicleState.locked ? "Öffnen" : "Schliessen")
+                self.batteryChargeBar.setRelativeWidth((CGFloat(SessionManger.vehicle.chargeState.batteryLevel / 100)), withAdjustment: 0)
+                self.chargingIndicatorTitle.setText("Chargin is \(SessionManger.vehicle.chargeState.isCharging ? "on" : "off" )")
                 print("finished Data")
                 // self.locationLabel.setText(vehicleInfo.driveState.)
             })
-        
     }
-    
-    
 }
 
 extension InterfaceController: WCSessionDelegate {
