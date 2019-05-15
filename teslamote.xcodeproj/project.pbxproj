@@ -13,6 +13,7 @@
 		3B1270AD22779A68008F2F1D /* SessionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B1270AC22779A68008F2F1D /* SessionManager.swift */; };
 		3B4CC0DF22739F0F001C4FDA /* Login.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B4CC0DE22739F0F001C4FDA /* Login.swift */; };
 		3B4CC0E122739F61001C4FDA /* AccessToken.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B4CC0E022739F61001C4FDA /* AccessToken.swift */; };
+		3B5AED21228CA4E500EC29CB /* HomeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B5AED20228CA4E500EC29CB /* HomeController.swift */; };
 		3B754CCB22789084007F2CCB /* LocationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B754CCA22789084007F2CCB /* LocationController.swift */; };
 		3B8818762279CF9F00D87D43 /* ClimateController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B8818752279CF9F00D87D43 /* ClimateController.swift */; };
 		3B8B753222782CC000438B5D /* ControlsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B8B753122782CC000438B5D /* ControlsController.swift */; };
@@ -106,6 +107,7 @@
 		3B317AC166AC49DD7ECB0156 /* Pods-teslamote WatchKit Extension.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-teslamote WatchKit Extension.release.xcconfig"; path = "Pods/Target Support Files/Pods-teslamote WatchKit Extension/Pods-teslamote WatchKit Extension.release.xcconfig"; sourceTree = "<group>"; };
 		3B4CC0DE22739F0F001C4FDA /* Login.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Login.swift; sourceTree = "<group>"; };
 		3B4CC0E022739F61001C4FDA /* AccessToken.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccessToken.swift; sourceTree = "<group>"; };
+		3B5AED20228CA4E500EC29CB /* HomeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeController.swift; sourceTree = "<group>"; };
 		3B754CCA22789084007F2CCB /* LocationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationController.swift; sourceTree = "<group>"; };
 		3B7EB68E22733B2700526F48 /* TeslaKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = TeslaKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3B7EB69022733B2700526F48 /* TeslaKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = TeslaKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -219,6 +221,15 @@
 			path = model;
 			sourceTree = "<group>";
 		};
+		3B5AED1F228CA49F00EC29CB /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				3BEB51022272FFEC002AFDA1 /* ViewController.swift */,
+				3B5AED20228CA4E500EC29CB /* HomeController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
 		3B8B753322782CD200438B5D /* Controller */ = {
 			isa = PBXGroup;
 			children = (
@@ -260,10 +271,10 @@
 		3BEB50FF2272FFEC002AFDA1 /* teslamote */ = {
 			isa = PBXGroup;
 			children = (
+				3B5AED1F228CA49F00EC29CB /* Controller */,
 				3B2BF50B2274BF840031CCE8 /* teslamote.entitlements */,
 				3B4CC0DD22739F01001C4FDA /* model */,
 				3BEB51002272FFEC002AFDA1 /* AppDelegate.swift */,
-				3BEB51022272FFEC002AFDA1 /* ViewController.swift */,
 				3BEB51042272FFEC002AFDA1 /* Main.storyboard */,
 				3BEB51072272FFEE002AFDA1 /* Assets.xcassets */,
 				3BEB51092272FFEE002AFDA1 /* LaunchScreen.storyboard */,
@@ -706,6 +717,7 @@
 			files = (
 				3BEB51032272FFEC002AFDA1 /* ViewController.swift in Sources */,
 				3B08F1CA227396A800CA761F /* SessionHandler.swift in Sources */,
+				3B5AED21228CA4E500EC29CB /* HomeController.swift in Sources */,
 				3BEB51012272FFEC002AFDA1 /* AppDelegate.swift in Sources */,
 				3B4CC0DF22739F0F001C4FDA /* Login.swift in Sources */,
 				3B4CC0E122739F61001C4FDA /* AccessToken.swift in Sources */,

@@ -51,6 +51,7 @@ class ViewController: UIViewController {
             guard let accessToken = dataOrNil?.accessToken else { return }
             
             self.setAccessToken(accessToken: accessToken)
+            self.performSegue(withIdentifier: "goToMain", sender: nil)
         }
         
     }
