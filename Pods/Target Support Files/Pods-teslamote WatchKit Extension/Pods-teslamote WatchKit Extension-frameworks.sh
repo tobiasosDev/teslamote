@@ -144,11 +144,13 @@ strip_invalid_archs() {
 
 if [[ "$CONFIGURATION" == "Debug" ]]; then
   install_framework "${BUILT_PRODUCTS_DIR}/ObjectMapper-watchOS/ObjectMapper.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/Sentry-watchOS/Sentry.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/TeslaKit-watchOS/TeslaKit.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/EMTLoadingIndicator/EMTLoadingIndicator.framework"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
   install_framework "${BUILT_PRODUCTS_DIR}/ObjectMapper-watchOS/ObjectMapper.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/Sentry-watchOS/Sentry.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/TeslaKit-watchOS/TeslaKit.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/EMTLoadingIndicator/EMTLoadingIndicator.framework"
 fi

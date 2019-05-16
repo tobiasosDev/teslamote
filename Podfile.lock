@@ -6,12 +6,16 @@ PODS:
   - Realm/Headers (3.12.0)
   - RealmSwift (3.12.0):
     - Realm (= 3.12.0)
+  - Sentry (4.3.1):
+    - Sentry/Core (= 4.3.1)
+  - Sentry/Core (4.3.1)
   - TeslaKit (2.5):
     - ObjectMapper (~> 3.3)
 
 DEPENDENCIES:
   - EMTLoadingIndicator (~> 4.0.0)
   - RealmSwift
+  - Sentry (from `https://github.com/getsentry/sentry-cocoa.git`, tag `4.3.1`)
   - TeslaKit (~> 2.5)
 
 SPEC REPOS:
@@ -22,13 +26,24 @@ SPEC REPOS:
     - RealmSwift
     - TeslaKit
 
+EXTERNAL SOURCES:
+  Sentry:
+    :git: https://github.com/getsentry/sentry-cocoa.git
+    :tag: 4.3.1
+
+CHECKOUT OPTIONS:
+  Sentry:
+    :git: https://github.com/getsentry/sentry-cocoa.git
+    :tag: 4.3.1
+
 SPEC CHECKSUMS:
   EMTLoadingIndicator: 84b875fbe500606bb9a5e411885bc152ae9a371f
   ObjectMapper: 0d4402610f4e468903ae64629eec4784531e5c51
   Realm: cdaef23c4ddb36ab1ddffed23f5a7f3332fc5585
   RealmSwift: 5576324033f0aa5ef1e0a839a3da2281dff47a7f
+  Sentry: 5267d493a398663538317e4dcc438c12c66202ed
   TeslaKit: 2d0d6562c11d6159bdeef073701691e34db1ad63
 
-PODFILE CHECKSUM: 92f7957f3c421770ac852211b44cdcaa876aff80
+PODFILE CHECKSUM: 084781c478853ebbb5f7223c8b50682f887705bb
 
 COCOAPODS: 1.5.3

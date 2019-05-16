@@ -8,6 +8,7 @@
 
 import UIKit
 import WatchConnectivity
+import Sentry
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -20,6 +21,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         if !SessionHandler.shared.isSuported() {
             print("WCSession not supported (f.e. on iPad).")
+        }
+        
+        do {
+            Client.shared = try Client(dsn: "https://e180856f272f4bb69ce2b2e07d35c2b2@sentry.io/1460743")
+            try Client.shared?.startCrashHandler()
+        } catch let error {
+            print("\(error)")
         }
         
         return true

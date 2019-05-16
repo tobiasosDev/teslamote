@@ -567,6 +567,7 @@
 				"${BUILT_PRODUCTS_DIR}/ObjectMapper-iOS/ObjectMapper.framework",
 				"${BUILT_PRODUCTS_DIR}/Realm/Realm.framework",
 				"${BUILT_PRODUCTS_DIR}/RealmSwift/RealmSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/Sentry-iOS/Sentry.framework",
 				"${BUILT_PRODUCTS_DIR}/TeslaKit-iOS/TeslaKit.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
@@ -576,6 +577,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ObjectMapper.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RealmSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Sentry.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/TeslaKit.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -637,6 +639,7 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-teslamote WatchKit Extension/Pods-teslamote WatchKit Extension-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/ObjectMapper-watchOS/ObjectMapper.framework",
+				"${BUILT_PRODUCTS_DIR}/Sentry-watchOS/Sentry.framework",
 				"${BUILT_PRODUCTS_DIR}/TeslaKit-watchOS/TeslaKit.framework",
 				"${BUILT_PRODUCTS_DIR}/EMTLoadingIndicator/EMTLoadingIndicator.framework",
 			);
@@ -645,6 +648,7 @@
 			);
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ObjectMapper.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Sentry.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/TeslaKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/EMTLoadingIndicator.framework",
 			);
