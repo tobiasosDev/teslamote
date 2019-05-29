@@ -7,16 +7,12 @@
 //
 
 import UIKit
-import TeslaKit
 
 class ViewController: UIViewController {
     
     // let realm = try! Realm()
     @IBOutlet weak var usernameInput: UITextField!
     @IBOutlet weak var passwordInput: UITextField!
-    let teslaAPI = TeslaAPI()
-    var vehicle = Vehicle()
-    @IBOutlet weak var teslaNameLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -44,50 +40,7 @@ class ViewController: UIViewController {
         loginModel.username = usernameInput.text!
         loginModel.password = passwordInput.text!
         
-        NSUbiquitousKeyValueStore.default.set(loginModel.username, forKey: "username")
-        NSUbiquitousKeyValueStore.default.set(loginModel.password, forKey: "password")
-        
-        teslaAPI.getAccessToken(email: loginModel.username, password: loginModel.password) { (httpResponse, dataOrNil, errorOrNil) in
-            guard let accessToken = dataOrNil?.accessToken else { return }
-            
-            self.setAccessToken(accessToken: accessToken)
-            self.performSegue(withIdentifier: "goToMain", sender: nil)
-        }
-        
-    }
-    
-    @IBAction func loadCarData(_ sender: Any) {
-        self.teslaAPI.getData(for: self.vehicle, completion: { (res, data, err) in
-            let vehicle = data!
-            
-            print("Hello, \(vehicle.displayName)")
-            self.teslaNameLabel.text = vehicle.displayName
-        })
-    }
-    
-    func setAccessToken(accessToken: String) {
-        // SessionHandler.shared.teslaAPI.setAccessToken(accessToken)
-        self.teslaAPI.setAccessToken(accessToken)
-        
-        self.teslaAPI.getVehicles { (httpResponse, dataOrNil, errorOrNil) in
-            
-            guard let vehicle = dataOrNil?.vehicles.first else { return }
-            self.vehicle = vehicle
-            
-            print("Hello, \(vehicle.displayName)")
-            let accessTokenModel = AccessToken()
-            accessTokenModel.token = accessToken;
-            accessTokenModel.carId = "\(vehicle.id)"
-            
-            print("id: \(vehicle.id)")
-            print("vhicleid: \(vehicle.vehicleId)")
-            
-            // SessionHandler.shared.accessToken = accessTokenModel
-            NSUbiquitousKeyValueStore.default.set(accessTokenModel.token, forKey: "token")
-            NSUbiquitousKeyValueStore.default.set(accessTokenModel.carId, forKey: "carId")
-            NSUbiquitousKeyValueStore.default.synchronize()
-            
-        }
+        SessionHandler.shared.login(username: loginModel.username, password: loginModel.password)
         
     }
     

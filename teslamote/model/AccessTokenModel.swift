@@ -9,7 +9,7 @@
 import Foundation
 
 
-class AccessToken {
+class AccessTokenModel {
     var token: String = ""
     var carId: String = ""
 }

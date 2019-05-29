@@ -12,7 +12,7 @@
 		3B08F1D22273997A00CA761F /* Pods_teslamote.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B08F1D12273997A00CA761F /* Pods_teslamote.framework */; };
 		3B1270AD22779A68008F2F1D /* SessionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B1270AC22779A68008F2F1D /* SessionManager.swift */; };
 		3B4CC0DF22739F0F001C4FDA /* Login.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B4CC0DE22739F0F001C4FDA /* Login.swift */; };
-		3B4CC0E122739F61001C4FDA /* AccessToken.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B4CC0E022739F61001C4FDA /* AccessToken.swift */; };
+		3B4CC0E122739F61001C4FDA /* AccessTokenModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B4CC0E022739F61001C4FDA /* AccessTokenModel.swift */; };
 		3B5AED21228CA4E500EC29CB /* HomeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B5AED20228CA4E500EC29CB /* HomeController.swift */; };
 		3B754CCB22789084007F2CCB /* LocationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B754CCA22789084007F2CCB /* LocationController.swift */; };
 		3B8818762279CF9F00D87D43 /* ClimateController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B8818752279CF9F00D87D43 /* ClimateController.swift */; };
@@ -106,7 +106,7 @@
 		3B2BF50B2274BF840031CCE8 /* teslamote.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = teslamote.entitlements; sourceTree = "<group>"; };
 		3B317AC166AC49DD7ECB0156 /* Pods-teslamote WatchKit Extension.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-teslamote WatchKit Extension.release.xcconfig"; path = "Pods/Target Support Files/Pods-teslamote WatchKit Extension/Pods-teslamote WatchKit Extension.release.xcconfig"; sourceTree = "<group>"; };
 		3B4CC0DE22739F0F001C4FDA /* Login.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Login.swift; sourceTree = "<group>"; };
-		3B4CC0E022739F61001C4FDA /* AccessToken.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccessToken.swift; sourceTree = "<group>"; };
+		3B4CC0E022739F61001C4FDA /* AccessTokenModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccessTokenModel.swift; sourceTree = "<group>"; };
 		3B5AED20228CA4E500EC29CB /* HomeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeController.swift; sourceTree = "<group>"; };
 		3B754CCA22789084007F2CCB /* LocationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationController.swift; sourceTree = "<group>"; };
 		3B7EB68E22733B2700526F48 /* TeslaKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = TeslaKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -216,7 +216,7 @@
 			isa = PBXGroup;
 			children = (
 				3B4CC0DE22739F0F001C4FDA /* Login.swift */,
-				3B4CC0E022739F61001C4FDA /* AccessToken.swift */,
+				3B4CC0E022739F61001C4FDA /* AccessTokenModel.swift */,
 			);
 			path = model;
 			sourceTree = "<group>";
@@ -549,15 +549,11 @@
 			buildActionMask = 2147483647;
 			files = (
 			);
-			inputFileListPaths = (
-			);
 			inputPaths = (
 				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
 				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
 			outputPaths = (
 				"$(DERIVED_FILE_DIR)/Pods-teslamote WatchKit App-checkManifestLockResult.txt",
 			);
@@ -571,8 +567,6 @@
 			buildActionMask = 2147483647;
 			files = (
 			);
-			inputFileListPaths = (
-			);
 			inputPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-teslamote/Pods-teslamote-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/ObjectMapper-iOS/ObjectMapper.framework",
@@ -581,8 +575,6 @@
 				"${BUILT_PRODUCTS_DIR}/TeslaKit-iOS/TeslaKit.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-			);
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ObjectMapper.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework",
@@ -599,15 +591,11 @@
 			buildActionMask = 2147483647;
 			files = (
 			);
-			inputFileListPaths = (
-			);
 			inputPaths = (
 				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
 				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
 			outputPaths = (
 				"$(DERIVED_FILE_DIR)/Pods-teslamoteTests-checkManifestLockResult.txt",
 			);
@@ -621,15 +609,11 @@
 			buildActionMask = 2147483647;
 			files = (
 			);
-			inputFileListPaths = (
-			);
 			inputPaths = (
 				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
 				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
 			outputPaths = (
 				"$(DERIVED_FILE_DIR)/Pods-teslamoteUITests-checkManifestLockResult.txt",
 			);
@@ -643,8 +627,6 @@
 			buildActionMask = 2147483647;
 			files = (
 			);
-			inputFileListPaths = (
-			);
 			inputPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-teslamote WatchKit Extension/Pods-teslamote WatchKit Extension-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/ObjectMapper-watchOS/ObjectMapper.framework",
@@ -652,8 +634,6 @@
 				"${BUILT_PRODUCTS_DIR}/EMTLoadingIndicator/EMTLoadingIndicator.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-			);
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ObjectMapper.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/TeslaKit.framework",
@@ -669,15 +649,11 @@
 			buildActionMask = 2147483647;
 			files = (
 			);
-			inputFileListPaths = (
-			);
 			inputPaths = (
 				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
 				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
 			outputPaths = (
 				"$(DERIVED_FILE_DIR)/Pods-teslamote WatchKit Extension-checkManifestLockResult.txt",
 			);
@@ -691,15 +667,11 @@
 			buildActionMask = 2147483647;
 			files = (
 			);
-			inputFileListPaths = (
-			);
 			inputPaths = (
 				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
 				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
 			outputPaths = (
 				"$(DERIVED_FILE_DIR)/Pods-teslamote-checkManifestLockResult.txt",
 			);
@@ -720,7 +692,7 @@
 				3B5AED21228CA4E500EC29CB /* HomeController.swift in Sources */,
 				3BEB51012272FFEC002AFDA1 /* AppDelegate.swift in Sources */,
 				3B4CC0DF22739F0F001C4FDA /* Login.swift in Sources */,
-				3B4CC0E122739F61001C4FDA /* AccessToken.swift in Sources */,
+				3B4CC0E122739F61001C4FDA /* AccessTokenModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -15,8 +15,9 @@ class SessionHandler : NSObject, WCSessionDelegate {
     
     // 1: Singleton
     static let shared = SessionHandler()
+    static var vehicle = Vehicle()
+    static var accessTokenLocal = AccessToken()
     public let teslaAPI = TeslaAPI()
-    public var accessToken = AccessToken()
     
     // 2: Property to manage session
     private var session = WCSession.default
@@ -65,14 +66,45 @@ class SessionHandler : NSObject, WCSessionDelegate {
         self.session.activate()
     }
     
-    func loadAccessToken() {
-        if NSUbiquitousKeyValueStore.default.string(forKey: "token") != nil {
-            let accessToken: AccessToken = AccessToken()
-            accessToken.carId = NSUbiquitousKeyValueStore.default.string(forKey: "carId")!
-            accessToken.token = NSUbiquitousKeyValueStore.default.string(forKey: "token")!
-            self.accessToken = accessToken;
-            self.teslaAPI.setAccessToken(accessToken.token)
+    func login(username: String, password: String) {
+        NSUbiquitousKeyValueStore.default.set(username, forKey: "username")
+        NSUbiquitousKeyValueStore.default.set(password, forKey: "password")
+        
+        teslaAPI.getAccessToken(email: username, password: password) { (httpResponse, dataOrNil, errorOrNil) in
+            guard let accessToken = dataOrNil? else { return }
+            
+            self.accessTokenLocal = accessToken
+            NSUbiquitousKeyValueStore.default.set(self.accessTokenLocal, forKey: "tokenDate")
+            NSUbiquitousKeyValueStore.default.synchronize()
+            self.setAccessToken(accessToken: accessToken)
+            // self.performSegue(withIdentifier: "goToMain", sender: nil)
         }
+    }
+    
+    func setAccessToken(accessToken: String) {
+        // SessionHandler.shared.teslaAPI.setAccessToken(accessToken)
+        self.teslaAPI.setAccessToken(accessToken)
+        
+        self.teslaAPI.getVehicles { (httpResponse, dataOrNil, errorOrNil) in
+            
+            guard let vehicle = dataOrNil?.vehicles.first else { return }
+            self.vehicle = vehicle
+            
+            print("Hello, \(vehicle.displayName)")
+            let accessTokenModel = AccessToken()
+            accessTokenModel.token = accessToken;
+            accessTokenModel.carId = "\(vehicle.id)"
+            
+            print("id: \(vehicle.id)")
+            print("vhicleid: \(vehicle.vehicleId)")
+            
+            // SessionHandler.shared.accessToken = accessTokenModel
+            NSUbiquitousKeyValueStore.default.set(accessTokenModel.token, forKey: "token")
+            NSUbiquitousKeyValueStore.default.set(accessTokenModel.carId, forKey: "carId")
+            NSUbiquitousKeyValueStore.default.synchronize()
+            
+        }
+        
     }
     
     /// Observer to receive messages from watch and we be able to response it
