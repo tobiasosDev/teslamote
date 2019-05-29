@@ -22,12 +22,9 @@ class ViewController: UIViewController {
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         
-        NSUbiquitousKeyValueStore.default.synchronize()
-        if NSUbiquitousKeyValueStore.default.string(forKey: "token") != nil && NSUbiquitousKeyValueStore.default.string(forKey: "token") != "" {
-            let accessToken: AccessToken = AccessToken()
-            accessToken.carId = NSUbiquitousKeyValueStore.default.string(forKey: "carId")!
-            accessToken.token = NSUbiquitousKeyValueStore.default.string(forKey: "token")!
-            setAccessToken(accessToken: accessToken.token)
+        
+        if  SessionHandler.shared.hasLoginCredentials() {
+            SessionHandler.shared.loginWithSavedCredentials()
         } else {
             let alert = UIAlertController(title: "Keine Login Daten", message: "Bitte loggen Sie sich ein", preferredStyle: .alert)
             alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))

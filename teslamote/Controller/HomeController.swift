@@ -16,7 +16,32 @@ class HomeController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
-
+    
+    func displayInformations() {
+        
+    }
+    
+    @IBAction func triggerFlashLight(_ sender: Any) {
+        TeslaComHandler.shared.flashLights()
+    }
+    
+    @IBAction func triggerFans(_ sender: Any) {
+        let message = TeslaComHandler.shared.turnOnOffClimate() ? "Klima ist nun an" : "Klima ist nun aus"
+        let alert = UIAlertController(title: "Klima Status", message: message, preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+        self.present(alert, animated: true)
+    }
+    
+    @IBAction func lockUnlock(_ sender: Any) {
+        let message = TeslaComHandler.shared.lockUnlockCar() ? "Türen sind nun offen" : "Türen sind nun geschlossen"
+        let alert = UIAlertController(title: "Tür Status", message: message, preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+        self.present(alert, animated: true)
+    }
+    
+    @IBAction func honkHorn(_ sender: Any) {
+        TeslaComHandler.shared.honkHorn()
+    }
     /*
     // MARK: - Navigation
 

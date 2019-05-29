@@ -1,12 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina5_5" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
-        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -92,47 +90,19 @@
             </objects>
             <point key="canvasLocation" x="140.57971014492756" y="138.61607142857142"/>
         </scene>
-        <!--View Controller-->
+        <!--Home Controller-->
         <scene sceneID="bk1-TP-apS">
             <objects>
-                <viewController id="Rm3-vH-xHP" sceneMemberID="viewController">
+                <viewController id="Rm3-vH-xHP" customClass="HomeController" customModule="teslamote" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Bdr-ed-0td">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleAspectFit" ambiguous="YES" distribution="equalCentering" spacing="21" translatesAutoresizingMaskIntoConstraints="NO" id="Ymg-Z7-5cr">
-                                <rect key="frame" x="104" y="416" width="222" height="34"/>
-                                <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XD6-Ou-oQj">
-                                        <rect key="frame" x="0.0" y="0.0" width="41" height="34"/>
-                                        <size key="titleShadowOffset" width="50" height="50"/>
-                                        <state key="normal" title="Light"/>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="J3L-pt-jIG">
-                                        <rect key="frame" x="66" y="0.0" width="30" height="34"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
-                                        <state key="normal" title="Fan">
-                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        </state>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7LB-4p-jgi">
-                                        <rect key="frame" x="122" y="0.0" width="39" height="34"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
-                                        <state key="normal" title="Lock">
-                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        </state>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eXb-h9-4Gh">
-                                        <rect key="frame" x="182" y="0.0" width="40" height="34"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
-                                        <state key="normal" title="Horn">
-                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        </state>
-                                    </button>
-                                </subviews>
-                            </stackView>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" minimumZoomScale="2" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="8tr-ca-Fi0">
-                                <rect key="frame" x="20" y="458" width="374" height="404"/>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" minimumZoomScale="2" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="8tr-ca-Fi0">
+                                <rect key="frame" x="20" y="481.33333333333326" width="374" height="404"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="8tr-ca-Fi0" secondAttribute="height" multiplier="187:202" id="AQD-Wy-ehk"/>
+                                </constraints>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="QBw-ue-SDr">
                                     <size key="itemSize" width="50" height="50"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
@@ -233,14 +203,62 @@
                                     <constraint firstAttribute="width" secondItem="wl5-VQ-op0" secondAttribute="height" multiplier="187:175" id="FJp-hw-H4X"/>
                                 </constraints>
                             </view>
+                            <stackView opaque="NO" contentMode="scaleAspectFit" distribution="equalCentering" spacing="21" translatesAutoresizingMaskIntoConstraints="NO" id="Ymg-Z7-5cr">
+                                <rect key="frame" x="20" y="416" width="374" height="57.333333333333314"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XD6-Ou-oQj">
+                                        <rect key="frame" x="0.0" y="0.0" width="41" height="57.333333333333336"/>
+                                        <size key="titleShadowOffset" width="50" height="50"/>
+                                        <state key="normal" title="Light"/>
+                                        <connections>
+                                            <action selector="triggerFlashLight:" destination="Rm3-vH-xHP" eventType="touchUpInside" id="Qa6-AJ-rku"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="J3L-pt-jIG">
+                                        <rect key="frame" x="116.66666666666666" y="0.0" width="30" height="57.333333333333336"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                        <state key="normal" title="Fan">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="triggerFans:" destination="Rm3-vH-xHP" eventType="touchUpInside" id="4m6-wr-KGi"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7LB-4p-jgi">
+                                        <rect key="frame" x="223.33333333333334" y="0.0" width="39.000000000000028" height="57.333333333333336"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                        <state key="normal" title="Lock">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="lockUnlock:" destination="Rm3-vH-xHP" eventType="touchUpInside" id="doV-77-IxX"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eXb-h9-4Gh">
+                                        <rect key="frame" x="334" y="0.0" width="40" height="57.333333333333336"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                        <state key="normal" title="Horn">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="honkHorn:" destination="Rm3-vH-xHP" eventType="touchUpInside" id="BR2-8X-6vX"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="Ymg-Z7-5cr" secondAttribute="height" multiplier="111:17" id="cHM-vl-OcM"/>
+                                </constraints>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" red="0.094102360308170319" green="0.09412645548582077" blue="0.094100810587406158" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="Ymg-Z7-5cr" firstAttribute="top" secondItem="wl5-VQ-op0" secondAttribute="bottom" constant="8" id="4Fj-4w-Kk6"/>
-                            <constraint firstItem="8tr-ca-Fi0" firstAttribute="bottom" secondItem="HWV-w5-90R" secondAttribute="bottom" constant="1" id="Gwp-TB-Aun"/>
+                            <constraint firstItem="Ymg-Z7-5cr" firstAttribute="top" secondItem="wl5-VQ-op0" secondAttribute="bottom" constant="8" id="CZ5-NT-Ues"/>
                             <constraint firstItem="HWV-w5-90R" firstAttribute="trailing" secondItem="wl5-VQ-op0" secondAttribute="trailing" constant="20" id="OKI-I5-Idg"/>
+                            <constraint firstItem="HWV-w5-90R" firstAttribute="trailing" secondItem="Ymg-Z7-5cr" secondAttribute="trailing" constant="20" id="Oxg-fg-KwI"/>
                             <constraint firstItem="wl5-VQ-op0" firstAttribute="leading" secondItem="HWV-w5-90R" secondAttribute="leading" constant="20" id="QAw-cm-fXW"/>
+                            <constraint firstItem="Ymg-Z7-5cr" firstAttribute="leading" secondItem="HWV-w5-90R" secondAttribute="leading" constant="20" id="Qws-4p-9KI"/>
                             <constraint firstItem="HWV-w5-90R" firstAttribute="trailing" secondItem="8tr-ca-Fi0" secondAttribute="trailing" constant="20" id="ZZw-yC-mdg"/>
+                            <constraint firstItem="8tr-ca-Fi0" firstAttribute="top" secondItem="Ymg-Z7-5cr" secondAttribute="bottom" constant="8" id="bb1-Vq-Hni"/>
                             <constraint firstItem="wl5-VQ-op0" firstAttribute="top" secondItem="HWV-w5-90R" secondAttribute="top" constant="38" id="eRV-SG-d9c"/>
                             <constraint firstItem="8tr-ca-Fi0" firstAttribute="leading" secondItem="HWV-w5-90R" secondAttribute="leading" constant="20" id="pGA-30-lft"/>
                         </constraints>

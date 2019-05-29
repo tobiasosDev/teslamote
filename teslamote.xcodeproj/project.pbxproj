@@ -18,6 +18,7 @@
 		3B8818762279CF9F00D87D43 /* ClimateController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B8818752279CF9F00D87D43 /* ClimateController.swift */; };
 		3B8B753222782CC000438B5D /* ControlsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B8B753122782CC000438B5D /* ControlsController.swift */; };
 		3BA697F3227850F4005E097B /* ChargingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BA697F2227850F4005E097B /* ChargingController.swift */; };
+		3BE4910A229F015500801552 /* TeslaComHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BE49109229F015500801552 /* TeslaComHandler.swift */; };
 		3BEB51012272FFEC002AFDA1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BEB51002272FFEC002AFDA1 /* AppDelegate.swift */; };
 		3BEB51032272FFEC002AFDA1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BEB51022272FFEC002AFDA1 /* ViewController.swift */; };
 		3BEB51062272FFEC002AFDA1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3BEB51042272FFEC002AFDA1 /* Main.storyboard */; };
@@ -114,6 +115,7 @@
 		3B8818752279CF9F00D87D43 /* ClimateController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClimateController.swift; sourceTree = "<group>"; };
 		3B8B753122782CC000438B5D /* ControlsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ControlsController.swift; sourceTree = "<group>"; };
 		3BA697F2227850F4005E097B /* ChargingController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChargingController.swift; sourceTree = "<group>"; };
+		3BE49109229F015500801552 /* TeslaComHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeslaComHandler.swift; sourceTree = "<group>"; };
 		3BEB50FD2272FFEC002AFDA1 /* teslamote.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = teslamote.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3BEB51002272FFEC002AFDA1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3BEB51022272FFEC002AFDA1 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -242,6 +244,15 @@
 			path = Controller;
 			sourceTree = "<group>";
 		};
+		3BE49108229F00F000801552 /* Handler */ = {
+			isa = PBXGroup;
+			children = (
+				3B08F1C9227396A800CA761F /* SessionHandler.swift */,
+				3BE49109229F015500801552 /* TeslaComHandler.swift */,
+			);
+			path = Handler;
+			sourceTree = "<group>";
+		};
 		3BEB50F42272FFEC002AFDA1 = {
 			isa = PBXGroup;
 			children = (
@@ -271,6 +282,7 @@
 		3BEB50FF2272FFEC002AFDA1 /* teslamote */ = {
 			isa = PBXGroup;
 			children = (
+				3BE49108229F00F000801552 /* Handler */,
 				3B5AED1F228CA49F00EC29CB /* Controller */,
 				3B2BF50B2274BF840031CCE8 /* teslamote.entitlements */,
 				3B4CC0DD22739F01001C4FDA /* model */,
@@ -279,7 +291,6 @@
 				3BEB51072272FFEE002AFDA1 /* Assets.xcassets */,
 				3BEB51092272FFEE002AFDA1 /* LaunchScreen.storyboard */,
 				3BEB510C2272FFEE002AFDA1 /* Info.plist */,
-				3B08F1C9227396A800CA761F /* SessionHandler.swift */,
 			);
 			path = teslamote;
 			sourceTree = "<group>";
@@ -688,6 +699,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3BEB51032272FFEC002AFDA1 /* ViewController.swift in Sources */,
+				3BE4910A229F015500801552 /* TeslaComHandler.swift in Sources */,
 				3B08F1CA227396A800CA761F /* SessionHandler.swift in Sources */,
 				3B5AED21228CA4E500EC29CB /* HomeController.swift in Sources */,
 				3BEB51012272FFEC002AFDA1 /* AppDelegate.swift in Sources */,
