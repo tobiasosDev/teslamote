@@ -9,16 +9,22 @@
 import UIKit
 
 class HomeController: UIViewController {
-
+    
+    @IBOutlet weak var temperatureLabel: UILabel!
+    @IBOutlet weak var batteryMileLable: UILabel!
+    @IBOutlet weak var batteryChargeLabel: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        self.displayInformations();
         // Do any additional setup after loading the view.
     }
     
     
     func displayInformations() {
-        
+        self.temperatureLabel.text = "\(String(describing: SessionHandler.shared.vehicle.climateState.insideTemperature))°"
+        self.batteryChargeLabel.text = "\(SessionHandler.shared.vehicle.chargeState.batteryLevel)%"
+        self.batteryMileLable.text = "\(String((SessionHandler.shared.vehicle.chargeState.estBatteryRange * 1.609344).rounded())) Km"
     }
     
     @IBAction func triggerFlashLight(_ sender: Any) {
