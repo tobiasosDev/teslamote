@@ -6,8 +6,10 @@ target 'teslamote' do
   use_frameworks!
 
   # Pods for teslamote
-  pod 'TeslaKit', '~> 2.5'
+  pod 'TeslaKit'
   pod 'RealmSwift'
+  pod 'EasyFutures'
+  pod 'lottie-ios'
 
 
   target 'teslamoteTests' do
@@ -35,7 +37,7 @@ target 'teslamote WatchKit Extension' do
   use_frameworks!
 
   # Pods for teslamote WatchKit Extension
-  pod 'TeslaKit', '~> 2.5'
+  pod 'TeslaKit'
   pod 'EMTLoadingIndicator', '~> 4.0.0'
 
 end

@@ -10,6 +10,7 @@
 import Foundation
 import WatchConnectivity
 import TeslaKit
+import EasyFutures
 
 class SessionHandler : NSObject, WCSessionDelegate {
     
@@ -67,28 +68,33 @@ class SessionHandler : NSObject, WCSessionDelegate {
         self.session.activate()
     }
     
-    func login(username: String, password: String) {
+    func login(username: String, password: String) -> Future<Bool>{
+        let promise = Promise<Bool>()
         NSUbiquitousKeyValueStore.default.set(username, forKey: "username")
         NSUbiquitousKeyValueStore.default.set(password, forKey: "password")
-        
         teslaAPI.getAccessToken(email: username, password: password) { (httpResponse, dataOrNil, errorOrNil) in
             guard let accessToken = dataOrNil else { return }
-            
             self.accessTokenLocal = accessToken
-            self.setAccessToken(accessToken: self.accessTokenLocal.accessToken!)
-            // self.performSegue(withIdentifier: "goToMain", sender: nil)
+            
+            self.setAccessToken(accessToken: self.accessTokenLocal.accessToken!).onSuccess { data in
+                promise.success(data)
+            }
         }
+        return promise.future
     }
     
-    func loginWithSavedCredentials() {
+    func loginWithSavedCredentials() -> Future<Bool> {
         if self.hasLoginCredentials() {
             let username = NSUbiquitousKeyValueStore.default.string(forKey: "username")
             let password = NSUbiquitousKeyValueStore.default.string(forKey: "password")
-            self.login(username: username!, password: password!)
+            return self.login(username: username!, password: password!)
         } else {
-            
+            let promise = Promise<Bool>()
+            promise.success(false)
+            return promise.future
         }
     }
+
     
     func hasLoginCredentials() -> Bool {
         NSUbiquitousKeyValueStore.default.synchronize()
@@ -105,7 +111,21 @@ class SessionHandler : NSObject, WCSessionDelegate {
         }
     }
     
-    func setAccessToken(accessToken: String) {
+    func wakeVehicle(vehicle: Vehicle) -> Future<Bool>{
+        let promise = Promise<Bool>()
+        if (vehicle.status != VehicleStatus.online) {
+            self.teslaAPI.wake(vehicle, completion: { (res, _, err) in
+                guard res else { return }
+                promise.success(true)
+            })
+        } else {
+            promise.success(true)
+        }
+        return promise.future
+    }
+    
+    func setAccessToken(accessToken: String) -> Future<Bool> {
+        let promise = Promise<Bool>()
         // SessionHandler.shared.teslaAPI.setAccessToken(accessToken)
         self.teslaAPI.setAccessToken(accessToken)
         
@@ -122,11 +142,15 @@ class SessionHandler : NSObject, WCSessionDelegate {
             
             print("id: \(self.vehicle.id)")
             print("vhicleid: \(self.vehicle.vehicleId)")
+            self.wakeVehicle(vehicle: self.vehicle).onSuccess { isOnline in
+                TeslaComHandler.shared.updateCarInformation(vehicle: self.vehicle).onSuccess { vehicle in
+                    promise.success(true)
+                }
+            }
             
             // SessionHandler.shared.accessToken = accessTokenModel
-            
         }
-        
+        return promise.future
     }
     
     /// Observer to receive messages from watch and we be able to response it

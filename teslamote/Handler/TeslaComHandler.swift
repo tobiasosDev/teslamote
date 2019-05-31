@@ -8,57 +8,81 @@
 
 import UIKit
 import TeslaKit
+import EasyFutures
 
 class TeslaComHandler: NSObject {
     
     static let shared = TeslaComHandler()
     let teslaAPI = TeslaAPI()
     
-    func updateCarInformation() {
+    func updateCarInformation(vehicle: Vehicle) -> Future<Vehicle> {
+        self.teslaAPI.setAccessToken(SessionHandler.shared.accessTokenLocal.accessToken!)
+        let promise = Promise<Vehicle>()
         SessionHandler.shared.refreshToken()
-        self.teslaAPI.getData(for: SessionHandler.shared.vehicle, completion: { (res, data, err) in
-            SessionHandler.shared.vehicle = data!
-        })
+        SessionHandler.shared.wakeVehicle(vehicle: vehicle).onSuccess { isOnline in
+            self.teslaAPI.getData(vehicle.id, completion: { (res, data, err) in
+                SessionHandler.shared.vehicle = data!
+                promise.success(data!)
+            })
+        }
+        return promise.future
     }
     
     func flashLights() {
+        self.teslaAPI.setAccessToken(SessionHandler.shared.accessTokenLocal.accessToken!)
         SessionHandler.shared.refreshToken()
-        self.teslaAPI.send(.flashLights, to: SessionHandler.shared.vehicle) { (repsonse) in
-            if repsonse.result {
-                // self.getCarInformation()
+        SessionHandler.shared.wakeVehicle(vehicle: SessionHandler.shared.vehicle).onSuccess { isOnline in
+            self.teslaAPI.send(.flashLights, to: SessionHandler.shared.vehicle) { (repsonse) in
+                if repsonse.result {
+                    // self.getCarInformation()
+                }
             }
         }
     }
     
     func honkHorn() {
+        self.teslaAPI.setAccessToken(SessionHandler.shared.accessTokenLocal.accessToken!)
         SessionHandler.shared.refreshToken()
-        self.teslaAPI.send(.honkHorn, to: SessionHandler.shared.vehicle) { (repsonse) in
-            if repsonse.result {
-                // self.getCarInformation()
+        SessionHandler.shared.wakeVehicle(vehicle: SessionHandler.shared.vehicle).onSuccess { isOnline in
+            self.teslaAPI.send(.honkHorn, to: SessionHandler.shared.vehicle) { (repsonse) in
+                if repsonse.result {
+                    // self.getCarInformation()
+                }
             }
         }
     }
     
-    func turnOnOffClimate() -> Bool {
+    func turnOnOffClimate() -> Future<Bool> {
+        self.teslaAPI.setAccessToken(SessionHandler.shared.accessTokenLocal.accessToken!)
         SessionHandler.shared.refreshToken()
-        let command = SessionHandler.shared.vehicle.climateState.isClimateOn ? Command.stopHVAC : Command.startHVAC
-        self.teslaAPI.send(command, to: SessionHandler.shared.vehicle) { (repsonse) in
-            if repsonse.result {
-                
+        let promise = Promise<Bool>()
+        SessionHandler.shared.wakeVehicle(vehicle: SessionHandler.shared.vehicle).onSuccess { isOnline in
+            let command = SessionHandler.shared.vehicle.climateState.isClimateOn ? Command.stopHVAC : Command.startHVAC
+            self.teslaAPI.send(command, to: SessionHandler.shared.vehicle) { (repsonse) in
+                if repsonse.result {
+                    self.updateCarInformation(vehicle: SessionHandler.shared.vehicle).onSuccess { vehicle in
+                        promise.success(vehicle.climateState.isClimateOn)
+                    }
+                }
             }
         }
-        return !SessionHandler.shared.vehicle.climateState.isClimateOn
+        return promise.future
     }
     
-    func lockUnlockCar() -> Bool {
+    func lockUnlockCar() -> Future<Bool> {
+        self.teslaAPI.setAccessToken(SessionHandler.shared.accessTokenLocal.accessToken!)
+        let promise = Promise<Bool>()
         SessionHandler.shared.refreshToken()
-        let command = SessionHandler.shared.vehicle.vehicleState.locked ? Command.unlockDoors : Command.lockDoors
-        
-        teslaAPI.send(command, to: SessionHandler.shared.vehicle) { (repsonse) in
-            if repsonse.result {
-                self.updateCarInformation()
+        SessionHandler.shared.wakeVehicle(vehicle: SessionHandler.shared.vehicle).onSuccess { isOnline in
+            let command = SessionHandler.shared.vehicle.vehicleState.locked ? Command.unlockDoors : Command.lockDoors
+            self.teslaAPI.send(command, to: SessionHandler.shared.vehicle) { (repsonse) in
+                if repsonse.result {
+                    self.updateCarInformation(vehicle: SessionHandler.shared.vehicle).onSuccess { vehicle in
+                        promise.success(vehicle.vehicleState.locked)
+                    }
+                }
             }
         }
-        return !SessionHandler.shared.vehicle.vehicleState.locked
+        return promise.future
     }
 }

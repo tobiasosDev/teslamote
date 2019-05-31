@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import EasyFutures
 
 class ViewController: UIViewController {
     
@@ -24,7 +25,16 @@ class ViewController: UIViewController {
         
         
         if  SessionHandler.shared.hasLoginCredentials() {
-            SessionHandler.shared.loginWithSavedCredentials()
+            SessionHandler.shared.loginWithSavedCredentials().onSuccess { result in
+                if (result) {
+                    print(SessionHandler.shared.vehicle)
+                    self.performSegue(withIdentifier: "goToMain", sender: nil)
+                } else {
+                    let alert = UIAlertController(title: "Keine Login Daten", message: "Bitte loggen Sie sich ein", preferredStyle: .alert)
+                    alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+                    self.present(alert, animated: true)
+                }
+            }
         } else {
             let alert = UIAlertController(title: "Keine Login Daten", message: "Bitte loggen Sie sich ein", preferredStyle: .alert)
             alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
@@ -37,8 +47,15 @@ class ViewController: UIViewController {
         loginModel.username = usernameInput.text!
         loginModel.password = passwordInput.text!
         
-        SessionHandler.shared.login(username: loginModel.username, password: loginModel.password)
-        
+        SessionHandler.shared.login(username: loginModel.username, password: loginModel.password).onSuccess { result in
+            if (result) {
+                self.performSegue(withIdentifier: "goToMain", sender: nil)
+            } else {
+                let alert = UIAlertController(title: "Keine Login Daten", message: "Bitte loggen Sie sich ein", preferredStyle: .alert)
+                alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+                self.present(alert, animated: true)
+            }
+        }
     }
     
 }

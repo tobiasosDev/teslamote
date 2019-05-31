@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		17A11C68E9DB08EF8AB6296E /* Pods_teslamoteUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 81A3C5467C60D58B389CD808 /* Pods_teslamoteUITests.framework */; };
+		3B01E51A22A1998D00964616 /* battery.json in Resources */ = {isa = PBXBuildFile; fileRef = 3B01E51922A1998D00964616 /* battery.json */; };
 		3B08F1CA227396A800CA761F /* SessionHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B08F1C9227396A800CA761F /* SessionHandler.swift */; };
 		3B08F1D22273997A00CA761F /* Pods_teslamote.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B08F1D12273997A00CA761F /* Pods_teslamote.framework */; };
 		3B1270AD22779A68008F2F1D /* SessionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B1270AC22779A68008F2F1D /* SessionManager.swift */; };
@@ -99,6 +100,7 @@
 		0C775A9766D07500AD447822 /* Pods_teslamote.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_teslamote.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		1EE4FE2EA45775A5C054963A /* libPods-teslamote WatchKit App.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-teslamote WatchKit App.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		319858A2880AB3E323E2E475 /* Pods_teslamote_WatchKit_Extension.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_teslamote_WatchKit_Extension.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3B01E51922A1998D00964616 /* battery.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = battery.json; sourceTree = "<group>"; };
 		3B08F1C9227396A800CA761F /* SessionHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionHandler.swift; sourceTree = "<group>"; };
 		3B08F1D12273997A00CA761F /* Pods_teslamote.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Pods_teslamote.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3B08F1D32273998000CA761F /* TeslaKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = TeslaKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -282,6 +284,7 @@
 		3BEB50FF2272FFEC002AFDA1 /* teslamote */ = {
 			isa = PBXGroup;
 			children = (
+				3B01E51922A1998D00964616 /* battery.json */,
 				3BE49108229F00F000801552 /* Handler */,
 				3B5AED1F228CA49F00EC29CB /* Controller */,
 				3B2BF50B2274BF840031CCE8 /* teslamote.entitlements */,
@@ -518,6 +521,7 @@
 				3BEB510B2272FFEE002AFDA1 /* LaunchScreen.storyboard in Resources */,
 				3BEB51082272FFEE002AFDA1 /* Assets.xcassets in Resources */,
 				3BEB51062272FFEC002AFDA1 /* Main.storyboard in Resources */,
+				3B01E51A22A1998D00964616 /* battery.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -580,17 +584,21 @@
 			);
 			inputPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-teslamote/Pods-teslamote-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/EasyFutures/EasyFutures.framework",
 				"${BUILT_PRODUCTS_DIR}/ObjectMapper-iOS/ObjectMapper.framework",
 				"${BUILT_PRODUCTS_DIR}/Realm/Realm.framework",
 				"${BUILT_PRODUCTS_DIR}/RealmSwift/RealmSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/TeslaKit-iOS/TeslaKit.framework",
+				"${BUILT_PRODUCTS_DIR}/lottie-ios/Lottie.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/EasyFutures.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ObjectMapper.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RealmSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/TeslaKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Lottie.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
