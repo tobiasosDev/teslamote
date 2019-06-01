@@ -21,6 +21,9 @@ class HomeController: UIViewController {
     @IBOutlet weak var temperatureView: UIView!
     @IBOutlet weak var batteryView: UIView!
     @IBOutlet weak var animatedBatteryView: AnimationView!
+    @IBOutlet weak var teslaNameLabel: UILabel!
+    
+    var updateTimer = Timer.scheduledTimer(timeInterval: 60.0, target: self, selector: #selector(updateDisplayInformations), userInfo: nil, repeats: true)
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -33,6 +36,7 @@ class HomeController: UIViewController {
         setFontDynamic(label: temperaturTitleLabel)
         setFontDynamic(label: batteryMileSubTitleLabel)
         setFontDynamic(label: batteryChargeSubTitleLabel)
+        setFontDynamic(label: teslaNameLabel)
         setRoundedCorners(uiview: temperatureView)
         setRoundedCorners(uiview: batteryView)
         animatedBatteryView.animation = Animation.named("battery")
@@ -49,11 +53,22 @@ class HomeController: UIViewController {
         uiview.clipsToBounds = true
     }
     
+    @objc func updateDisplayInformations() {
+        TeslaComHandler.shared.updateCarInformation(vehicle: SessionHandler.shared.vehicle).onSuccess { vehicle in
+            self.displayInformations()
+        }
+    }
     
     func displayInformations() {
+        let distanceMiles = Measurement(value: SessionHandler.shared.vehicle.chargeState.batteryRange, unit: UnitLength.miles)
+        self.teslaNameLabel.text = SessionHandler.shared.vehicle.displayName
         self.temperatureLabel.text = "\(String(describing: SessionHandler.shared.vehicle.climateState.insideTemperature!))°"
         self.batteryChargeLabel.text = "\(SessionHandler.shared.vehicle.chargeState.batteryLevel)%"
-        self.batteryMileLable.text = "\(String(Int((SessionHandler.shared.vehicle.chargeState.estBatteryRange * 1.609344).rounded()))) Km"
+        self.batteryMileLable.text = "\(String(Int((distanceMiles.converted(to: UnitLength.kilometers).value).rounded()))) Km"
+    }
+    
+    func dispatchAll() {
+        self.updateTimer.invalidate()
     }
     
     @IBAction func triggerFlashLight(_ sender: Any) {
@@ -80,6 +95,11 @@ class HomeController: UIViewController {
     
     @IBAction func honkHorn(_ sender: Any) {
         TeslaComHandler.shared.honkHorn()
+    }
+    
+    @IBAction func goToBattery(_ sender: Any) {
+        self.dispatchAll()
+        self.performSegue(withIdentifier: "goToBatteryMain", sender: nil)
     }
     /*
     // MARK: - Navigation
