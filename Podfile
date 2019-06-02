@@ -10,6 +10,8 @@ target 'teslamote' do
   pod 'RealmSwift'
   pod 'EasyFutures'
   pod 'lottie-ios'
+  pod 'fluid-slider'
+  pod 'UICircularProgressRing'
 
 
   target 'teslamoteTests' do

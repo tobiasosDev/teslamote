@@ -220,7 +220,7 @@
                         </group>
                         <group width="1" alignment="left" verticalAlignment="bottom" radius="20" id="Xbs-hm-ooY">
                             <items>
-                                <slider width="1" alignment="left" verticalAlignment="bottom" value="1" maximum="3" steps="3" id="4yb-aQ-VcJ">
+                                <slider width="1" alignment="left" verticalAlignment="bottom" value="25" minimum="15" maximum="28" steps="26" id="4yb-aQ-VcJ">
                                     <connections>
                                         <action selector="setTemperatur:" destination="gVg-OX-J6q" id="0hL-jl-Unq"/>
                                     </connections>

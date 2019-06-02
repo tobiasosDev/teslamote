@@ -43,7 +43,7 @@ class ClimateController: WKInterfaceController {
             }
         }
     }
-    
+    // Max 28°, Min 15°
     @IBAction func setTemperatur(_ value: Float) {
         let parameters = SetChargeLimit(limitValue: Double(value))
         self.teslaAPI.send(.setChargeLimit, to: SessionManger.vehicle, parameters: parameters) { (repsonse) in

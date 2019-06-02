@@ -1,8 +1,11 @@
 PODS:
   - EasyFutures (1.2.0)
   - EMTLoadingIndicator (4.0.0)
+  - fluid-slider (1.1.0):
+    - pop
   - lottie-ios (3.1.0)
   - ObjectMapper (3.4.2)
+  - pop (1.0.12)
   - Realm (3.16.0):
     - Realm/Headers (= 3.16.0)
   - Realm/Headers (3.16.0)
@@ -10,33 +13,42 @@ PODS:
     - Realm (= 3.16.0)
   - TeslaKit (2.5):
     - ObjectMapper (~> 3.3)
+  - UICircularProgressRing (6.2.0)
 
 DEPENDENCIES:
   - EasyFutures
   - EMTLoadingIndicator (~> 4.0.0)
+  - fluid-slider
   - lottie-ios
   - RealmSwift
   - TeslaKit
+  - UICircularProgressRing
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
     - EasyFutures
     - EMTLoadingIndicator
+    - fluid-slider
     - lottie-ios
     - ObjectMapper
+    - pop
     - Realm
     - RealmSwift
     - TeslaKit
+    - UICircularProgressRing
 
 SPEC CHECKSUMS:
   EasyFutures: 19973d79f507dddde63e76bc7ce8df52ae839c08
   EMTLoadingIndicator: 84b875fbe500606bb9a5e411885bc152ae9a371f
+  fluid-slider: 68037ac7247f16a89f3e24ff5d0167c8eea6f50b
   lottie-ios: 9467723922dfff46f6d4e3019c32594a62440b7c
   ObjectMapper: 0d4402610f4e468903ae64629eec4784531e5c51
+  pop: d582054913807fd11fd50bfe6a539d91c7e1a55a
   Realm: 5ca1b8c472dfc532cd0ba0bfe2ce49f97130158f
   RealmSwift: 2ee401dbcc188706261921326146f5a539d4d4a7
   TeslaKit: 2d0d6562c11d6159bdeef073701691e34db1ad63
+  UICircularProgressRing: 0ff679b05a17f15ad6301a7886686837b8c301a9
 
-PODFILE CHECKSUM: 801f8c7672fea3b45bec4ea8a69d4ece5eeaba2f
+PODFILE CHECKSUM: 2dc2d6b78f36ec8a978f7030e5b7b6bc19ee4317
 
 COCOAPODS: 1.6.1

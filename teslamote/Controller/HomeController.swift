@@ -23,7 +23,7 @@ class HomeController: UIViewController {
     @IBOutlet weak var animatedBatteryView: AnimationView!
     @IBOutlet weak var teslaNameLabel: UILabel!
     
-    var updateTimer = Timer.scheduledTimer(timeInterval: 60.0, target: self, selector: #selector(updateDisplayInformations), userInfo: nil, repeats: true)
+    // var updateTimer = Timer.scheduledTimer(timeInterval: 60.0, target: self, selector: #selector(updateDisplayInformations), userInfo: nil, repeats: true)
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -53,7 +53,7 @@ class HomeController: UIViewController {
         uiview.clipsToBounds = true
     }
     
-    @objc func updateDisplayInformations() {
+    func updateDisplayInformations() {
         TeslaComHandler.shared.updateCarInformation(vehicle: SessionHandler.shared.vehicle).onSuccess { vehicle in
             self.displayInformations()
         }
@@ -68,7 +68,7 @@ class HomeController: UIViewController {
     }
     
     func dispatchAll() {
-        self.updateTimer.invalidate()
+        // self.updateTimer.invalidate()
     }
     
     @IBAction func triggerFlashLight(_ sender: Any) {
