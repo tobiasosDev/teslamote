@@ -1,0 +1,6 @@
+framework module EasyFutures {
+  umbrella header "EasyFutures-umbrella.h"
+
+  export *
+  module * { export * }
+}

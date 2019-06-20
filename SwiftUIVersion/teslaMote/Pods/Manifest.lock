@@ -1,0 +1,24 @@
+PODS:
+  - EasyFutures (1.2.0)
+  - PromiseKit/CorePromise (6.8.4)
+  - TeslaSwift (4.7.1):
+    - PromiseKit/CorePromise (~> 6)
+
+DEPENDENCIES:
+  - EasyFutures
+  - TeslaSwift
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - EasyFutures
+    - PromiseKit
+    - TeslaSwift
+
+SPEC CHECKSUMS:
+  EasyFutures: 19973d79f507dddde63e76bc7ce8df52ae839c08
+  PromiseKit: 51794a832647e7b819336dc2279039ce9f1cc49b
+  TeslaSwift: 24723414b5171eeab83640f30de2b9c400371c35
+
+PODFILE CHECKSUM: 36f1ccbca25ddbe2006508f62d12e81b098d798e
+
+COCOAPODS: 1.6.1

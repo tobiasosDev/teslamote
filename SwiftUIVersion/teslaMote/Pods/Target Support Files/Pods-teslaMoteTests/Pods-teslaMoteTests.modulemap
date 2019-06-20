@@ -1,0 +1,6 @@
+framework module Pods_teslaMoteTests {
+  umbrella header "Pods-teslaMoteTests-umbrella.h"
+
+  export *
+  module * { export * }
+}

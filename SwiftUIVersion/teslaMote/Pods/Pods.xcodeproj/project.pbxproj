@@ -1,0 +1,1609 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		07B1BF7A4C04C1CB3390F8F76D367C8A /* ClimateState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B830AE24587F8C5EB5F153239E33638 /* ClimateState.swift */; };
+		0A61A34876395FD5052618F50FF85904 /* TeslaSwift-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 2E09858FE84586FF6E3D9EDF1EA8E8E4 /* TeslaSwift-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0EEAC00D9161A04BFF14BE3ABF270938 /* after.m in Sources */ = {isa = PBXBuildFile; fileRef = 71BA7E9989F768FF2EA38C710257253B /* after.m */; };
+		0F75B56A1535A79245D1C24A7C950E42 /* hang.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DC3E6DA3A68C7DD1CE84EA82BFCC0EC /* hang.swift */; };
+		12726EBE84B1D50BDC2795115438A6F1 /* PromiseKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 226A7AECCBF199C9691A973E21320128 /* PromiseKit.framework */; };
+		14D62A58D6D0BACEDDA906405E900675 /* TeslaStreaming.swift in Sources */ = {isa = PBXBuildFile; fileRef = E07CA90A2ABE08E7FDF4221F4287B224 /* TeslaStreaming.swift */; };
+		188D6D68FF8D17EBA4C073CD8665B597 /* Box.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BC7B0C56DB5113538A284AA832FA897 /* Box.swift */; };
+		1C3BB765E3BAB91F93AC1EE5408DAD1F /* HTTPEventStreaming.swift in Sources */ = {isa = PBXBuildFile; fileRef = B664FA2DD49FE1F62967D795B90C6A29 /* HTTPEventStreaming.swift */; };
+		1E4DDE7B644AF285293872D1A0F3CE7A /* TeslaStreamEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDA2CBFDBF97FE8F06D0E3296942512F /* TeslaStreamEndpoint.swift */; };
+		233B9E09D0BA4F71C46565130ECBEE26 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7806801F2BC36D1206A1637FBEF1EFDD /* Foundation.framework */; };
+		275ECBEC3A63AC17860FD981DCFE1531 /* SpeedLimitOptions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A32615CE4F21C1AB13D15AE516C8EBE /* SpeedLimitOptions.swift */; };
+		2ACF0BBE4676F32011AD27812A1CD036 /* race.m in Sources */ = {isa = PBXBuildFile; fileRef = 51E244AABE53D73A9250517E84D68D0C /* race.m */; };
+		2EFC567818A731DD7F8076FB66CF1B79 /* Deprecations.swift in Sources */ = {isa = PBXBuildFile; fileRef = C36D9645CE744B13517C16417337467F /* Deprecations.swift */; };
+		36BD533342D70355D2A1A50DE92B8C66 /* Vehicle.swift in Sources */ = {isa = PBXBuildFile; fileRef = B421FB77EBF79AE2B5C76DF83E2C1DEE /* Vehicle.swift */; };
+		391DB81AF20B8D91C578D10D83F8CA48 /* Pods-teslaMote-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = A6B3C32A3740C93131FC4147CB77D167 /* Pods-teslaMote-dummy.m */; };
+		3CEFD45F95E972FC41467F12B5E8EE69 /* SoftwareUpdate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84C1C9DF3D0092402D343C4E62B4281D /* SoftwareUpdate.swift */; };
+		3CF4A9987DC4D09B93B98CB6EADCC51A /* EasyFutures-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 117487D4953B45379031DE51EF41028B /* EasyFutures-dummy.m */; };
+		3F3F275FA359FEE11CD9CDEAD272C21C /* firstly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68B0EC5D7B477D9AC151924108F0F50A /* firstly.swift */; };
+		460282A6714A1A870F2B644BC3571042 /* NavigationRequestOptions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3C8A9F0EF6FC167A0F0B3AA5DA1EF51 /* NavigationRequestOptions.swift */; };
+		4D1567425338D979E07F579E6CF564C3 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7806801F2BC36D1206A1637FBEF1EFDD /* Foundation.framework */; };
+		4F7B7770DB3F85BCC13AD85C0FC175CA /* OpenTrunkOptions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3447A4F05C0A2BF55CAE2428D3A57F4 /* OpenTrunkOptions.swift */; };
+		5029664CA94301E2311BE2BC14F05BFD /* RemoteSeatHeaterRequestOptions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1DED8389E39319674A2188A45858039 /* RemoteSeatHeaterRequestOptions.swift */; };
+		543800651BBE1F2AA266F6BD935B622B /* ValetCommandOptions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B99035E6943BA5D71532FCA98F0DED58 /* ValetCommandOptions.swift */; };
+		593970590A1416EC5A775CF594E668FE /* FutureError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C62831DC734BED3A0E8DE7510C0C4D4 /* FutureError.swift */; };
+		59595D3F294F65FA658B5856C978524B /* ChargeState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E0327B4C61A8ABB13AEFE3F6639141F /* ChargeState.swift */; };
+		5ACF8E6F536948EE33BFE7FE64B62CB1 /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = F794801C85788655A25FE5AB14355F28 /* Result.swift */; };
+		5B987C979C2E58A0C76B5ACB5D00E860 /* PromiseKit-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 12C8D5C28D6BC0552C6EA09FE9E33FCF /* PromiseKit-dummy.m */; };
+		5E58504397DD88EC4CDE5BB5D163EFEC /* hang.m in Sources */ = {isa = PBXBuildFile; fileRef = E4C924C931C8CD8DA18BD3C3667BFEC3 /* hang.m */; };
+		5FE49A8912F53C594A7B843BDCBBC6C6 /* TeslaSwift-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 5204176C1A631D58C2948F22C2A35AD8 /* TeslaSwift-dummy.m */; };
+		601D0D06B303CE12DC554DFC95F3DE92 /* Guarantee.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9FD605733EA2B65548FFC9EB3C995CF /* Guarantee.swift */; };
+		60266054119BD1633100E8C51F238E29 /* VehicleExtended.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EB6A463B51F97FAF8C2B7740287D2E2 /* VehicleExtended.swift */; };
+		663FE56598F479E14F7E96B66529334D /* Promise.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FF03E3F6B659B62B39AF6AAB391DC72 /* Promise.swift */; };
+		668CA21D0E4AA0A7B77A75122E4A3955 /* ChargeLimitPercentageCommandOptions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BF125F6D8F4DF96E53B95B50D2AA288 /* ChargeLimitPercentageCommandOptions.swift */; };
+		6C0DA87BB4A6AB0C5D353AB554BC623D /* VehicleState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F61C5695BFE373B7EC90C6DBAB5AFC1 /* VehicleState.swift */; };
+		73B882AF46B2895C7666EA9790F239C4 /* join.m in Sources */ = {isa = PBXBuildFile; fileRef = 5355F98532F6FEDD9E7017C7A6102B1E /* join.m */; };
+		74546AD9BF6FD218481513327D93E6D1 /* AnyPromise.swift in Sources */ = {isa = PBXBuildFile; fileRef = 225C42F4013F5BD1098B59A779C3D661 /* AnyPromise.swift */; };
+		7B2B3DC93BBAE563C62E56B6535310A9 /* Pods-teslaMoteUITests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 18EDFB2B5C3B24E56CDB6B9640E39DDA /* Pods-teslaMoteUITests-dummy.m */; };
+		7CBE7D2F93643FF4F2841D81C1A1EE78 /* Authentication.swift in Sources */ = {isa = PBXBuildFile; fileRef = B59DF141FD4CD577D8A1A32F6B32472F /* Authentication.swift */; };
+		7F61DDA7D58CE3AD3AF6B49A853C1D75 /* EasyFutures-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 4F6FC26B101CEA44349B9A3ADF7E798B /* EasyFutures-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		81AAC5B0FBD8EC2C15722844346D6A8B /* VehicleConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AA04C7DBAF89746B978C71CE60FBD48 /* VehicleConfig.swift */; };
+		86F07D836FE9857D80DEE5A70162E3D8 /* CommandResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC02177ACB06CA57EC55A130097DE736 /* CommandResponse.swift */; };
+		87B226161F706AC36F196F554DDF8CEE /* Pods-teslaMote-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 55FA7F1EF6B8DC663A3300924ADBF0D2 /* Pods-teslaMote-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		88BB556A7814232291643F705887E6CE /* GenericResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BD573C915420C69A2A28EC446D2E148 /* GenericResponse.swift */; };
+		8A90677D3B8EA51F2E9285FF5A5194E9 /* after.swift in Sources */ = {isa = PBXBuildFile; fileRef = 839A107ED02270AE14DC7E5B48DDE8E7 /* after.swift */; };
+		8C7EB19229FDA45A42C993A39D558448 /* Pods-teslaMoteUITests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 752D73F415CC916532C6DFA94080458A /* Pods-teslaMoteUITests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		8CD5A854EF31F4FB65C4DE45E8783B5D /* Error.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0493FA4DEF68BC4BE089ECF62E4FBD06 /* Error.swift */; };
+		8E89D8DB087BADC6CD2A606C591505FC /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7806801F2BC36D1206A1637FBEF1EFDD /* Foundation.framework */; };
+		8F78750B0342008CA386ACB834CC389D /* LogEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4836AF32157145665127150AACD82144 /* LogEvent.swift */; };
+		91BA329BC2D3F74BA6DA5471C1669895 /* Promise.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A853C8499DA712A0EFFF8E9159206DA /* Promise.swift */; };
+		920F852E4C23027230FE2F1F78C3E4C8 /* ErrorMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA1428F60325AF36E2365E63A6920FF2 /* ErrorMessage.swift */; };
+		930418B586D8C7CBB8AEB6FF80D7DACB /* TeslaEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92C525A0E0B7285C4953A57C60761927 /* TeslaEndpoint.swift */; };
+		95FDC810136DF86D5415E826E4581C92 /* Sequence+Future.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67275ACA16B5F988C849A02554B45349 /* Sequence+Future.swift */; };
+		9B15FE2589BB235ED409EC5251FDE65F /* AnyPromise.h in Headers */ = {isa = PBXBuildFile; fileRef = 15F76F743099A25E428AB524D53912E2 /* AnyPromise.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A1F38F3E510E1D82330E14F3E4E96885 /* Catchable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AAF6CFD736ABB911BE41035C968AB9C /* Catchable.swift */; };
+		A4C756D26B8B3E8703C5112EF44C2C08 /* SentryModeCommandOptions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6AE1EF9C80140BF18F1DF5C85F4C0B9 /* SentryModeCommandOptions.swift */; };
+		A536DCA576C7B9684DD3E782DC39D981 /* Configuration.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCABA2D9C19E2B65D9F3D4AC400A2AD9 /* Configuration.swift */; };
+		AAB85E94D5DAC654DE2F76DA59A56D3D /* when.swift in Sources */ = {isa = PBXBuildFile; fileRef = 038F2E9C59D52C0C775F2106DCE89005 /* when.swift */; };
+		AEDB99D0006468C743789B932A65E2CC /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7806801F2BC36D1206A1637FBEF1EFDD /* Foundation.framework */; };
+		B11A226DF6F67C03475720F551C2A764 /* RemoteSteeringWheelHeaterRequestOptions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 943C4EC8CDFA004FD0C6F0B7BA801F5E /* RemoteSteeringWheelHeaterRequestOptions.swift */; };
+		B1F8A59FF716D123D294F931AEF3391A /* Distance.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACB24004C97D5B15E04BB6E96888DE12 /* Distance.swift */; };
+		B26C1D810B98A106D22B6ABA3CD110DF /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7806801F2BC36D1206A1637FBEF1EFDD /* Foundation.framework */; };
+		B6D4DCB25145A03D7F8ECA1CC077F538 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7806801F2BC36D1206A1637FBEF1EFDD /* Foundation.framework */; };
+		BB526CC6C23AE8100C9C7451ED9E9524 /* fwd.h in Headers */ = {isa = PBXBuildFile; fileRef = 64DA4A1EE4559929CD92A715DD0098A4 /* fwd.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		BF2B3FA482B2EB1B1CA944ECB1C1F891 /* SetTemperatureCommandOptions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A9E6F211B6ACF9D431AC9422E594303 /* SetTemperatureCommandOptions.swift */; };
+		BF892EAFD385CCDA1C860548FD53E42B /* TeslaSwift.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9CA3B992A2B4C75DF6AE6439EC6E60A /* TeslaSwift.swift */; };
+		C0B00E22DAFD30C995312AA8476144F7 /* Resolver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 288EC72F9C964928950BFB92B1F147D8 /* Resolver.swift */; };
+		C2322A9D44026B43D23E5D27C7E53FDB /* AnyPromise.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A2B8A170405E3E82A31312A0793EA3D /* AnyPromise.m */; };
+		C2D44EC38F625C16DA3C9D9A7DBD118A /* Pods-teslaMoteTests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = D3F713E2BFADF34A9E404064990FA0F6 /* Pods-teslaMoteTests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C4CE9331D1B192687A431B47D6CE86B4 /* dispatch_promise.m in Sources */ = {isa = PBXBuildFile; fileRef = F3FF2AE36E9FD0DFADD1A0E39B9DFB58 /* dispatch_promise.m */; };
+		C85DCEF47CE9375C66F0177487519CDE /* PromiseKit-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = CF558F03510522CBF56B43DEFA5F0C41 /* PromiseKit-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		CB6F1B9121FC67658B887A0EC6314F5C /* EasyFutures.h in Headers */ = {isa = PBXBuildFile; fileRef = 698FFC6AECAB792104AECBF331F2C650 /* EasyFutures.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		CFDA8EF179B9E305FFCC173E75152560 /* StreamEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AB325AEF046A9B50468BF5C792253CB /* StreamEvent.swift */; };
+		D03072F9A4CD72D4AB4B2EBC20F833F7 /* race.swift in Sources */ = {isa = PBXBuildFile; fileRef = A62EBF8DEC303AB430138E187C84E71D /* race.swift */; };
+		D1A106854C9929D08828912869092840 /* FutureType.swift in Sources */ = {isa = PBXBuildFile; fileRef = D30BCF99E599202782677AC375EFB096 /* FutureType.swift */; };
+		D80037FF9CD78B6634D828A005C4B453 /* DriveState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DEF7E7F8C28F13FE7A4704D95D0750D /* DriveState.swift */; };
+		D9A20DD42C62DE15F1AF87D263F51C5B /* Future.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8679AC315DAD7C38D81B5C86D61790C3 /* Future.swift */; };
+		DC22295251CCDB1C0EEF1E569088CB16 /* GuiSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82DAC167BF3EC32632076CAE656817EF /* GuiSettings.swift */; };
+		E87F6964A23E80AC8D83D14E650CD006 /* when.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C90F40450B049E8B88B4D9342B504A9 /* when.m */; };
+		EA840C552465C708CA5066A701DE3C81 /* PromiseKit.h in Headers */ = {isa = PBXBuildFile; fileRef = C19E8B5D08570C248FD95D5F878EA200 /* PromiseKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		EBE2EA94CCA713EDA60B5780D8E82C5A /* SetSunRoofCommandOptions.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFF97D68E37EC7E6FC44B45929191181 /* SetSunRoofCommandOptions.swift */; };
+		EC02E7AA1CDCCD65DC74C4CCEF4680A1 /* RemoteStartDriveCommandOptions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EBE509AD07DC3D8F17EA8F2DCD2699A /* RemoteStartDriveCommandOptions.swift */; };
+		F1FF0CBE94DF6AFB56D9109807DABF13 /* Pods-teslaMoteTests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = AD482CF750E9FC84DCE6D6D52970F478 /* Pods-teslaMoteTests-dummy.m */; };
+		F5B13B9F725FFC932DE556F672A1B7E8 /* Codable+JSONString.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E7FC8F69764683C56AFFFC2936D88E0 /* Codable+JSONString.swift */; };
+		FD60D89ABA941DC1BA04A50805FC1211 /* CustomStringConvertible.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5135607F05C5F039BA30EC85DD47F21C /* CustomStringConvertible.swift */; };
+		FDE49592D5C4237668CE2368738552FB /* Thenable.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFB9761DCAEA4E34EB17BA9A09626AA3 /* Thenable.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		490AC82FCE7D3C89F1DAB8F50422AB60 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 7E875E4B2267EE67D252A515E14BF06E;
+			remoteInfo = TeslaSwift;
+		};
+		5173696025571482FB8AFCB8CB36BED3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 6C3B6439DE28CA405E27BB60D81B207F;
+			remoteInfo = "Pods-teslaMote";
+		};
+		5F1E1385E5B8FFC796AC1A735C77E9D1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 5541708B34B3C15B67E6FCE8FB695492;
+			remoteInfo = PromiseKit;
+		};
+		B4EBB3FA657019172289C4B84D3C9DC1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 6C3B6439DE28CA405E27BB60D81B207F;
+			remoteInfo = "Pods-teslaMote";
+		};
+		C8065B3C70B754B4395F5A8213EA3978 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 38C29102AF4D45E639A436925D6DDB96;
+			remoteInfo = EasyFutures;
+		};
+		DC39433814E1031596DC4D474A78CA65 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 5541708B34B3C15B67E6FCE8FB695492;
+			remoteInfo = PromiseKit;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		01AC527875B887DFEEF6A12BFB061D5C /* PromiseKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = PromiseKit.framework; path = PromiseKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		038F2E9C59D52C0C775F2106DCE89005 /* when.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = when.swift; path = Sources/when.swift; sourceTree = "<group>"; };
+		0493FA4DEF68BC4BE089ECF62E4FBD06 /* Error.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Error.swift; path = Sources/Error.swift; sourceTree = "<group>"; };
+		0A2B8A170405E3E82A31312A0793EA3D /* AnyPromise.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = AnyPromise.m; path = Sources/AnyPromise.m; sourceTree = "<group>"; };
+		0AB325AEF046A9B50468BF5C792253CB /* StreamEvent.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = StreamEvent.swift; path = Sources/StreamEvent.swift; sourceTree = "<group>"; };
+		0B830AE24587F8C5EB5F153239E33638 /* ClimateState.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ClimateState.swift; path = Sources/ClimateState.swift; sourceTree = "<group>"; };
+		0DEF7E7F8C28F13FE7A4704D95D0750D /* DriveState.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DriveState.swift; path = Sources/DriveState.swift; sourceTree = "<group>"; };
+		0F61C5695BFE373B7EC90C6DBAB5AFC1 /* VehicleState.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = VehicleState.swift; path = Sources/VehicleState.swift; sourceTree = "<group>"; };
+		117487D4953B45379031DE51EF41028B /* EasyFutures-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "EasyFutures-dummy.m"; sourceTree = "<group>"; };
+		12C8D5C28D6BC0552C6EA09FE9E33FCF /* PromiseKit-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "PromiseKit-dummy.m"; sourceTree = "<group>"; };
+		15F76F743099A25E428AB524D53912E2 /* AnyPromise.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AnyPromise.h; path = Sources/AnyPromise.h; sourceTree = "<group>"; };
+		187099F116CC104E5478DED927552456 /* TeslaSwift.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = TeslaSwift.xcconfig; sourceTree = "<group>"; };
+		18EDFB2B5C3B24E56CDB6B9640E39DDA /* Pods-teslaMoteUITests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-teslaMoteUITests-dummy.m"; sourceTree = "<group>"; };
+		1BD573C915420C69A2A28EC446D2E148 /* GenericResponse.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = GenericResponse.swift; path = Sources/GenericResponse.swift; sourceTree = "<group>"; };
+		225C42F4013F5BD1098B59A779C3D661 /* AnyPromise.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AnyPromise.swift; path = Sources/AnyPromise.swift; sourceTree = "<group>"; };
+		226A7AECCBF199C9691A973E21320128 /* PromiseKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = PromiseKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2482F75AC9AF27D72DBDEAA2C3E1D73D /* PromiseKit-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "PromiseKit-Info.plist"; sourceTree = "<group>"; };
+		288EC72F9C964928950BFB92B1F147D8 /* Resolver.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Resolver.swift; path = Sources/Resolver.swift; sourceTree = "<group>"; };
+		2AA04C7DBAF89746B978C71CE60FBD48 /* VehicleConfig.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = VehicleConfig.swift; path = Sources/VehicleConfig.swift; sourceTree = "<group>"; };
+		2AAF6CFD736ABB911BE41035C968AB9C /* Catchable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Catchable.swift; path = Sources/Catchable.swift; sourceTree = "<group>"; };
+		2BC7B0C56DB5113538A284AA832FA897 /* Box.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Box.swift; path = Sources/Box.swift; sourceTree = "<group>"; };
+		2E09858FE84586FF6E3D9EDF1EA8E8E4 /* TeslaSwift-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "TeslaSwift-umbrella.h"; sourceTree = "<group>"; };
+		30E7AB242CE8220E9CAABB0D84A248B0 /* Pods-teslaMote-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-teslaMote-Info.plist"; sourceTree = "<group>"; };
+		346BAB94CBD0F88B3B8CD009723044D9 /* Pods-teslaMote-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-teslaMote-acknowledgements.plist"; sourceTree = "<group>"; };
+		3A32615CE4F21C1AB13D15AE516C8EBE /* SpeedLimitOptions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SpeedLimitOptions.swift; path = Sources/SpeedLimitOptions.swift; sourceTree = "<group>"; };
+		3DF00F9C3F9B8245D7ECD06A87016C40 /* Pods-teslaMote-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-teslaMote-acknowledgements.markdown"; sourceTree = "<group>"; };
+		419778C0A6609986548ADBEC6A38175B /* Pods-teslaMote-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-teslaMote-frameworks.sh"; sourceTree = "<group>"; };
+		4836AF32157145665127150AACD82144 /* LogEvent.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LogEvent.swift; path = Sources/LogEvent.swift; sourceTree = "<group>"; };
+		48AA8BCB58EBD8D8B2C34E3811D5EAD1 /* EasyFutures.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = EasyFutures.framework; path = EasyFutures.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		49616F84BEA826E619C4420D8A87844B /* Pods-teslaMoteTests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-teslaMoteTests-acknowledgements.markdown"; sourceTree = "<group>"; };
+		4A853C8499DA712A0EFFF8E9159206DA /* Promise.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Promise.swift; path = Sources/Promise.swift; sourceTree = "<group>"; };
+		4C9AB67C1EC60539E0FE5E20A66C05E2 /* EasyFutures.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = EasyFutures.xcconfig; sourceTree = "<group>"; };
+		4E0327B4C61A8ABB13AEFE3F6639141F /* ChargeState.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ChargeState.swift; path = Sources/ChargeState.swift; sourceTree = "<group>"; };
+		4E2C6B0B8F45B5818CE3DF7C35C46B8E /* Pods_teslaMoteTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_teslaMoteTests.framework; path = "Pods-teslaMoteTests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		4E4209C3C6D24B5495518C8B0D793C4C /* Pods-teslaMoteTests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-teslaMoteTests.modulemap"; sourceTree = "<group>"; };
+		4EBE509AD07DC3D8F17EA8F2DCD2699A /* RemoteStartDriveCommandOptions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = RemoteStartDriveCommandOptions.swift; path = Sources/RemoteStartDriveCommandOptions.swift; sourceTree = "<group>"; };
+		4F6FC26B101CEA44349B9A3ADF7E798B /* EasyFutures-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "EasyFutures-umbrella.h"; sourceTree = "<group>"; };
+		5135607F05C5F039BA30EC85DD47F21C /* CustomStringConvertible.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CustomStringConvertible.swift; path = Sources/CustomStringConvertible.swift; sourceTree = "<group>"; };
+		51E244AABE53D73A9250517E84D68D0C /* race.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = race.m; path = Sources/race.m; sourceTree = "<group>"; };
+		5204176C1A631D58C2948F22C2A35AD8 /* TeslaSwift-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "TeslaSwift-dummy.m"; sourceTree = "<group>"; };
+		5355F98532F6FEDD9E7017C7A6102B1E /* join.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = join.m; path = Sources/join.m; sourceTree = "<group>"; };
+		55FA7F1EF6B8DC663A3300924ADBF0D2 /* Pods-teslaMote-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-teslaMote-umbrella.h"; sourceTree = "<group>"; };
+		57BFAF519C2A8F39DD612B5B50BC5F5B /* TeslaSwift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = TeslaSwift.framework; path = TeslaSwift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5BF125F6D8F4DF96E53B95B50D2AA288 /* ChargeLimitPercentageCommandOptions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ChargeLimitPercentageCommandOptions.swift; path = Sources/ChargeLimitPercentageCommandOptions.swift; sourceTree = "<group>"; };
+		5E7FC8F69764683C56AFFFC2936D88E0 /* Codable+JSONString.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Codable+JSONString.swift"; path = "Sources/Codable+JSONString.swift"; sourceTree = "<group>"; };
+		5FF03E3F6B659B62B39AF6AAB391DC72 /* Promise.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Promise.swift; path = EasyFutures/Promise.swift; sourceTree = "<group>"; };
+		60BF93F231373A592B7A23D733C682A5 /* Pods-teslaMoteTests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-teslaMoteTests-Info.plist"; sourceTree = "<group>"; };
+		64DA4A1EE4559929CD92A715DD0098A4 /* fwd.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = fwd.h; path = Sources/fwd.h; sourceTree = "<group>"; };
+		67275ACA16B5F988C849A02554B45349 /* Sequence+Future.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Sequence+Future.swift"; path = "EasyFutures/Sequence+Future.swift"; sourceTree = "<group>"; };
+		68B0EC5D7B477D9AC151924108F0F50A /* firstly.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = firstly.swift; path = Sources/firstly.swift; sourceTree = "<group>"; };
+		698FFC6AECAB792104AECBF331F2C650 /* EasyFutures.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = EasyFutures.h; path = EasyFutures/EasyFutures.h; sourceTree = "<group>"; };
+		6FBDA548DEF1CA4BA2887555A43A2868 /* Pods-teslaMoteUITests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-teslaMoteUITests-Info.plist"; sourceTree = "<group>"; };
+		71BA7E9989F768FF2EA38C710257253B /* after.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = after.m; path = Sources/after.m; sourceTree = "<group>"; };
+		752D73F415CC916532C6DFA94080458A /* Pods-teslaMoteUITests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-teslaMoteUITests-umbrella.h"; sourceTree = "<group>"; };
+		7806801F2BC36D1206A1637FBEF1EFDD /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		7A9E6F211B6ACF9D431AC9422E594303 /* SetTemperatureCommandOptions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SetTemperatureCommandOptions.swift; path = Sources/SetTemperatureCommandOptions.swift; sourceTree = "<group>"; };
+		7C2C33FB42886E09CF127A712403A8CB /* EasyFutures-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "EasyFutures-Info.plist"; sourceTree = "<group>"; };
+		7DC3E6DA3A68C7DD1CE84EA82BFCC0EC /* hang.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = hang.swift; path = Sources/hang.swift; sourceTree = "<group>"; };
+		82DAC167BF3EC32632076CAE656817EF /* GuiSettings.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = GuiSettings.swift; path = Sources/GuiSettings.swift; sourceTree = "<group>"; };
+		839A107ED02270AE14DC7E5B48DDE8E7 /* after.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = after.swift; path = Sources/after.swift; sourceTree = "<group>"; };
+		84C1C9DF3D0092402D343C4E62B4281D /* SoftwareUpdate.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SoftwareUpdate.swift; path = Sources/SoftwareUpdate.swift; sourceTree = "<group>"; };
+		85FB23A07A3B0F44BC33653EBC365DC8 /* TeslaSwift-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "TeslaSwift-Info.plist"; sourceTree = "<group>"; };
+		8679AC315DAD7C38D81B5C86D61790C3 /* Future.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Future.swift; path = EasyFutures/Future.swift; sourceTree = "<group>"; };
+		8C62831DC734BED3A0E8DE7510C0C4D4 /* FutureError.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = FutureError.swift; path = EasyFutures/FutureError.swift; sourceTree = "<group>"; };
+		8C90F40450B049E8B88B4D9342B504A9 /* when.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = when.m; path = Sources/when.m; sourceTree = "<group>"; };
+		8EB6A463B51F97FAF8C2B7740287D2E2 /* VehicleExtended.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = VehicleExtended.swift; path = Sources/VehicleExtended.swift; sourceTree = "<group>"; };
+		9247B7C39B0A808127F48758D2217876 /* Pods-teslaMoteUITests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-teslaMoteUITests-acknowledgements.markdown"; sourceTree = "<group>"; };
+		92C525A0E0B7285C4953A57C60761927 /* TeslaEndpoint.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TeslaEndpoint.swift; path = Sources/TeslaEndpoint.swift; sourceTree = "<group>"; };
+		943C4EC8CDFA004FD0C6F0B7BA801F5E /* RemoteSteeringWheelHeaterRequestOptions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = RemoteSteeringWheelHeaterRequestOptions.swift; path = Sources/RemoteSteeringWheelHeaterRequestOptions.swift; sourceTree = "<group>"; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		A3447A4F05C0A2BF55CAE2428D3A57F4 /* OpenTrunkOptions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = OpenTrunkOptions.swift; path = Sources/OpenTrunkOptions.swift; sourceTree = "<group>"; };
+		A3C8A9F0EF6FC167A0F0B3AA5DA1EF51 /* NavigationRequestOptions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = NavigationRequestOptions.swift; path = Sources/NavigationRequestOptions.swift; sourceTree = "<group>"; };
+		A51A63F4EEF2EDA78F35280811B6A30C /* Pods-teslaMoteTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-teslaMoteTests.release.xcconfig"; sourceTree = "<group>"; };
+		A62EBF8DEC303AB430138E187C84E71D /* race.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = race.swift; path = Sources/race.swift; sourceTree = "<group>"; };
+		A6B3C32A3740C93131FC4147CB77D167 /* Pods-teslaMote-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-teslaMote-dummy.m"; sourceTree = "<group>"; };
+		A843337A3944B1F8AE17C7DAC55D0774 /* PromiseKit-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "PromiseKit-prefix.pch"; sourceTree = "<group>"; };
+		ABA100C2A35D5B497EE23CA41FF6504D /* Pods_teslaMoteUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_teslaMoteUITests.framework; path = "Pods-teslaMoteUITests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		ACB24004C97D5B15E04BB6E96888DE12 /* Distance.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Distance.swift; path = Sources/Distance.swift; sourceTree = "<group>"; };
+		AD482CF750E9FC84DCE6D6D52970F478 /* Pods-teslaMoteTests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-teslaMoteTests-dummy.m"; sourceTree = "<group>"; };
+		AFB9D61EA49E86E78708283EBC053F07 /* Pods-teslaMoteTests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-teslaMoteTests-acknowledgements.plist"; sourceTree = "<group>"; };
+		B07E8307E93CED143BC6AA526D209CF6 /* Pods-teslaMoteUITests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-teslaMoteUITests.modulemap"; sourceTree = "<group>"; };
+		B222A3FF6D66E48DC0DC17304E44A40B /* EasyFutures-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "EasyFutures-prefix.pch"; sourceTree = "<group>"; };
+		B421FB77EBF79AE2B5C76DF83E2C1DEE /* Vehicle.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Vehicle.swift; path = Sources/Vehicle.swift; sourceTree = "<group>"; };
+		B48CAB8366AF8FB0257385841757769B /* Pods-teslaMote.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-teslaMote.modulemap"; sourceTree = "<group>"; };
+		B59DF141FD4CD577D8A1A32F6B32472F /* Authentication.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Authentication.swift; path = Sources/Authentication.swift; sourceTree = "<group>"; };
+		B664FA2DD49FE1F62967D795B90C6A29 /* HTTPEventStreaming.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = HTTPEventStreaming.swift; path = Sources/HTTPEventStreaming.swift; sourceTree = "<group>"; };
+		B66780EA6756B0D97D5F1584694D5A79 /* Pods-teslaMoteUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-teslaMoteUITests.release.xcconfig"; sourceTree = "<group>"; };
+		B99035E6943BA5D71532FCA98F0DED58 /* ValetCommandOptions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ValetCommandOptions.swift; path = Sources/ValetCommandOptions.swift; sourceTree = "<group>"; };
+		B9CA3B992A2B4C75DF6AE6439EC6E60A /* TeslaSwift.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TeslaSwift.swift; path = Sources/TeslaSwift.swift; sourceTree = "<group>"; };
+		B9FD605733EA2B65548FFC9EB3C995CF /* Guarantee.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Guarantee.swift; path = Sources/Guarantee.swift; sourceTree = "<group>"; };
+		BCCF2A8142641FED78022A3701972C70 /* Pods-teslaMoteUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-teslaMoteUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		BD932972DA7E3E058C3EF15FB9838A58 /* Pods-teslaMote.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-teslaMote.debug.xcconfig"; sourceTree = "<group>"; };
+		BFF97D68E37EC7E6FC44B45929191181 /* SetSunRoofCommandOptions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SetSunRoofCommandOptions.swift; path = Sources/SetSunRoofCommandOptions.swift; sourceTree = "<group>"; };
+		C19E8B5D08570C248FD95D5F878EA200 /* PromiseKit.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PromiseKit.h; path = Sources/PromiseKit.h; sourceTree = "<group>"; };
+		C36D9645CE744B13517C16417337467F /* Deprecations.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Deprecations.swift; path = Sources/Deprecations.swift; sourceTree = "<group>"; };
+		C6AE1EF9C80140BF18F1DF5C85F4C0B9 /* SentryModeCommandOptions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SentryModeCommandOptions.swift; path = Sources/SentryModeCommandOptions.swift; sourceTree = "<group>"; };
+		C8042F24EADC1B6358A1546166B01AA7 /* PromiseKit.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = PromiseKit.modulemap; sourceTree = "<group>"; };
+		CC1DDBED2CD9465E2447526C36C84A4D /* Pods-teslaMoteUITests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-teslaMoteUITests-acknowledgements.plist"; sourceTree = "<group>"; };
+		CF558F03510522CBF56B43DEFA5F0C41 /* PromiseKit-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "PromiseKit-umbrella.h"; sourceTree = "<group>"; };
+		CFB9761DCAEA4E34EB17BA9A09626AA3 /* Thenable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Thenable.swift; path = Sources/Thenable.swift; sourceTree = "<group>"; };
+		D30BCF99E599202782677AC375EFB096 /* FutureType.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = FutureType.swift; path = EasyFutures/FutureType.swift; sourceTree = "<group>"; };
+		D3F713E2BFADF34A9E404064990FA0F6 /* Pods-teslaMoteTests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-teslaMoteTests-umbrella.h"; sourceTree = "<group>"; };
+		DA1428F60325AF36E2365E63A6920FF2 /* ErrorMessage.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ErrorMessage.swift; path = Sources/ErrorMessage.swift; sourceTree = "<group>"; };
+		DC02177ACB06CA57EC55A130097DE736 /* CommandResponse.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CommandResponse.swift; path = Sources/CommandResponse.swift; sourceTree = "<group>"; };
+		DCABA2D9C19E2B65D9F3D4AC400A2AD9 /* Configuration.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Configuration.swift; path = Sources/Configuration.swift; sourceTree = "<group>"; };
+		E07CA90A2ABE08E7FDF4221F4287B224 /* TeslaStreaming.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TeslaStreaming.swift; path = Sources/TeslaStreaming.swift; sourceTree = "<group>"; };
+		E1B7817147EE900FE63CBCD950E1FADF /* TeslaSwift.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = TeslaSwift.modulemap; sourceTree = "<group>"; };
+		E1DED8389E39319674A2188A45858039 /* RemoteSeatHeaterRequestOptions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = RemoteSeatHeaterRequestOptions.swift; path = Sources/RemoteSeatHeaterRequestOptions.swift; sourceTree = "<group>"; };
+		E33867649D396A6D1C2649D2DCB339C2 /* PromiseKit.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = PromiseKit.xcconfig; sourceTree = "<group>"; };
+		E4C924C931C8CD8DA18BD3C3667BFEC3 /* hang.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = hang.m; path = Sources/hang.m; sourceTree = "<group>"; };
+		F07FE7D93B33C9252543868C92922E71 /* EasyFutures.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = EasyFutures.modulemap; sourceTree = "<group>"; };
+		F3FF2AE36E9FD0DFADD1A0E39B9DFB58 /* dispatch_promise.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = dispatch_promise.m; path = Sources/dispatch_promise.m; sourceTree = "<group>"; };
+		F57F773B45582914CD6EAAC0107682B6 /* TeslaSwift-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "TeslaSwift-prefix.pch"; sourceTree = "<group>"; };
+		F6B8075A5B9B20B3490C2804C8B53693 /* Pods-teslaMote.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-teslaMote.release.xcconfig"; sourceTree = "<group>"; };
+		F794801C85788655A25FE5AB14355F28 /* Result.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Result.swift; path = EasyFutures/Result.swift; sourceTree = "<group>"; };
+		FAA633B5AAFAF6938C0B9CE2C6EC223E /* Pods_teslaMote.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_teslaMote.framework; path = "Pods-teslaMote.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		FC45946C26A25FCFB3F15C6A665996C4 /* Pods-teslaMoteTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-teslaMoteTests.debug.xcconfig"; sourceTree = "<group>"; };
+		FDA2CBFDBF97FE8F06D0E3296942512F /* TeslaStreamEndpoint.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TeslaStreamEndpoint.swift; path = Sources/TeslaStreamEndpoint.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		16D6AAC25EB2646338BEB8C725A6AC19 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B6D4DCB25145A03D7F8ECA1CC077F538 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3BD232731ACC8C13D4DFF190F0CE4DC1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8E89D8DB087BADC6CD2A606C591505FC /* Foundation.framework in Frameworks */,
+				12726EBE84B1D50BDC2795115438A6F1 /* PromiseKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		75BCD7BBA1D7BD543CA43521CAD35A23 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4D1567425338D979E07F579E6CF564C3 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B48DC5D522DEE2F4EAECC4F911505B9A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AEDB99D0006468C743789B932A65E2CC /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C25B89938DEE0A2D9AD2806AE30D4709 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B26C1D810B98A106D22B6ABA3CD110DF /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E53B5AD6A914E974D0534774847EBFD5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				233B9E09D0BA4F71C46565130ECBEE26 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		0EF51A028A7370550BF7BE6A40DE3E0C /* EasyFutures */ = {
+			isa = PBXGroup;
+			children = (
+				698FFC6AECAB792104AECBF331F2C650 /* EasyFutures.h */,
+				8679AC315DAD7C38D81B5C86D61790C3 /* Future.swift */,
+				8C62831DC734BED3A0E8DE7510C0C4D4 /* FutureError.swift */,
+				D30BCF99E599202782677AC375EFB096 /* FutureType.swift */,
+				5FF03E3F6B659B62B39AF6AAB391DC72 /* Promise.swift */,
+				F794801C85788655A25FE5AB14355F28 /* Result.swift */,
+				67275ACA16B5F988C849A02554B45349 /* Sequence+Future.swift */,
+				C0B921237389A3CFB7748DFD7FE17BCB /* Support Files */,
+			);
+			name = EasyFutures;
+			path = EasyFutures;
+			sourceTree = "<group>";
+		};
+		1DF1623474D3359A43A52093356B09BE /* TeslaSwift */ = {
+			isa = PBXGroup;
+			children = (
+				B59DF141FD4CD577D8A1A32F6B32472F /* Authentication.swift */,
+				5BF125F6D8F4DF96E53B95B50D2AA288 /* ChargeLimitPercentageCommandOptions.swift */,
+				4E0327B4C61A8ABB13AEFE3F6639141F /* ChargeState.swift */,
+				0B830AE24587F8C5EB5F153239E33638 /* ClimateState.swift */,
+				5E7FC8F69764683C56AFFFC2936D88E0 /* Codable+JSONString.swift */,
+				DC02177ACB06CA57EC55A130097DE736 /* CommandResponse.swift */,
+				ACB24004C97D5B15E04BB6E96888DE12 /* Distance.swift */,
+				0DEF7E7F8C28F13FE7A4704D95D0750D /* DriveState.swift */,
+				DA1428F60325AF36E2365E63A6920FF2 /* ErrorMessage.swift */,
+				1BD573C915420C69A2A28EC446D2E148 /* GenericResponse.swift */,
+				82DAC167BF3EC32632076CAE656817EF /* GuiSettings.swift */,
+				B664FA2DD49FE1F62967D795B90C6A29 /* HTTPEventStreaming.swift */,
+				A3C8A9F0EF6FC167A0F0B3AA5DA1EF51 /* NavigationRequestOptions.swift */,
+				A3447A4F05C0A2BF55CAE2428D3A57F4 /* OpenTrunkOptions.swift */,
+				E1DED8389E39319674A2188A45858039 /* RemoteSeatHeaterRequestOptions.swift */,
+				4EBE509AD07DC3D8F17EA8F2DCD2699A /* RemoteStartDriveCommandOptions.swift */,
+				943C4EC8CDFA004FD0C6F0B7BA801F5E /* RemoteSteeringWheelHeaterRequestOptions.swift */,
+				C6AE1EF9C80140BF18F1DF5C85F4C0B9 /* SentryModeCommandOptions.swift */,
+				BFF97D68E37EC7E6FC44B45929191181 /* SetSunRoofCommandOptions.swift */,
+				7A9E6F211B6ACF9D431AC9422E594303 /* SetTemperatureCommandOptions.swift */,
+				84C1C9DF3D0092402D343C4E62B4281D /* SoftwareUpdate.swift */,
+				3A32615CE4F21C1AB13D15AE516C8EBE /* SpeedLimitOptions.swift */,
+				0AB325AEF046A9B50468BF5C792253CB /* StreamEvent.swift */,
+				92C525A0E0B7285C4953A57C60761927 /* TeslaEndpoint.swift */,
+				FDA2CBFDBF97FE8F06D0E3296942512F /* TeslaStreamEndpoint.swift */,
+				E07CA90A2ABE08E7FDF4221F4287B224 /* TeslaStreaming.swift */,
+				B9CA3B992A2B4C75DF6AE6439EC6E60A /* TeslaSwift.swift */,
+				B99035E6943BA5D71532FCA98F0DED58 /* ValetCommandOptions.swift */,
+				B421FB77EBF79AE2B5C76DF83E2C1DEE /* Vehicle.swift */,
+				2AA04C7DBAF89746B978C71CE60FBD48 /* VehicleConfig.swift */,
+				8EB6A463B51F97FAF8C2B7740287D2E2 /* VehicleExtended.swift */,
+				0F61C5695BFE373B7EC90C6DBAB5AFC1 /* VehicleState.swift */,
+				5ABFC753F6E56BA580CE34A14004CA2F /* Support Files */,
+			);
+			name = TeslaSwift;
+			path = TeslaSwift;
+			sourceTree = "<group>";
+		};
+		2063457A7E46C905B3D4972D89909656 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				226A7AECCBF199C9691A973E21320128 /* PromiseKit.framework */,
+				C8D40E0B5C7EDC157E85BD44682091A7 /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		42A73AE428008193B536637DA657F63D /* PromiseKit */ = {
+			isa = PBXGroup;
+			children = (
+				871F298BCB2D346DE5CA57782305FF67 /* CorePromise */,
+				6F3E5FA94045C5AD4D884F16D87CD3F0 /* Support Files */,
+			);
+			name = PromiseKit;
+			path = PromiseKit;
+			sourceTree = "<group>";
+		};
+		522E1A2F140F59C692598E0292126FC8 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				48AA8BCB58EBD8D8B2C34E3811D5EAD1 /* EasyFutures.framework */,
+				FAA633B5AAFAF6938C0B9CE2C6EC223E /* Pods_teslaMote.framework */,
+				4E2C6B0B8F45B5818CE3DF7C35C46B8E /* Pods_teslaMoteTests.framework */,
+				ABA100C2A35D5B497EE23CA41FF6504D /* Pods_teslaMoteUITests.framework */,
+				01AC527875B887DFEEF6A12BFB061D5C /* PromiseKit.framework */,
+				57BFAF519C2A8F39DD612B5B50BC5F5B /* TeslaSwift.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		5ABFC753F6E56BA580CE34A14004CA2F /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				E1B7817147EE900FE63CBCD950E1FADF /* TeslaSwift.modulemap */,
+				187099F116CC104E5478DED927552456 /* TeslaSwift.xcconfig */,
+				5204176C1A631D58C2948F22C2A35AD8 /* TeslaSwift-dummy.m */,
+				85FB23A07A3B0F44BC33653EBC365DC8 /* TeslaSwift-Info.plist */,
+				F57F773B45582914CD6EAAC0107682B6 /* TeslaSwift-prefix.pch */,
+				2E09858FE84586FF6E3D9EDF1EA8E8E4 /* TeslaSwift-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/TeslaSwift";
+			sourceTree = "<group>";
+		};
+		661A192FF933D24423EF9B312BF0A177 /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				9BA924AFE42F029567B1ED7BA2040CD7 /* Pods-teslaMote */,
+				A641BEC387EF044BAF4B86DE642E7329 /* Pods-teslaMoteTests */,
+				A0393AB7D8D7DD6F734A57CF6537DF97 /* Pods-teslaMoteUITests */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		6F3E5FA94045C5AD4D884F16D87CD3F0 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				C8042F24EADC1B6358A1546166B01AA7 /* PromiseKit.modulemap */,
+				E33867649D396A6D1C2649D2DCB339C2 /* PromiseKit.xcconfig */,
+				12C8D5C28D6BC0552C6EA09FE9E33FCF /* PromiseKit-dummy.m */,
+				2482F75AC9AF27D72DBDEAA2C3E1D73D /* PromiseKit-Info.plist */,
+				A843337A3944B1F8AE17C7DAC55D0774 /* PromiseKit-prefix.pch */,
+				CF558F03510522CBF56B43DEFA5F0C41 /* PromiseKit-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/PromiseKit";
+			sourceTree = "<group>";
+		};
+		871F298BCB2D346DE5CA57782305FF67 /* CorePromise */ = {
+			isa = PBXGroup;
+			children = (
+				71BA7E9989F768FF2EA38C710257253B /* after.m */,
+				839A107ED02270AE14DC7E5B48DDE8E7 /* after.swift */,
+				15F76F743099A25E428AB524D53912E2 /* AnyPromise.h */,
+				0A2B8A170405E3E82A31312A0793EA3D /* AnyPromise.m */,
+				225C42F4013F5BD1098B59A779C3D661 /* AnyPromise.swift */,
+				2BC7B0C56DB5113538A284AA832FA897 /* Box.swift */,
+				2AAF6CFD736ABB911BE41035C968AB9C /* Catchable.swift */,
+				DCABA2D9C19E2B65D9F3D4AC400A2AD9 /* Configuration.swift */,
+				5135607F05C5F039BA30EC85DD47F21C /* CustomStringConvertible.swift */,
+				C36D9645CE744B13517C16417337467F /* Deprecations.swift */,
+				F3FF2AE36E9FD0DFADD1A0E39B9DFB58 /* dispatch_promise.m */,
+				0493FA4DEF68BC4BE089ECF62E4FBD06 /* Error.swift */,
+				68B0EC5D7B477D9AC151924108F0F50A /* firstly.swift */,
+				64DA4A1EE4559929CD92A715DD0098A4 /* fwd.h */,
+				B9FD605733EA2B65548FFC9EB3C995CF /* Guarantee.swift */,
+				E4C924C931C8CD8DA18BD3C3667BFEC3 /* hang.m */,
+				7DC3E6DA3A68C7DD1CE84EA82BFCC0EC /* hang.swift */,
+				5355F98532F6FEDD9E7017C7A6102B1E /* join.m */,
+				4836AF32157145665127150AACD82144 /* LogEvent.swift */,
+				4A853C8499DA712A0EFFF8E9159206DA /* Promise.swift */,
+				C19E8B5D08570C248FD95D5F878EA200 /* PromiseKit.h */,
+				51E244AABE53D73A9250517E84D68D0C /* race.m */,
+				A62EBF8DEC303AB430138E187C84E71D /* race.swift */,
+				288EC72F9C964928950BFB92B1F147D8 /* Resolver.swift */,
+				CFB9761DCAEA4E34EB17BA9A09626AA3 /* Thenable.swift */,
+				8C90F40450B049E8B88B4D9342B504A9 /* when.m */,
+				038F2E9C59D52C0C775F2106DCE89005 /* when.swift */,
+			);
+			name = CorePromise;
+			sourceTree = "<group>";
+		};
+		94BE9F5D01B4D40DECA16683A402984A /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				0EF51A028A7370550BF7BE6A40DE3E0C /* EasyFutures */,
+				42A73AE428008193B536637DA657F63D /* PromiseKit */,
+				1DF1623474D3359A43A52093356B09BE /* TeslaSwift */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		9BA924AFE42F029567B1ED7BA2040CD7 /* Pods-teslaMote */ = {
+			isa = PBXGroup;
+			children = (
+				B48CAB8366AF8FB0257385841757769B /* Pods-teslaMote.modulemap */,
+				3DF00F9C3F9B8245D7ECD06A87016C40 /* Pods-teslaMote-acknowledgements.markdown */,
+				346BAB94CBD0F88B3B8CD009723044D9 /* Pods-teslaMote-acknowledgements.plist */,
+				A6B3C32A3740C93131FC4147CB77D167 /* Pods-teslaMote-dummy.m */,
+				419778C0A6609986548ADBEC6A38175B /* Pods-teslaMote-frameworks.sh */,
+				30E7AB242CE8220E9CAABB0D84A248B0 /* Pods-teslaMote-Info.plist */,
+				55FA7F1EF6B8DC663A3300924ADBF0D2 /* Pods-teslaMote-umbrella.h */,
+				BD932972DA7E3E058C3EF15FB9838A58 /* Pods-teslaMote.debug.xcconfig */,
+				F6B8075A5B9B20B3490C2804C8B53693 /* Pods-teslaMote.release.xcconfig */,
+			);
+			name = "Pods-teslaMote";
+			path = "Target Support Files/Pods-teslaMote";
+			sourceTree = "<group>";
+		};
+		A0393AB7D8D7DD6F734A57CF6537DF97 /* Pods-teslaMoteUITests */ = {
+			isa = PBXGroup;
+			children = (
+				B07E8307E93CED143BC6AA526D209CF6 /* Pods-teslaMoteUITests.modulemap */,
+				9247B7C39B0A808127F48758D2217876 /* Pods-teslaMoteUITests-acknowledgements.markdown */,
+				CC1DDBED2CD9465E2447526C36C84A4D /* Pods-teslaMoteUITests-acknowledgements.plist */,
+				18EDFB2B5C3B24E56CDB6B9640E39DDA /* Pods-teslaMoteUITests-dummy.m */,
+				6FBDA548DEF1CA4BA2887555A43A2868 /* Pods-teslaMoteUITests-Info.plist */,
+				752D73F415CC916532C6DFA94080458A /* Pods-teslaMoteUITests-umbrella.h */,
+				BCCF2A8142641FED78022A3701972C70 /* Pods-teslaMoteUITests.debug.xcconfig */,
+				B66780EA6756B0D97D5F1584694D5A79 /* Pods-teslaMoteUITests.release.xcconfig */,
+			);
+			name = "Pods-teslaMoteUITests";
+			path = "Target Support Files/Pods-teslaMoteUITests";
+			sourceTree = "<group>";
+		};
+		A641BEC387EF044BAF4B86DE642E7329 /* Pods-teslaMoteTests */ = {
+			isa = PBXGroup;
+			children = (
+				4E4209C3C6D24B5495518C8B0D793C4C /* Pods-teslaMoteTests.modulemap */,
+				49616F84BEA826E619C4420D8A87844B /* Pods-teslaMoteTests-acknowledgements.markdown */,
+				AFB9D61EA49E86E78708283EBC053F07 /* Pods-teslaMoteTests-acknowledgements.plist */,
+				AD482CF750E9FC84DCE6D6D52970F478 /* Pods-teslaMoteTests-dummy.m */,
+				60BF93F231373A592B7A23D733C682A5 /* Pods-teslaMoteTests-Info.plist */,
+				D3F713E2BFADF34A9E404064990FA0F6 /* Pods-teslaMoteTests-umbrella.h */,
+				FC45946C26A25FCFB3F15C6A665996C4 /* Pods-teslaMoteTests.debug.xcconfig */,
+				A51A63F4EEF2EDA78F35280811B6A30C /* Pods-teslaMoteTests.release.xcconfig */,
+			);
+			name = "Pods-teslaMoteTests";
+			path = "Target Support Files/Pods-teslaMoteTests";
+			sourceTree = "<group>";
+		};
+		C0B921237389A3CFB7748DFD7FE17BCB /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				F07FE7D93B33C9252543868C92922E71 /* EasyFutures.modulemap */,
+				4C9AB67C1EC60539E0FE5E20A66C05E2 /* EasyFutures.xcconfig */,
+				117487D4953B45379031DE51EF41028B /* EasyFutures-dummy.m */,
+				7C2C33FB42886E09CF127A712403A8CB /* EasyFutures-Info.plist */,
+				B222A3FF6D66E48DC0DC17304E44A40B /* EasyFutures-prefix.pch */,
+				4F6FC26B101CEA44349B9A3ADF7E798B /* EasyFutures-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/EasyFutures";
+			sourceTree = "<group>";
+		};
+		C8D40E0B5C7EDC157E85BD44682091A7 /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				7806801F2BC36D1206A1637FBEF1EFDD /* Foundation.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		CF1408CF629C7361332E53B88F7BD30C = {
+			isa = PBXGroup;
+			children = (
+				9D940727FF8FB9C785EB98E56350EF41 /* Podfile */,
+				2063457A7E46C905B3D4972D89909656 /* Frameworks */,
+				94BE9F5D01B4D40DECA16683A402984A /* Pods */,
+				522E1A2F140F59C692598E0292126FC8 /* Products */,
+				661A192FF933D24423EF9B312BF0A177 /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		6742D25D76AED724BE82A3B012174581 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8C7EB19229FDA45A42C993A39D558448 /* Pods-teslaMoteUITests-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9D71E71AF1FB35FD011ADFAE2E0B0368 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				87B226161F706AC36F196F554DDF8CEE /* Pods-teslaMote-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9ECAE5C6DF43DA5314AC570C18CB402D /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9B15FE2589BB235ED409EC5251FDE65F /* AnyPromise.h in Headers */,
+				BB526CC6C23AE8100C9C7451ED9E9524 /* fwd.h in Headers */,
+				C85DCEF47CE9375C66F0177487519CDE /* PromiseKit-umbrella.h in Headers */,
+				EA840C552465C708CA5066A701DE3C81 /* PromiseKit.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FAB4EA096E7CD9FD1A4A4CEEBF2327B1 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C2D44EC38F625C16DA3C9D9A7DBD118A /* Pods-teslaMoteTests-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FD1CB5CF236F0F7C7EF3CC6E08489407 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7F61DDA7D58CE3AD3AF6B49A853C1D75 /* EasyFutures-umbrella.h in Headers */,
+				CB6F1B9121FC67658B887A0EC6314F5C /* EasyFutures.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FD884FB495A6C7123F220A927A89DBB7 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0A61A34876395FD5052618F50FF85904 /* TeslaSwift-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		0AC8ACF65E358924B1891DDC76B97727 /* Pods-teslaMoteUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FFFFCEABA5E49250D1021A9A0EBEFC6E /* Build configuration list for PBXNativeTarget "Pods-teslaMoteUITests" */;
+			buildPhases = (
+				6742D25D76AED724BE82A3B012174581 /* Headers */,
+				D398957BC13F6ED3F362AE06A7947BE8 /* Sources */,
+				E53B5AD6A914E974D0534774847EBFD5 /* Frameworks */,
+				35B6DBEB98A8809E010B2764753EFE6C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				A2AD6C8FD989830BAD7A56B35E6F65D2 /* PBXTargetDependency */,
+			);
+			name = "Pods-teslaMoteUITests";
+			productName = "Pods-teslaMoteUITests";
+			productReference = ABA100C2A35D5B497EE23CA41FF6504D /* Pods_teslaMoteUITests.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		38C29102AF4D45E639A436925D6DDB96 /* EasyFutures */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5FB614D6E0B0CFB422B23FC2C11DE56C /* Build configuration list for PBXNativeTarget "EasyFutures" */;
+			buildPhases = (
+				FD1CB5CF236F0F7C7EF3CC6E08489407 /* Headers */,
+				81652DBB0F10149F4450439B8179A056 /* Sources */,
+				C25B89938DEE0A2D9AD2806AE30D4709 /* Frameworks */,
+				FD9C0557035288176EE01036830E0761 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = EasyFutures;
+			productName = EasyFutures;
+			productReference = 48AA8BCB58EBD8D8B2C34E3811D5EAD1 /* EasyFutures.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		3A09865D0875E59767B30A8E4D2B1058 /* Pods-teslaMoteTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 15E7C60405AC2D0ADA4125C6E8656CDA /* Build configuration list for PBXNativeTarget "Pods-teslaMoteTests" */;
+			buildPhases = (
+				FAB4EA096E7CD9FD1A4A4CEEBF2327B1 /* Headers */,
+				8D9019EA4B816718CBA3CACD71B404E9 /* Sources */,
+				75BCD7BBA1D7BD543CA43521CAD35A23 /* Frameworks */,
+				8CD610F3BFC4ADA604087F28E5A5A6D0 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				B5CD2FCF09C48FFF3381DBDA8826B383 /* PBXTargetDependency */,
+			);
+			name = "Pods-teslaMoteTests";
+			productName = "Pods-teslaMoteTests";
+			productReference = 4E2C6B0B8F45B5818CE3DF7C35C46B8E /* Pods_teslaMoteTests.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		5541708B34B3C15B67E6FCE8FB695492 /* PromiseKit */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8233ACA1D77A59E7EAE040C3F13EB3E4 /* Build configuration list for PBXNativeTarget "PromiseKit" */;
+			buildPhases = (
+				9ECAE5C6DF43DA5314AC570C18CB402D /* Headers */,
+				BE23032829B553F2C0F624CC860B4217 /* Sources */,
+				16D6AAC25EB2646338BEB8C725A6AC19 /* Frameworks */,
+				C0C06C488D8A3E60423DD5F559CC2AE5 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = PromiseKit;
+			productName = PromiseKit;
+			productReference = 01AC527875B887DFEEF6A12BFB061D5C /* PromiseKit.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		6C3B6439DE28CA405E27BB60D81B207F /* Pods-teslaMote */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E1105ABA8E0AF0B5782D574546D792B0 /* Build configuration list for PBXNativeTarget "Pods-teslaMote" */;
+			buildPhases = (
+				9D71E71AF1FB35FD011ADFAE2E0B0368 /* Headers */,
+				D00A7A669BD8D76C12274014F52D4A18 /* Sources */,
+				B48DC5D522DEE2F4EAECC4F911505B9A /* Frameworks */,
+				4DA515EE9B0C4E772EB8429D55A5C020 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				E82F94193F6BD853D93FD21AE14F1922 /* PBXTargetDependency */,
+				A1F8C237AA769E2FB68C84F1CFE8A32D /* PBXTargetDependency */,
+				1663FD3041C392F6275D0EB4D6FDAE1E /* PBXTargetDependency */,
+			);
+			name = "Pods-teslaMote";
+			productName = "Pods-teslaMote";
+			productReference = FAA633B5AAFAF6938C0B9CE2C6EC223E /* Pods_teslaMote.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		7E875E4B2267EE67D252A515E14BF06E /* TeslaSwift */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7067F3121BCB7A92E80617543ACDB6B2 /* Build configuration list for PBXNativeTarget "TeslaSwift" */;
+			buildPhases = (
+				FD884FB495A6C7123F220A927A89DBB7 /* Headers */,
+				03C607DE73E2FC414E2742FF3A11EC6C /* Sources */,
+				3BD232731ACC8C13D4DFF190F0CE4DC1 /* Frameworks */,
+				5F73A4EA7D0A6609042B1AF9A736E3CF /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				34E83C01FC5E74714F4CE88FB98046C5 /* PBXTargetDependency */,
+			);
+			name = TeslaSwift;
+			productName = TeslaSwift;
+			productReference = 57BFAF519C2A8F39DD612B5B50BC5F5B /* TeslaSwift.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		BFDFE7DC352907FC980B868725387E98 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0930;
+				LastUpgradeCheck = 0930;
+			};
+			buildConfigurationList = 4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = CF1408CF629C7361332E53B88F7BD30C;
+			productRefGroup = 522E1A2F140F59C692598E0292126FC8 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				38C29102AF4D45E639A436925D6DDB96 /* EasyFutures */,
+				6C3B6439DE28CA405E27BB60D81B207F /* Pods-teslaMote */,
+				3A09865D0875E59767B30A8E4D2B1058 /* Pods-teslaMoteTests */,
+				0AC8ACF65E358924B1891DDC76B97727 /* Pods-teslaMoteUITests */,
+				5541708B34B3C15B67E6FCE8FB695492 /* PromiseKit */,
+				7E875E4B2267EE67D252A515E14BF06E /* TeslaSwift */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		35B6DBEB98A8809E010B2764753EFE6C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4DA515EE9B0C4E772EB8429D55A5C020 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5F73A4EA7D0A6609042B1AF9A736E3CF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8CD610F3BFC4ADA604087F28E5A5A6D0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C0C06C488D8A3E60423DD5F559CC2AE5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FD9C0557035288176EE01036830E0761 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		03C607DE73E2FC414E2742FF3A11EC6C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7CBE7D2F93643FF4F2841D81C1A1EE78 /* Authentication.swift in Sources */,
+				668CA21D0E4AA0A7B77A75122E4A3955 /* ChargeLimitPercentageCommandOptions.swift in Sources */,
+				59595D3F294F65FA658B5856C978524B /* ChargeState.swift in Sources */,
+				07B1BF7A4C04C1CB3390F8F76D367C8A /* ClimateState.swift in Sources */,
+				F5B13B9F725FFC932DE556F672A1B7E8 /* Codable+JSONString.swift in Sources */,
+				86F07D836FE9857D80DEE5A70162E3D8 /* CommandResponse.swift in Sources */,
+				B1F8A59FF716D123D294F931AEF3391A /* Distance.swift in Sources */,
+				D80037FF9CD78B6634D828A005C4B453 /* DriveState.swift in Sources */,
+				920F852E4C23027230FE2F1F78C3E4C8 /* ErrorMessage.swift in Sources */,
+				88BB556A7814232291643F705887E6CE /* GenericResponse.swift in Sources */,
+				DC22295251CCDB1C0EEF1E569088CB16 /* GuiSettings.swift in Sources */,
+				1C3BB765E3BAB91F93AC1EE5408DAD1F /* HTTPEventStreaming.swift in Sources */,
+				460282A6714A1A870F2B644BC3571042 /* NavigationRequestOptions.swift in Sources */,
+				4F7B7770DB3F85BCC13AD85C0FC175CA /* OpenTrunkOptions.swift in Sources */,
+				5029664CA94301E2311BE2BC14F05BFD /* RemoteSeatHeaterRequestOptions.swift in Sources */,
+				EC02E7AA1CDCCD65DC74C4CCEF4680A1 /* RemoteStartDriveCommandOptions.swift in Sources */,
+				B11A226DF6F67C03475720F551C2A764 /* RemoteSteeringWheelHeaterRequestOptions.swift in Sources */,
+				A4C756D26B8B3E8703C5112EF44C2C08 /* SentryModeCommandOptions.swift in Sources */,
+				EBE2EA94CCA713EDA60B5780D8E82C5A /* SetSunRoofCommandOptions.swift in Sources */,
+				BF2B3FA482B2EB1B1CA944ECB1C1F891 /* SetTemperatureCommandOptions.swift in Sources */,
+				3CEFD45F95E972FC41467F12B5E8EE69 /* SoftwareUpdate.swift in Sources */,
+				275ECBEC3A63AC17860FD981DCFE1531 /* SpeedLimitOptions.swift in Sources */,
+				CFDA8EF179B9E305FFCC173E75152560 /* StreamEvent.swift in Sources */,
+				930418B586D8C7CBB8AEB6FF80D7DACB /* TeslaEndpoint.swift in Sources */,
+				1E4DDE7B644AF285293872D1A0F3CE7A /* TeslaStreamEndpoint.swift in Sources */,
+				14D62A58D6D0BACEDDA906405E900675 /* TeslaStreaming.swift in Sources */,
+				5FE49A8912F53C594A7B843BDCBBC6C6 /* TeslaSwift-dummy.m in Sources */,
+				BF892EAFD385CCDA1C860548FD53E42B /* TeslaSwift.swift in Sources */,
+				543800651BBE1F2AA266F6BD935B622B /* ValetCommandOptions.swift in Sources */,
+				36BD533342D70355D2A1A50DE92B8C66 /* Vehicle.swift in Sources */,
+				81AAC5B0FBD8EC2C15722844346D6A8B /* VehicleConfig.swift in Sources */,
+				60266054119BD1633100E8C51F238E29 /* VehicleExtended.swift in Sources */,
+				6C0DA87BB4A6AB0C5D353AB554BC623D /* VehicleState.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		81652DBB0F10149F4450439B8179A056 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3CF4A9987DC4D09B93B98CB6EADCC51A /* EasyFutures-dummy.m in Sources */,
+				D9A20DD42C62DE15F1AF87D263F51C5B /* Future.swift in Sources */,
+				593970590A1416EC5A775CF594E668FE /* FutureError.swift in Sources */,
+				D1A106854C9929D08828912869092840 /* FutureType.swift in Sources */,
+				663FE56598F479E14F7E96B66529334D /* Promise.swift in Sources */,
+				5ACF8E6F536948EE33BFE7FE64B62CB1 /* Result.swift in Sources */,
+				95FDC810136DF86D5415E826E4581C92 /* Sequence+Future.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8D9019EA4B816718CBA3CACD71B404E9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F1FF0CBE94DF6AFB56D9109807DABF13 /* Pods-teslaMoteTests-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BE23032829B553F2C0F624CC860B4217 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0EEAC00D9161A04BFF14BE3ABF270938 /* after.m in Sources */,
+				8A90677D3B8EA51F2E9285FF5A5194E9 /* after.swift in Sources */,
+				C2322A9D44026B43D23E5D27C7E53FDB /* AnyPromise.m in Sources */,
+				74546AD9BF6FD218481513327D93E6D1 /* AnyPromise.swift in Sources */,
+				188D6D68FF8D17EBA4C073CD8665B597 /* Box.swift in Sources */,
+				A1F38F3E510E1D82330E14F3E4E96885 /* Catchable.swift in Sources */,
+				A536DCA576C7B9684DD3E782DC39D981 /* Configuration.swift in Sources */,
+				FD60D89ABA941DC1BA04A50805FC1211 /* CustomStringConvertible.swift in Sources */,
+				2EFC567818A731DD7F8076FB66CF1B79 /* Deprecations.swift in Sources */,
+				C4CE9331D1B192687A431B47D6CE86B4 /* dispatch_promise.m in Sources */,
+				8CD5A854EF31F4FB65C4DE45E8783B5D /* Error.swift in Sources */,
+				3F3F275FA359FEE11CD9CDEAD272C21C /* firstly.swift in Sources */,
+				601D0D06B303CE12DC554DFC95F3DE92 /* Guarantee.swift in Sources */,
+				5E58504397DD88EC4CDE5BB5D163EFEC /* hang.m in Sources */,
+				0F75B56A1535A79245D1C24A7C950E42 /* hang.swift in Sources */,
+				73B882AF46B2895C7666EA9790F239C4 /* join.m in Sources */,
+				8F78750B0342008CA386ACB834CC389D /* LogEvent.swift in Sources */,
+				91BA329BC2D3F74BA6DA5471C1669895 /* Promise.swift in Sources */,
+				5B987C979C2E58A0C76B5ACB5D00E860 /* PromiseKit-dummy.m in Sources */,
+				2ACF0BBE4676F32011AD27812A1CD036 /* race.m in Sources */,
+				D03072F9A4CD72D4AB4B2EBC20F833F7 /* race.swift in Sources */,
+				C0B00E22DAFD30C995312AA8476144F7 /* Resolver.swift in Sources */,
+				FDE49592D5C4237668CE2368738552FB /* Thenable.swift in Sources */,
+				E87F6964A23E80AC8D83D14E650CD006 /* when.m in Sources */,
+				AAB85E94D5DAC654DE2F76DA59A56D3D /* when.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D00A7A669BD8D76C12274014F52D4A18 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				391DB81AF20B8D91C578D10D83F8CA48 /* Pods-teslaMote-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D398957BC13F6ED3F362AE06A7947BE8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7B2B3DC93BBAE563C62E56B6535310A9 /* Pods-teslaMoteUITests-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		1663FD3041C392F6275D0EB4D6FDAE1E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = TeslaSwift;
+			target = 7E875E4B2267EE67D252A515E14BF06E /* TeslaSwift */;
+			targetProxy = 490AC82FCE7D3C89F1DAB8F50422AB60 /* PBXContainerItemProxy */;
+		};
+		34E83C01FC5E74714F4CE88FB98046C5 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = PromiseKit;
+			target = 5541708B34B3C15B67E6FCE8FB695492 /* PromiseKit */;
+			targetProxy = 5F1E1385E5B8FFC796AC1A735C77E9D1 /* PBXContainerItemProxy */;
+		};
+		A1F8C237AA769E2FB68C84F1CFE8A32D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = PromiseKit;
+			target = 5541708B34B3C15B67E6FCE8FB695492 /* PromiseKit */;
+			targetProxy = DC39433814E1031596DC4D474A78CA65 /* PBXContainerItemProxy */;
+		};
+		A2AD6C8FD989830BAD7A56B35E6F65D2 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Pods-teslaMote";
+			target = 6C3B6439DE28CA405E27BB60D81B207F /* Pods-teslaMote */;
+			targetProxy = 5173696025571482FB8AFCB8CB36BED3 /* PBXContainerItemProxy */;
+		};
+		B5CD2FCF09C48FFF3381DBDA8826B383 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Pods-teslaMote";
+			target = 6C3B6439DE28CA405E27BB60D81B207F /* Pods-teslaMote */;
+			targetProxy = B4EBB3FA657019172289C4B84D3C9DC1 /* PBXContainerItemProxy */;
+		};
+		E82F94193F6BD853D93FD21AE14F1922 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = EasyFutures;
+			target = 38C29102AF4D45E639A436925D6DDB96 /* EasyFutures */;
+			targetProxy = C8065B3C70B754B4395F5A8213EA3978 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		0F1FDBB606C2A84679CC4F5AC739F53B /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A51A63F4EEF2EDA78F35280811B6A30C /* Pods-teslaMoteTests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-teslaMoteTests/Pods-teslaMoteTests-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-teslaMoteTests/Pods-teslaMoteTests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		1312FCD97323E296334C5E1907153FE1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = BD932972DA7E3E058C3EF15FB9838A58 /* Pods-teslaMote.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-teslaMote/Pods-teslaMote-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-teslaMote/Pods-teslaMote.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		162F0455968B59DCB8EF79D224C9272C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E33867649D396A6D1C2649D2DCB339C2 /* PromiseKit.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/PromiseKit/PromiseKit-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/PromiseKit/PromiseKit-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/PromiseKit/PromiseKit.modulemap";
+				PRODUCT_MODULE_NAME = PromiseKit;
+				PRODUCT_NAME = PromiseKit;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		3C62C1E754667D7BCE4EC22F2D41FD5C /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E33867649D396A6D1C2649D2DCB339C2 /* PromiseKit.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/PromiseKit/PromiseKit-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/PromiseKit/PromiseKit-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/PromiseKit/PromiseKit.modulemap";
+				PRODUCT_MODULE_NAME = PromiseKit;
+				PRODUCT_NAME = PromiseKit;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		418CF4DF50672B3FD020866A0D442D1E /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 187099F116CC104E5478DED927552456 /* TeslaSwift.xcconfig */;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/TeslaSwift/TeslaSwift-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/TeslaSwift/TeslaSwift-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/TeslaSwift/TeslaSwift.modulemap";
+				PRODUCT_MODULE_NAME = TeslaSwift;
+				PRODUCT_NAME = TeslaSwift;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		4318C7BC9A42060160888EC75AF56A94 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F6B8075A5B9B20B3490C2804C8B53693 /* Pods-teslaMote.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-teslaMote/Pods-teslaMote-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-teslaMote/Pods-teslaMote.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		453742FB487ED44A3D210CFD85DF8B86 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = FC45946C26A25FCFB3F15C6A665996C4 /* Pods-teslaMoteTests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-teslaMoteTests/Pods-teslaMoteTests-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-teslaMoteTests/Pods-teslaMoteTests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		493189177FD095E8F1CC0EC9207AC862 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_DEBUG=1",
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.2;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Debug;
+		};
+		5BA32A0CD454CB20D940E12ABB189231 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4C9AB67C1EC60539E0FE5E20A66C05E2 /* EasyFutures.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/EasyFutures/EasyFutures-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/EasyFutures/EasyFutures-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/EasyFutures/EasyFutures.modulemap";
+				PRODUCT_MODULE_NAME = EasyFutures;
+				PRODUCT_NAME = EasyFutures;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		7400FE236BFD9BB0B57A5A4306AC033D /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B66780EA6756B0D97D5F1584694D5A79 /* Pods-teslaMoteUITests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-teslaMoteUITests/Pods-teslaMoteUITests-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-teslaMoteUITests/Pods-teslaMoteUITests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		91435088EDD5B5BDF7204283DAA2F881 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 187099F116CC104E5478DED927552456 /* TeslaSwift.xcconfig */;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/TeslaSwift/TeslaSwift-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/TeslaSwift/TeslaSwift-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/TeslaSwift/TeslaSwift.modulemap";
+				PRODUCT_MODULE_NAME = TeslaSwift;
+				PRODUCT_NAME = TeslaSwift;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		9975A8C57815D68E9D678964D6B3C42E /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4C9AB67C1EC60539E0FE5E20A66C05E2 /* EasyFutures.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/EasyFutures/EasyFutures-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/EasyFutures/EasyFutures-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/EasyFutures/EasyFutures.modulemap";
+				PRODUCT_MODULE_NAME = EasyFutures;
+				PRODUCT_NAME = EasyFutures;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		BE8C0DEB61FC6A7CC8220A86C1542266 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = BCCF2A8142641FED78022A3701972C70 /* Pods-teslaMoteUITests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-teslaMoteUITests/Pods-teslaMoteUITests-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-teslaMoteUITests/Pods-teslaMoteUITests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		C81EA092D14AE1D1D944AE64377DAA4B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_RELEASE=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 4.2;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		15E7C60405AC2D0ADA4125C6E8656CDA /* Build configuration list for PBXNativeTarget "Pods-teslaMoteTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				453742FB487ED44A3D210CFD85DF8B86 /* Debug */,
+				0F1FDBB606C2A84679CC4F5AC739F53B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				493189177FD095E8F1CC0EC9207AC862 /* Debug */,
+				C81EA092D14AE1D1D944AE64377DAA4B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5FB614D6E0B0CFB422B23FC2C11DE56C /* Build configuration list for PBXNativeTarget "EasyFutures" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5BA32A0CD454CB20D940E12ABB189231 /* Debug */,
+				9975A8C57815D68E9D678964D6B3C42E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7067F3121BCB7A92E80617543ACDB6B2 /* Build configuration list for PBXNativeTarget "TeslaSwift" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				91435088EDD5B5BDF7204283DAA2F881 /* Debug */,
+				418CF4DF50672B3FD020866A0D442D1E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8233ACA1D77A59E7EAE040C3F13EB3E4 /* Build configuration list for PBXNativeTarget "PromiseKit" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				162F0455968B59DCB8EF79D224C9272C /* Debug */,
+				3C62C1E754667D7BCE4EC22F2D41FD5C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E1105ABA8E0AF0B5782D574546D792B0 /* Build configuration list for PBXNativeTarget "Pods-teslaMote" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1312FCD97323E296334C5E1907153FE1 /* Debug */,
+				4318C7BC9A42060160888EC75AF56A94 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FFFFCEABA5E49250D1021A9A0EBEFC6E /* Build configuration list for PBXNativeTarget "Pods-teslaMoteUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BE8C0DEB61FC6A7CC8220A86C1542266 /* Debug */,
+				7400FE236BFD9BB0B57A5A4306AC033D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+}
